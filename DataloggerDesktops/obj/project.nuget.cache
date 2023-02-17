@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UbQxYCaqlOpYZwYoI32bF8P5kysbqjd7cya4zqPeGLEyGoQ086bbkn+RTrqV4h3czVYHaH7u3SxvDWlxoy3tiA==",
+  "dgSpecHash": "SsXqPOQET/mCVS9LDXd/VoehLikA7mSP4jFSGDOLVk/ydFnNn1wjlWL1+DsZkxxugKGhAcAqz821HLrGs4AC9g==",
   "success": true,
-  "projectFilePath": "D:\\ReviewC#\\DataloggerDesktops\\DataloggerDesktops\\DataloggerDesktops.csproj",
+  "projectFilePath": "D:\\ReviewC#\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
