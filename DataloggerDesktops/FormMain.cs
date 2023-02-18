@@ -93,6 +93,9 @@ namespace DataloggerDesktops
       // load image
       //pictureBox_tab.Image = new Bitmap(Application.StartupPath + "\\Resources\\collapse_icon.png");
       //pictureBox_tab.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+      // Minh Khùng
     }
   }
 }
