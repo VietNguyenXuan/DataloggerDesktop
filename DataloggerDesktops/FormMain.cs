@@ -55,6 +55,9 @@ namespace DataloggerDesktops
       OffButtonBord(btnStatistics);
       OffButtonBord(btnSetting);
 
+      
+      OffButtonBord(btnSetting);
+
       //OffButtonBord(btn_parametter);
       //OffButtonBord(btn_device);
       //OffButtonBord(btn_user);
