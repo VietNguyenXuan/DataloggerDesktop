@@ -55,7 +55,8 @@ namespace DataloggerDesktops
       OffButtonBord(btnStatistics);
       OffButtonBord(btnSetting);
 
-      
+
+      OffButtonBord(btnSetting);
       OffButtonBord(btnSetting);
 
       //OffButtonBord(btn_parametter);
