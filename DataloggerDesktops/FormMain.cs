@@ -17,5 +17,10 @@ namespace DataloggerDesktops
       InitializeComponent();
     }
 
+    private void FormMain_Load(object sender, EventArgs e)
+    {
+      FormBorderStyle = FormBorderStyle.Sizable;
+      WindowState = FormWindowState.Maximized;
+    }
   }
 }
