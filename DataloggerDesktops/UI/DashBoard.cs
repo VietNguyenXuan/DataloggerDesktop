@@ -17,9 +17,21 @@ namespace DataloggerDesktops
       InitializeComponent();
     }
 
-        private void panelDashBoardFull_Paint(object sender, PaintEventArgs e)
-        {
+    private void DashBoard_Load(object sender, EventArgs e)
+    {
+      // Thiết lập màu cho panel mode
+      panelDashBoardFull.BackColor = Color.FromArgb(12, 17, 44);
 
-        }
+      panelDevice.BackColor = Color.FromArgb(19, 33, 73);
+      panelTemp.BackColor = Color.FromArgb(19, 33, 73);
+      panelSpeech.BackColor = Color.FromArgb(19, 33, 73);
+
+      panelStatus.BackColor = Color.FromArgb(19, 33, 73);
+      panelTrend.BackColor = Color.FromArgb(19, 33, 73);
+      panelVibrationData.BackColor = Color.FromArgb(19, 33, 73);
+      panelScatter.BackColor = Color.FromArgb(19, 33, 73);
+      panelMFD.BackColor = Color.FromArgb(19, 33, 73);
+      panelAcousticData.BackColor = Color.FromArgb(19, 33, 73);
     }
+  }
 }

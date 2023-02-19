@@ -55,7 +55,7 @@
       this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelMain.Location = new System.Drawing.Point(0, 0);
       this.panelMain.Name = "panelMain";
-      this.panelMain.Size = new System.Drawing.Size(1314, 667);
+      this.panelMain.Size = new System.Drawing.Size(1314, 680);
       this.panelMain.TabIndex = 0;
       // 
       // panelBody
@@ -64,7 +64,7 @@
       this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelBody.Location = new System.Drawing.Point(0, 50);
       this.panelBody.Name = "panelBody";
-      this.panelBody.Size = new System.Drawing.Size(1314, 617);
+      this.panelBody.Size = new System.Drawing.Size(1314, 630);
       this.panelBody.TabIndex = 2;
       // 
       // panelControl
@@ -79,7 +79,7 @@
       this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
       this.panelControl.Location = new System.Drawing.Point(0, 0);
       this.panelControl.Name = "panelControl";
-      this.panelControl.Size = new System.Drawing.Size(155, 617);
+      this.panelControl.Size = new System.Drawing.Size(155, 630);
       this.panelControl.TabIndex = 1;
       // 
       // btnUser
@@ -199,7 +199,7 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1314, 667);
+      this.ClientSize = new System.Drawing.Size(1314, 680);
       this.Controls.Add(this.panelMain);
       this.Name = "FormMain";
       this.Text = "Form1";
