@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PqIGlAQDVZ+URgWK5PZljIDveLNalXKc76gCFZsBPiFuApdsKO3dPY6aVCXlT5zhoar7dodXQBaXJB54KJYHkA==",
+  "dgSpecHash": "D3fJ53nxm/rMgH32I8k9cgpCxMgDyBXoa0NSB9lTxU/6Wvff3I2NbIxQXIxzvEhE7+rvh9t0ExWG7pXWJzyzcQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DEL\\Documents\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+  "projectFilePath": "C:\\Users\\DEL\\Documents\\thu\\DataloggerDesktops\\DataloggerDesktops.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DEL\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
     "C:\\Users\\DEL\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512",

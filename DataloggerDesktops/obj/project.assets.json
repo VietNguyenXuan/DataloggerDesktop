@@ -72,11 +72,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DEL\\Documents\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+      "projectUniqueName": "C:\\Users\\DEL\\Documents\\thu\\DataloggerDesktops\\DataloggerDesktops.csproj",
       "projectName": "DataloggerDesktops",
-      "projectPath": "C:\\Users\\DEL\\Documents\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+      "projectPath": "C:\\Users\\DEL\\Documents\\thu\\DataloggerDesktops\\DataloggerDesktops.csproj",
       "packagesPath": "C:\\Users\\DEL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DEL\\Documents\\DataloggerDesktop\\DataloggerDesktops\\obj\\",
+      "outputPath": "C:\\Users\\DEL\\Documents\\thu\\DataloggerDesktops\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
