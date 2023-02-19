@@ -22,3 +22,6 @@ D:\ReviewC#\DataloggerDesktops\DataloggerDesktop\DataloggerDesktops\obj\Debug\ne
 D:\ReviewC#\DataloggerDesktops\DataloggerDesktop\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.SettingParametter.resources
 D:\ReviewC#\DataloggerDesktops\DataloggerDesktop\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.SettingUser.resources
 D:\ReviewC#\DataloggerDesktops\DataloggerDesktop\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.Statistics.resources
+D:\ReviewC#\DataloggerDesktops\DataloggerDesktop\DataloggerDesktops\bin\Debug\net5.0-windows\CircularProgressBar.dll
+D:\ReviewC#\DataloggerDesktops\DataloggerDesktop\DataloggerDesktops\bin\Debug\net5.0-windows\WinFormAnimation.dll
+D:\ReviewC#\DataloggerDesktops\DataloggerDesktop\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.csproj.CopyComplete
