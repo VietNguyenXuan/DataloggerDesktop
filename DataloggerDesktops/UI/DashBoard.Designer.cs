@@ -29,6 +29,7 @@
     private void InitializeComponent()
     {
       this.panelDashBoardFull = new System.Windows.Forms.Panel();
+      this.button4 = new System.Windows.Forms.Button();
       this.button3 = new System.Windows.Forms.Button();
       this.button2 = new System.Windows.Forms.Button();
       this.button1 = new System.Windows.Forms.Button();
@@ -40,13 +41,14 @@
       this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
       this.panelSpeech = new System.Windows.Forms.Panel();
       this.panelTemp = new System.Windows.Forms.Panel();
-      this.button4 = new System.Windows.Forms.Button();
+      this.button5 = new System.Windows.Forms.Button();
       this.panelDashBoardFull.SuspendLayout();
       this.panelMon.SuspendLayout();
       this.SuspendLayout();
       // 
       // panelDashBoardFull
       // 
+      this.panelDashBoardFull.Controls.Add(this.button5);
       this.panelDashBoardFull.Controls.Add(this.button4);
       this.panelDashBoardFull.Controls.Add(this.button3);
       this.panelDashBoardFull.Controls.Add(this.button2);
@@ -63,6 +65,15 @@
       this.panelDashBoardFull.Name = "panelDashBoardFull";
       this.panelDashBoardFull.Size = new System.Drawing.Size(1148, 633);
       this.panelDashBoardFull.TabIndex = 1;
+      // 
+      // button4
+      // 
+      this.button4.Location = new System.Drawing.Point(422, 499);
+      this.button4.Name = "button4";
+      this.button4.Size = new System.Drawing.Size(464, 29);
+      this.button4.TabIndex = 7;
+      this.button4.Text = "Đức trùm tech team";
+      this.button4.UseVisualStyleBackColor = true;
       // 
       // button3
       // 
@@ -147,14 +158,14 @@
       this.panelTemp.Size = new System.Drawing.Size(250, 177);
       this.panelTemp.TabIndex = 0;
       // 
-      // button4
+      // button5
       // 
-      this.button4.Location = new System.Drawing.Point(422, 499);
-      this.button4.Name = "button4";
-      this.button4.Size = new System.Drawing.Size(464, 29);
-      this.button4.TabIndex = 7;
-      this.button4.Text = "Đức trùm tech team";
-      this.button4.UseVisualStyleBackColor = true;
+      this.button5.Location = new System.Drawing.Point(422, 548);
+      this.button5.Name = "button5";
+      this.button5.Size = new System.Drawing.Size(464, 29);
+      this.button5.TabIndex = 8;
+      this.button5.Text = "Đức trùm tech team";
+      this.button5.UseVisualStyleBackColor = true;
       // 
       // DashBoard
       // 
@@ -185,5 +196,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Button button5;
   }
 }
