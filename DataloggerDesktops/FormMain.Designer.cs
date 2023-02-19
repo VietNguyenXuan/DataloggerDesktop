@@ -230,3 +230,4 @@
     private System.Windows.Forms.Button btnParameter;
   }
 }
+//HuynhanMinh
