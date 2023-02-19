@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "PqIGlAQDVZ+URgWK5PZljIDveLNalXKc76gCFZsBPiFuApdsKO3dPY6aVCXlT5zhoar7dodXQBaXJB54KJYHkA==",
+  "dgSpecHash": "+RLAXbEFq3sRtPUWmZIEjnfwj+lU0qjBbrRDmpBS+kvOhDuYF0IVYhGG7pb+y4U94QhxRieKOLfMtJEYRIvH6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DEL\\Documents\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+  "projectFilePath": "D:\\ReviewC#\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DEL\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
-    "C:\\Users\\DEL\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512",
-    "C:\\Users\\DEL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\DEL\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\DEL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\DEL\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+    "C:\\Users\\19146\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
+    "C:\\Users\\19146\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512"
   ],
   "logs": [
     {

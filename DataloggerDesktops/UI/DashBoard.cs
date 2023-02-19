@@ -16,5 +16,9 @@ namespace DataloggerDesktops
     {
       InitializeComponent();
     }
+
+    private void DashBoard_Load(object sender, EventArgs e)
+    {
+    }
   }
 }
