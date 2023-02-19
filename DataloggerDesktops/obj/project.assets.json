@@ -66,23 +66,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\19146\\.nuget\\packages\\": {},
+    "C:\\Users\\DEL\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ReviewC#\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+      "projectUniqueName": "C:\\Users\\DEL\\Documents\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
       "projectName": "DataloggerDesktops",
-      "projectPath": "D:\\ReviewC#\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
-      "packagesPath": "C:\\Users\\19146\\.nuget\\packages\\",
-      "outputPath": "D:\\ReviewC#\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\obj\\",
+      "projectPath": "C:\\Users\\DEL\\Documents\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+      "packagesPath": "C:\\Users\\DEL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DEL\\Documents\\DataloggerDesktop\\DataloggerDesktops\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\19146\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DEL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -126,6 +126,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -134,7 +152,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   },
