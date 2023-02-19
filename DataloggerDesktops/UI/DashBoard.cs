@@ -16,5 +16,10 @@ namespace DataloggerDesktops
     {
       InitializeComponent();
     }
-  }
+
+        private void panelDashBoardFull_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }

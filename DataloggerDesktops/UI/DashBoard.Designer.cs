@@ -29,19 +29,21 @@
     private void InitializeComponent()
     {
             this.panelDashBoardFull = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelDevice = new System.Windows.Forms.Panel();
             this.panelMon = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panelSpeech = new System.Windows.Forms.Panel();
             this.panelTemp = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.panelDashBoardFull.SuspendLayout();
             this.panelMon.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDashBoardFull
             // 
+            this.panelDashBoardFull.Controls.Add(this.monthCalendar2);
             this.panelDashBoardFull.Controls.Add(this.panel2);
             this.panelDashBoardFull.Controls.Add(this.panel1);
             this.panelDashBoardFull.Controls.Add(this.panelDevice);
@@ -53,6 +55,21 @@
             this.panelDashBoardFull.Name = "panelDashBoardFull";
             this.panelDashBoardFull.Size = new System.Drawing.Size(1148, 633);
             this.panelDashBoardFull.TabIndex = 1;
+            this.panelDashBoardFull.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashBoardFull_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(316, 267);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 177);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(36, 267);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 177);
+            this.panel1.TabIndex = 3;
             // 
             // panelDevice
             // 
@@ -89,19 +106,11 @@
             this.panelTemp.Size = new System.Drawing.Size(250, 177);
             this.panelTemp.TabIndex = 0;
             // 
-            // panel1
+            // monthCalendar2
             // 
-            this.panel1.Location = new System.Drawing.Point(36, 267);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 177);
-            this.panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(316, 267);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 177);
-            this.panel2.TabIndex = 3;
+            this.monthCalendar2.Location = new System.Drawing.Point(627, 243);
+            this.monthCalendar2.Name = "monthCalendar2";
+            this.monthCalendar2.TabIndex = 0;
             // 
             // DashBoard
             // 
@@ -127,5 +136,6 @@
     private System.Windows.Forms.Panel panelTemp;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MonthCalendar monthCalendar2;
     }
 }
