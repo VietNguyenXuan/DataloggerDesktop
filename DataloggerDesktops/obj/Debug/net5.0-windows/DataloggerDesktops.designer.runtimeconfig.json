@@ -7,10 +7,14 @@
     },
     "additionalProbingPaths": [
 <<<<<<< HEAD
+<<<<<<< HEAD
       "C:\\Users\\DEL\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\DEL\\.nuget\\packages",
 =======
       "C:\\Users\\19146\\.dotnet\\store\\|arch|\\|tfm|",
+=======
+      "C:\\Users\\truon\\.dotnet\\store\\|arch|\\|tfm|",
+>>>>>>> 35a056337b98706eef0c7672940e41cdbbfc2fd9
       "C:\\Users\\19146\\.nuget\\packages",
 >>>>>>> c6fede550afb2bcced442c9e76db1d08bf4973fc
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
