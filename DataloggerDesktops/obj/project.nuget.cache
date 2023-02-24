@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cH1SnjxADGadClp5MjBC4IpKi/vVSnD00FpNCwcyepxCuYlRhlBXYfyeAZCk2yy5qTJQJiiDVB1T12kEennaNA==",
+  "dgSpecHash": "+RLAXbEFq3sRtPUWmZIEjnfwj+lU0qjBbrRDmpBS+kvOhDuYF0IVYhGG7pb+y4U94QhxRieKOLfMtJEYRIvH6g==",
   "success": true,
-  "projectFilePath": "D:\\Software\\DataLoggerUI_Render\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+  "projectFilePath": "D:\\ReviewC#\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\truon\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
-    "C:\\Users\\truon\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512"
+    "C:\\Users\\19146\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
+    "C:\\Users\\19146\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512"
   ],
   "logs": [
     {

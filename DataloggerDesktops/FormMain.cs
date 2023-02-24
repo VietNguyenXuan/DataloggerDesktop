@@ -162,7 +162,7 @@ namespace DataloggerDesktops
       btnStatistics.BackColor = Color.FromArgb(4, 25, 61);
       btnSetting.BackColor = Color.FromArgb(8, 46, 112);
 
-      btnParameter.BackColor = Color.FromArgb(8, 46, 112);
+      btnParameter.BackColor = Color.FromArgb(8, 46, 200);
       btnDevice.BackColor = Color.FromArgb(4, 25, 61);
       btnUser.BackColor = Color.FromArgb(4, 25, 61);
     }
@@ -172,7 +172,7 @@ namespace DataloggerDesktops
       openFormChild(new SettingDevice());
 
       btnParameter.BackColor = Color.FromArgb(4, 25, 61);
-      btnDevice.BackColor = Color.FromArgb(8, 46, 112);
+      btnDevice.BackColor = Color.FromArgb(8, 46, 200);
       btnUser.BackColor = Color.FromArgb(4, 25, 61);
     }
 
@@ -182,7 +182,7 @@ namespace DataloggerDesktops
 
       btnParameter.BackColor = Color.FromArgb(4, 25, 61);
       btnDevice.BackColor = Color.FromArgb(4, 25, 61);
-      btnUser.BackColor = Color.FromArgb(8, 46, 112);
+      btnUser.BackColor = Color.FromArgb(8, 46, 200);
     }
 
     bool _isStatusTab = true;
@@ -195,16 +195,13 @@ namespace DataloggerDesktops
         panelControl.Size = new Size(155, 667);
         panelTab.Size = new Size(155, 50);
         btnTab.Location = new Point(115, 0);
-
         btnTab.Text = "<";
-        //pictureBox_tab.Image = new Bitmap(Application.StartupPath + "\\Resources\\collapse_icon.png");
       }
       else
       {
         panelControl.Size = new Size(0, 667);
         panelTab.Size = new Size(100, 50);
         btnTab.Location = new Point(0, 0);
-
         btnTab.Text = ">";
       }
     }
