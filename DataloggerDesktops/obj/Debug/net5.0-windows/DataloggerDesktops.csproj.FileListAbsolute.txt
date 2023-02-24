@@ -62,12 +62,14 @@ C:\Users\DEL\Documents\thu\DataloggerDesktops\bin\Debug\net5.0-windows\CircularP
 C:\Users\DEL\Documents\thu\DataloggerDesktops\bin\Debug\net5.0-windows\WinFormAnimation.dll
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.csproj.AssemblyReference.cache
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.FormMain.resources
+C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.Properties.Resources.resources
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.DashBoard.resources
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.Historical.resources
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.SettingDevice.resources
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.SettingParametter.resources
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.SettingUser.resources
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.Statistics.resources
+C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.UI.UCObjectCount.resources
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.csproj.GenerateResource.cache
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DEL\Documents\thu\DataloggerDesktops\obj\Debug\net5.0-windows\DataloggerDesktops.AssemblyInfoInputs.cache

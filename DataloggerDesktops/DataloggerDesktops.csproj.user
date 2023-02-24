@@ -22,5 +22,8 @@
     <Compile Update="UI\Statistics.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI\UCObjectCount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
