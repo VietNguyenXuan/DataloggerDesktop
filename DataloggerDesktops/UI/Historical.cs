@@ -16,5 +16,20 @@ namespace DataloggerDesktops
     {
       InitializeComponent();
     }
-  }
+
+        private void Historical_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
