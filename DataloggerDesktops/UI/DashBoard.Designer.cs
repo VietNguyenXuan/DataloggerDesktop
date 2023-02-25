@@ -74,10 +74,8 @@
       // 
       this.panelDashBoardFull.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(44)))));
       this.panelDashBoardFull.Controls.Add(this.panelAcousticData);
-      this.panelDashBoardFull.Controls.Add(this.panelMFD);
-      this.panelDashBoardFull.Controls.Add(this.panelScatter);
       this.panelDashBoardFull.Controls.Add(this.panelVibrationData);
-      this.panelDashBoardFull.Controls.Add(this.panelTrend);
+      this.panelDashBoardFull.Controls.Add(this.panelScatter);
       this.panelDashBoardFull.Controls.Add(this.panelSpeech);
       this.panelDashBoardFull.Controls.Add(this.panelStatus);
       this.panelDashBoardFull.Controls.Add(this.panelDevice);
@@ -93,7 +91,7 @@
       // 
       this.panelAcousticData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelAcousticData.Controls.Add(this.label10);
-      this.panelAcousticData.Location = new System.Drawing.Point(764, 430);
+      this.panelAcousticData.Location = new System.Drawing.Point(142, 410);
       this.panelAcousticData.Name = "panelAcousticData";
       this.panelAcousticData.Size = new System.Drawing.Size(354, 177);
       this.panelAcousticData.TabIndex = 16;
@@ -113,7 +111,7 @@
       // 
       this.panelMFD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelMFD.Controls.Add(this.labelMFD);
-      this.panelMFD.Location = new System.Drawing.Point(381, 430);
+      this.panelMFD.Location = new System.Drawing.Point(34, 61);
       this.panelMFD.Name = "panelMFD";
       this.panelMFD.Size = new System.Drawing.Size(356, 177);
       this.panelMFD.TabIndex = 15;
@@ -133,6 +131,7 @@
       // 
       this.panelScatter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelScatter.Controls.Add(this.label12);
+      this.panelScatter.Controls.Add(this.panelMFD);
       this.panelScatter.Location = new System.Drawing.Point(36, 430);
       this.panelScatter.Name = "panelScatter";
       this.panelScatter.Size = new System.Drawing.Size(316, 177);
@@ -153,7 +152,7 @@
       // 
       this.panelVibrationData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelVibrationData.Controls.Add(this.label9);
-      this.panelVibrationData.Location = new System.Drawing.Point(764, 227);
+      this.panelVibrationData.Location = new System.Drawing.Point(139, 206);
       this.panelVibrationData.Name = "panelVibrationData";
       this.panelVibrationData.Size = new System.Drawing.Size(354, 177);
       this.panelVibrationData.TabIndex = 13;
@@ -173,7 +172,7 @@
       // 
       this.panelTrend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelTrend.Controls.Add(this.label8);
-      this.panelTrend.Location = new System.Drawing.Point(381, 227);
+      this.panelTrend.Location = new System.Drawing.Point(62, 67);
       this.panelTrend.Name = "panelTrend";
       this.panelTrend.Size = new System.Drawing.Size(356, 177);
       this.panelTrend.TabIndex = 12;
@@ -247,6 +246,7 @@
       // 
       this.panelStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelStatus.Controls.Add(this.label7);
+      this.panelStatus.Controls.Add(this.panelTrend);
       this.panelStatus.Location = new System.Drawing.Point(36, 227);
       this.panelStatus.Name = "panelStatus";
       this.panelStatus.Size = new System.Drawing.Size(316, 177);

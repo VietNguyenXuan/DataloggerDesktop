@@ -28,9 +28,12 @@
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       this.panelMain = new System.Windows.Forms.Panel();
       this.panelBody = new System.Windows.Forms.Panel();
+      this.dataGridView1 = new System.Windows.Forms.DataGridView();
       this.panelControl = new System.Windows.Forms.Panel();
+      this.txb = new System.Windows.Forms.TextBox();
       this.btnUser = new System.Windows.Forms.Button();
       this.btnDevice = new System.Windows.Forms.Button();
       this.btnParameter = new System.Windows.Forms.Button();
@@ -41,8 +44,10 @@
       this.panelHeading = new System.Windows.Forms.Panel();
       this.panelTab = new System.Windows.Forms.Panel();
       this.btnTab = new System.Windows.Forms.Button();
+      this.tmrUpdateMQTT = new System.Windows.Forms.Timer(this.components);
       this.panelMain.SuspendLayout();
       this.panelBody.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
       this.panelControl.SuspendLayout();
       this.panelHeading.SuspendLayout();
       this.panelTab.SuspendLayout();
@@ -60,6 +65,7 @@
       // 
       // panelBody
       // 
+      this.panelBody.Controls.Add(this.dataGridView1);
       this.panelBody.Controls.Add(this.panelControl);
       this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelBody.Location = new System.Drawing.Point(0, 50);
@@ -67,8 +73,21 @@
       this.panelBody.Size = new System.Drawing.Size(1314, 632);
       this.panelBody.TabIndex = 2;
       // 
+      // dataGridView1
+      // 
+      this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+      this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dataGridView1.Location = new System.Drawing.Point(171, 18);
+      this.dataGridView1.Name = "dataGridView1";
+      this.dataGridView1.RowHeadersVisible = false;
+      this.dataGridView1.RowHeadersWidth = 51;
+      this.dataGridView1.RowTemplate.Height = 29;
+      this.dataGridView1.Size = new System.Drawing.Size(931, 384);
+      this.dataGridView1.TabIndex = 2;
+      // 
       // panelControl
       // 
+      this.panelControl.Controls.Add(this.txb);
       this.panelControl.Controls.Add(this.btnUser);
       this.panelControl.Controls.Add(this.btnDevice);
       this.panelControl.Controls.Add(this.btnParameter);
@@ -82,88 +101,111 @@
       this.panelControl.Size = new System.Drawing.Size(155, 632);
       this.panelControl.TabIndex = 1;
       // 
+      // txb
+      // 
+      this.txb.Enabled = false;
+      this.txb.Location = new System.Drawing.Point(12, 333);
+      this.txb.Multiline = true;
+      this.txb.Name = "txb";
+      this.txb.Size = new System.Drawing.Size(123, 287);
+      this.txb.TabIndex = 9;
+      // 
       // btnUser
       // 
+      this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
       this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.btnUser.ForeColor = System.Drawing.Color.Transparent;
       this.btnUser.Location = new System.Drawing.Point(0, 290);
       this.btnUser.Name = "btnUser";
       this.btnUser.Size = new System.Drawing.Size(155, 37);
       this.btnUser.TabIndex = 8;
       this.btnUser.Text = "   User";
-      this.btnUser.UseVisualStyleBackColor = true;
+      this.btnUser.UseVisualStyleBackColor = false;
       this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
       // 
       // btnDevice
       // 
+      this.btnDevice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
       this.btnDevice.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnDevice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.btnDevice.ForeColor = System.Drawing.Color.Transparent;
       this.btnDevice.Location = new System.Drawing.Point(0, 253);
       this.btnDevice.Name = "btnDevice";
       this.btnDevice.Size = new System.Drawing.Size(155, 37);
       this.btnDevice.TabIndex = 7;
       this.btnDevice.Text = "   Device";
-      this.btnDevice.UseVisualStyleBackColor = true;
+      this.btnDevice.UseVisualStyleBackColor = false;
       this.btnDevice.Click += new System.EventHandler(this.btnDevice_Click);
       // 
       // btnParameter
       // 
+      this.btnParameter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
       this.btnParameter.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnParameter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.btnParameter.ForeColor = System.Drawing.Color.Transparent;
       this.btnParameter.Location = new System.Drawing.Point(0, 216);
       this.btnParameter.Name = "btnParameter";
       this.btnParameter.Size = new System.Drawing.Size(155, 37);
       this.btnParameter.TabIndex = 6;
       this.btnParameter.Text = "   Parameter";
-      this.btnParameter.UseVisualStyleBackColor = true;
+      this.btnParameter.UseVisualStyleBackColor = false;
       this.btnParameter.Click += new System.EventHandler(this.btnParameter_Click);
       // 
       // btnSetting
       // 
+      this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
       this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.btnSetting.ForeColor = System.Drawing.Color.Transparent;
       this.btnSetting.Location = new System.Drawing.Point(0, 162);
       this.btnSetting.Name = "btnSetting";
       this.btnSetting.Size = new System.Drawing.Size(155, 54);
       this.btnSetting.TabIndex = 5;
       this.btnSetting.Text = "Setting";
-      this.btnSetting.UseVisualStyleBackColor = true;
+      this.btnSetting.UseVisualStyleBackColor = false;
       this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
       // 
       // btnStatistics
       // 
+      this.btnStatistics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
       this.btnStatistics.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnStatistics.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.btnStatistics.ForeColor = System.Drawing.Color.Transparent;
       this.btnStatistics.Location = new System.Drawing.Point(0, 108);
       this.btnStatistics.Name = "btnStatistics";
       this.btnStatistics.Size = new System.Drawing.Size(155, 54);
       this.btnStatistics.TabIndex = 4;
       this.btnStatistics.Text = "Statistics";
-      this.btnStatistics.UseVisualStyleBackColor = true;
+      this.btnStatistics.UseVisualStyleBackColor = false;
       this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
       // 
       // btnHistorical
       // 
+      this.btnHistorical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
       this.btnHistorical.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnHistorical.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.btnHistorical.ForeColor = System.Drawing.Color.Transparent;
       this.btnHistorical.Location = new System.Drawing.Point(0, 54);
       this.btnHistorical.Name = "btnHistorical";
       this.btnHistorical.Size = new System.Drawing.Size(155, 54);
       this.btnHistorical.TabIndex = 3;
       this.btnHistorical.Text = "Historical";
-      this.btnHistorical.UseVisualStyleBackColor = true;
+      this.btnHistorical.UseVisualStyleBackColor = false;
       this.btnHistorical.Click += new System.EventHandler(this.btnHistorical_Click);
       // 
       // btnDashBoard
       // 
+      this.btnDashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
       this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnDashBoard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.btnDashBoard.ForeColor = System.Drawing.Color.Transparent;
       this.btnDashBoard.Location = new System.Drawing.Point(0, 0);
       this.btnDashBoard.Name = "btnDashBoard";
       this.btnDashBoard.Size = new System.Drawing.Size(155, 54);
       this.btnDashBoard.TabIndex = 2;
       this.btnDashBoard.Text = "DashBoard";
-      this.btnDashBoard.UseVisualStyleBackColor = true;
+      this.btnDashBoard.UseVisualStyleBackColor = false;
       this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
       // 
       // panelHeading
@@ -195,6 +237,11 @@
       this.btnTab.UseVisualStyleBackColor = true;
       this.btnTab.Click += new System.EventHandler(this.btnTab_Click);
       // 
+      // tmrUpdateMQTT
+      // 
+      this.tmrUpdateMQTT.Interval = 3000;
+      this.tmrUpdateMQTT.Tick += new System.EventHandler(this.tmrUpdateMQTT_Tick);
+      // 
       // FormMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -206,7 +253,9 @@
       this.Load += new System.EventHandler(this.FormMain_Load);
       this.panelMain.ResumeLayout(false);
       this.panelBody.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
       this.panelControl.ResumeLayout(false);
+      this.panelControl.PerformLayout();
       this.panelHeading.ResumeLayout(false);
       this.panelTab.ResumeLayout(false);
       this.ResumeLayout(false);
@@ -228,5 +277,8 @@
     private System.Windows.Forms.Button btnUser;
     private System.Windows.Forms.Button btnDevice;
     private System.Windows.Forms.Button btnParameter;
+    private System.Windows.Forms.Timer tmrUpdateMQTT;
+    private System.Windows.Forms.TextBox txb;
+    private System.Windows.Forms.DataGridView dataGridView1;
   }
 }

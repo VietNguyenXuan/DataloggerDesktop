@@ -48,6 +48,26 @@
             "CircularProgressBar": {
               "target": "Package",
               "version": "[2.8.0.16, )"
+            },
+            "M2Mqtt": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "MQTTnet": {
+              "target": "Package",
+              "version": "[4.1.4.563, )"
+            },
+            "MQTTnet.Extensions.ManagedClient": {
+              "target": "Package",
+              "version": "[4.1.4.563, )"
+            },
+            "MetroFramework": {
+              "target": "Package",
+              "version": "[1.2.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
             }
           },
           "imports": [

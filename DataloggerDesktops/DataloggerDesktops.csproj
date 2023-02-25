@@ -9,6 +9,11 @@
 
   <ItemGroup>
     <PackageReference Include="CircularProgressBar" Version="2.8.0.16" />
+    <PackageReference Include="M2Mqtt" Version="4.3.0" />
+    <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="MQTTnet" Version="4.1.4.563" />
+    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="4.1.4.563" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
 </Project>

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using CodeBeautify;
+
+using MQTTChanel;
+using CodeBeautify;
 
 namespace DataloggerDesktops
 {
@@ -17,6 +21,9 @@ namespace DataloggerDesktops
     {
       InitializeComponent();
     }
+    MQTTClass mqttClass = new MQTTClass();
+
+
 
     // funstion off boading buttons
     private void OffButtonBord(Button button)
@@ -47,6 +54,9 @@ namespace DataloggerDesktops
 
     private void FormMain_Load(object sender, EventArgs e)
     {
+      mqttClass.Connect();
+      tmrUpdateMQTT.Start();
+
       //FormBorderStyle = FormBorderStyle.Sizable;
       //WindowState = FormWindowState.Maximized;
 
@@ -54,12 +64,6 @@ namespace DataloggerDesktops
       OffButtonBord(btnDashBoard);
       OffButtonBord(btnHistorical);
       OffButtonBord(btnStatistics);
-      OffButtonBord(btnSetting);
-
-
-      OffButtonBord(btnSetting);
-      OffButtonBord(btnSetting);
-      OffButtonBord(btnSetting);
       OffButtonBord(btnSetting);
 
       OffButtonBord(btnParameter);
@@ -80,23 +84,15 @@ namespace DataloggerDesktops
 
       btnTab.BackColor = Color.FromArgb(8, 46, 112);
 
-      // Thiết lập màu chữ
-      btnTab.ForeColor = Color.FromArgb(255, 255, 255);
-
-      btnDashBoard.ForeColor = Color.FromArgb(255, 255, 255);
-      btnHistorical.ForeColor = Color.FromArgb(255, 255, 255);
-      btnStatistics.ForeColor = Color.FromArgb(255, 255, 255);
-      btnSetting.ForeColor = Color.FromArgb(255, 255, 255);
-      btnParameter.ForeColor = Color.FromArgb(255, 255, 255);
-      btnDevice.ForeColor = Color.FromArgb(255, 255, 255);
-      btnUser.ForeColor = Color.FromArgb(255, 255, 255);
-
       // Khi chạy mặc định vào form dashboard
-      btnDashBoard.PerformClick();
+      //btnDashBoard.PerformClick();
 
       // load image
       //pictureBox_tab.Image = new Bitmap(Application.StartupPath + "\\Resources\\collapse_icon.png");
       //pictureBox_tab.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+      
     }
 
     private void btnDashBoard_Click(object sender, EventArgs e)
@@ -207,6 +203,28 @@ namespace DataloggerDesktops
 
         btnTab.Text = ">";
       }
+    }
+
+    string stringJson;
+    string pl = "[{\"sensors\":[{\"Name\":\"Magnetometer\",\"registers\":[{\"Name\":\"Magnetometer - X (Avg)\",\"Description\":\"ac\",\"Value\":8960},{\"Name\":\"Magnetometer - X (Std)\",\"Description\":\"ac\",\"Value\":256},{\"Name\":\"Magnetometer - X (RMS)\",\"Description\":\"ac\",\"Value\":8960}],\"Description\":null},{\"Name\":\"Accelerometer\",\"registers\":[{\"Name\":\"Accelerometer (Secondary) - X (Avg)\",\"Description\":\"ac\",\"Value\":7936},{\"Name\":\"Accelerometer (Secondary) - X (Std)\",\"Description\":\"ac\",\"Value\":512},{\"Name\":\"Accelerometer (Secondary) - X (RMS)\",\"Description\":\"ac\",\"Value\":7936}],\"Description\":null},{\"Name\":\"Accelerometer (Primary)\",\"registers\":[{\"Name\":\"Accelerometer (Primary) - X (Avg)\",\"Description\":\"ac\",\"Value\":0},{\"Name\":\"Accelerometer (Primary) - X (Std)\",\"Description\":\"ac\",\"Value\":0},{\"Name\":\"Accelerometer (Primary) - X (RMS)\",\"Description\":\"ac\",\"Value\":1280}],\"Description\":null},{\"Name\":\"Temperature\",\"registers\":[{\"Name\":\"Temperature\",\"Description\":\"ac\",\"Value\":192}],\"Description\":null},{\"Name\":\"Microphone\",\"registers\":[{\"Name\":\"Microphone - Avg\",\"Description\":\"ac\",\"Value\":256},{\"Name\":\"Microphone - Std\",\"Description\":\"ac\",\"Value\":6912},{\"Name\":\"Microphone - RMS\",\"Description\":\"ac\",\"Value\":6912}],\"Description\":null}],\"Id\":\"00000000-0000-0000-0000-000000000000\",\"CreateDate\":\"0001-01-01T00:00:00Z\",\"UpdateDate\":\"0001-01-01T00:00:00Z\",\"Name\":null}]";
+    private void tmrUpdateMQTT_Tick(object sender, EventArgs e)
+    {
+      mqttClass.publish("A", pl);
+      mqttClass.subcribe("A");
+      stringJson = mqttClass.payloadResult();
+      txb.Text = stringJson;
+
+
+
+      if (string.IsNullOrWhiteSpace(stringJson)) return;
+      var welcome4 = Welcome2.FromJson(stringJson);
+      var listObj = welcome4.FirstOrDefault().Sensors.SelectMany(s => s.Registers);
+
+      this.dataGridView1.DataSource = listObj.ToList();
+
+      //var arrlistObj = listObj.ToArray();
+      //txb1.Text = arrlistObj[4].Name.ToString();
+      //txb2.Text = arrlistObj[4].Value.ToString();
     }
   }
 }
