@@ -32,8 +32,9 @@
       this.panelMain = new System.Windows.Forms.Panel();
       this.panelBody = new System.Windows.Forms.Panel();
       this.dataGridView1 = new System.Windows.Forms.DataGridView();
+      this.B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.C = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.panelControl = new System.Windows.Forms.Panel();
-      this.txb = new System.Windows.Forms.TextBox();
       this.btnUser = new System.Windows.Forms.Button();
       this.btnDevice = new System.Windows.Forms.Button();
       this.btnParameter = new System.Windows.Forms.Button();
@@ -42,15 +43,18 @@
       this.btnHistorical = new System.Windows.Forms.Button();
       this.btnDashBoard = new System.Windows.Forms.Button();
       this.panelHeading = new System.Windows.Forms.Panel();
+      this.txb = new System.Windows.Forms.TextBox();
       this.panelTab = new System.Windows.Forms.Panel();
       this.btnTab = new System.Windows.Forms.Button();
       this.tmrUpdateMQTT = new System.Windows.Forms.Timer(this.components);
+      this.dataGridView2 = new System.Windows.Forms.DataGridView();
       this.panelMain.SuspendLayout();
       this.panelBody.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
       this.panelControl.SuspendLayout();
       this.panelHeading.SuspendLayout();
       this.panelTab.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
       this.SuspendLayout();
       // 
       // panelMain
@@ -65,6 +69,7 @@
       // 
       // panelBody
       // 
+      this.panelBody.Controls.Add(this.dataGridView2);
       this.panelBody.Controls.Add(this.dataGridView1);
       this.panelBody.Controls.Add(this.panelControl);
       this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,17 +82,31 @@
       // 
       this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView1.Location = new System.Drawing.Point(171, 18);
+      this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.B,
+            this.C});
+      this.dataGridView1.Location = new System.Drawing.Point(161, 6);
       this.dataGridView1.Name = "dataGridView1";
       this.dataGridView1.RowHeadersVisible = false;
       this.dataGridView1.RowHeadersWidth = 51;
       this.dataGridView1.RowTemplate.Height = 29;
-      this.dataGridView1.Size = new System.Drawing.Size(931, 384);
+      this.dataGridView1.Size = new System.Drawing.Size(605, 497);
       this.dataGridView1.TabIndex = 2;
+      // 
+      // B
+      // 
+      this.B.HeaderText = "B";
+      this.B.MinimumWidth = 6;
+      this.B.Name = "B";
+      // 
+      // C
+      // 
+      this.C.HeaderText = "C";
+      this.C.MinimumWidth = 6;
+      this.C.Name = "C";
       // 
       // panelControl
       // 
-      this.panelControl.Controls.Add(this.txb);
       this.panelControl.Controls.Add(this.btnUser);
       this.panelControl.Controls.Add(this.btnDevice);
       this.panelControl.Controls.Add(this.btnParameter);
@@ -100,15 +119,6 @@
       this.panelControl.Name = "panelControl";
       this.panelControl.Size = new System.Drawing.Size(155, 632);
       this.panelControl.TabIndex = 1;
-      // 
-      // txb
-      // 
-      this.txb.Enabled = false;
-      this.txb.Location = new System.Drawing.Point(12, 333);
-      this.txb.Multiline = true;
-      this.txb.Name = "txb";
-      this.txb.Size = new System.Drawing.Size(123, 287);
-      this.txb.TabIndex = 9;
       // 
       // btnUser
       // 
@@ -210,12 +220,23 @@
       // 
       // panelHeading
       // 
+      this.panelHeading.Controls.Add(this.txb);
       this.panelHeading.Controls.Add(this.panelTab);
       this.panelHeading.Dock = System.Windows.Forms.DockStyle.Top;
       this.panelHeading.Location = new System.Drawing.Point(0, 0);
       this.panelHeading.Name = "panelHeading";
       this.panelHeading.Size = new System.Drawing.Size(1314, 50);
       this.panelHeading.TabIndex = 0;
+      // 
+      // txb
+      // 
+      this.txb.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.txb.Enabled = false;
+      this.txb.Location = new System.Drawing.Point(155, 0);
+      this.txb.Multiline = true;
+      this.txb.Name = "txb";
+      this.txb.Size = new System.Drawing.Size(1159, 50);
+      this.txb.TabIndex = 2;
       // 
       // panelTab
       // 
@@ -239,8 +260,18 @@
       // 
       // tmrUpdateMQTT
       // 
-      this.tmrUpdateMQTT.Interval = 3000;
+      this.tmrUpdateMQTT.Interval = 5000;
       this.tmrUpdateMQTT.Tick += new System.EventHandler(this.tmrUpdateMQTT_Tick);
+      // 
+      // dataGridView2
+      // 
+      this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dataGridView2.Location = new System.Drawing.Point(780, 9);
+      this.dataGridView2.Name = "dataGridView2";
+      this.dataGridView2.RowHeadersWidth = 51;
+      this.dataGridView2.RowTemplate.Height = 29;
+      this.dataGridView2.Size = new System.Drawing.Size(522, 494);
+      this.dataGridView2.TabIndex = 3;
       // 
       // FormMain
       // 
@@ -248,16 +279,16 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1314, 682);
       this.Controls.Add(this.panelMain);
-      this.Name = "FormMain";
       this.Text = "Form1";
       this.Load += new System.EventHandler(this.FormMain_Load);
       this.panelMain.ResumeLayout(false);
       this.panelBody.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
       this.panelControl.ResumeLayout(false);
-      this.panelControl.PerformLayout();
       this.panelHeading.ResumeLayout(false);
+      this.panelHeading.PerformLayout();
       this.panelTab.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -278,7 +309,10 @@
     private System.Windows.Forms.Button btnDevice;
     private System.Windows.Forms.Button btnParameter;
     private System.Windows.Forms.Timer tmrUpdateMQTT;
-    private System.Windows.Forms.TextBox txb;
     private System.Windows.Forms.DataGridView dataGridView1;
+    private System.Windows.Forms.TextBox txb;
+    private System.Windows.Forms.DataGridViewTextBoxColumn B;
+    private System.Windows.Forms.DataGridViewTextBoxColumn C;
+    private System.Windows.Forms.DataGridView dataGridView2;
   }
 }

@@ -43,8 +43,7 @@ namespace MQTTChanel
 
       await client.ConnectAsync(clientOptions, CancellationToken.None);
 
-      //subcribe();
-      MessageBox.Show("Connect Sucsess");
+      //MessageBox.Show("Connect Sucsess");
     }
     private Task Client_ApplicationMessageReceivedAsync(MqttApplicationMessageReceivedEventArgs arg)
     {
