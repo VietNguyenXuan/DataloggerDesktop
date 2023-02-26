@@ -31,9 +31,6 @@
       this.components = new System.ComponentModel.Container();
       this.panelMain = new System.Windows.Forms.Panel();
       this.panelBody = new System.Windows.Forms.Panel();
-      this.dataGridView1 = new System.Windows.Forms.DataGridView();
-      this.B = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.C = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.panelControl = new System.Windows.Forms.Panel();
       this.btnUser = new System.Windows.Forms.Button();
       this.btnDevice = new System.Windows.Forms.Button();
@@ -47,14 +44,13 @@
       this.panelTab = new System.Windows.Forms.Panel();
       this.btnTab = new System.Windows.Forms.Button();
       this.tmrUpdateMQTT = new System.Windows.Forms.Timer(this.components);
-      this.dataGridView2 = new System.Windows.Forms.DataGridView();
+      this.dataGridView1 = new System.Windows.Forms.DataGridView();
       this.panelMain.SuspendLayout();
       this.panelBody.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
       this.panelControl.SuspendLayout();
       this.panelHeading.SuspendLayout();
       this.panelTab.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
       this.SuspendLayout();
       // 
       // panelMain
@@ -69,7 +65,6 @@
       // 
       // panelBody
       // 
-      this.panelBody.Controls.Add(this.dataGridView2);
       this.panelBody.Controls.Add(this.dataGridView1);
       this.panelBody.Controls.Add(this.panelControl);
       this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,33 +72,6 @@
       this.panelBody.Name = "panelBody";
       this.panelBody.Size = new System.Drawing.Size(1314, 632);
       this.panelBody.TabIndex = 2;
-      // 
-      // dataGridView1
-      // 
-      this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-      this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.B,
-            this.C});
-      this.dataGridView1.Location = new System.Drawing.Point(161, 6);
-      this.dataGridView1.Name = "dataGridView1";
-      this.dataGridView1.RowHeadersVisible = false;
-      this.dataGridView1.RowHeadersWidth = 51;
-      this.dataGridView1.RowTemplate.Height = 29;
-      this.dataGridView1.Size = new System.Drawing.Size(605, 497);
-      this.dataGridView1.TabIndex = 2;
-      // 
-      // B
-      // 
-      this.B.HeaderText = "B";
-      this.B.MinimumWidth = 6;
-      this.B.Name = "B";
-      // 
-      // C
-      // 
-      this.C.HeaderText = "C";
-      this.C.MinimumWidth = 6;
-      this.C.Name = "C";
       // 
       // panelControl
       // 
@@ -263,15 +231,15 @@
       this.tmrUpdateMQTT.Interval = 5000;
       this.tmrUpdateMQTT.Tick += new System.EventHandler(this.tmrUpdateMQTT_Tick);
       // 
-      // dataGridView2
+      // dataGridView1
       // 
-      this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView2.Location = new System.Drawing.Point(780, 9);
-      this.dataGridView2.Name = "dataGridView2";
-      this.dataGridView2.RowHeadersWidth = 51;
-      this.dataGridView2.RowTemplate.Height = 29;
-      this.dataGridView2.Size = new System.Drawing.Size(522, 494);
-      this.dataGridView2.TabIndex = 3;
+      this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dataGridView1.Location = new System.Drawing.Point(346, 83);
+      this.dataGridView1.Name = "dataGridView1";
+      this.dataGridView1.RowHeadersWidth = 51;
+      this.dataGridView1.RowTemplate.Height = 29;
+      this.dataGridView1.Size = new System.Drawing.Size(659, 333);
+      this.dataGridView1.TabIndex = 2;
       // 
       // FormMain
       // 
@@ -283,12 +251,11 @@
       this.Load += new System.EventHandler(this.FormMain_Load);
       this.panelMain.ResumeLayout(false);
       this.panelBody.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
       this.panelControl.ResumeLayout(false);
       this.panelHeading.ResumeLayout(false);
       this.panelHeading.PerformLayout();
       this.panelTab.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -296,23 +263,20 @@
     #endregion
 
     private System.Windows.Forms.Panel panelMain;
-    private System.Windows.Forms.Panel panelControl;
     private System.Windows.Forms.Panel panelHeading;
+    private System.Windows.Forms.Panel panelTab;
+    private System.Windows.Forms.Button btnTab;
+    private System.Windows.Forms.Timer tmrUpdateMQTT;
+    private System.Windows.Forms.TextBox txb;
+    private System.Windows.Forms.Panel panelBody;
+    private System.Windows.Forms.Panel panelControl;
+    private System.Windows.Forms.Button btnUser;
+    private System.Windows.Forms.Button btnDevice;
+    private System.Windows.Forms.Button btnParameter;
     private System.Windows.Forms.Button btnSetting;
     private System.Windows.Forms.Button btnStatistics;
     private System.Windows.Forms.Button btnHistorical;
     private System.Windows.Forms.Button btnDashBoard;
-    private System.Windows.Forms.Panel panelTab;
-    private System.Windows.Forms.Panel panelBody;
-    private System.Windows.Forms.Button btnTab;
-    private System.Windows.Forms.Button btnUser;
-    private System.Windows.Forms.Button btnDevice;
-    private System.Windows.Forms.Button btnParameter;
-    private System.Windows.Forms.Timer tmrUpdateMQTT;
     private System.Windows.Forms.DataGridView dataGridView1;
-    private System.Windows.Forms.TextBox txb;
-    private System.Windows.Forms.DataGridViewTextBoxColumn B;
-    private System.Windows.Forms.DataGridViewTextBoxColumn C;
-    private System.Windows.Forms.DataGridView dataGridView2;
   }
 }

@@ -226,12 +226,16 @@ namespace DataloggerDesktops
     //  "Microphone - Std",
     //  "Microphone - RMS"
     //};
+
+
     string[] Name = new string[13];
     string[] Description = new string[13];
     string[] Value = new string[13];
 
+
     string stringJson;
     string pl = "[{\"sensors\":[{\"Name\":\"Magnetometer\",\"registers\":[{\"Name\":\"Magnetometer - X (Avg)\",\"Description\":\"ac\",\"Value\":8960},{\"Name\":\"Magnetometer - X (Std)\",\"Description\":\"ac\",\"Value\":256},{\"Name\":\"Magnetometer - X (RMS)\",\"Description\":\"ac\",\"Value\":8960}],\"Description\":null},{\"Name\":\"Accelerometer\",\"registers\":[{\"Name\":\"Accelerometer (Secondary) - X (Avg)\",\"Description\":\"ac\",\"Value\":7936},{\"Name\":\"Accelerometer (Secondary) - X (Std)\",\"Description\":\"ac\",\"Value\":512},{\"Name\":\"Accelerometer (Secondary) - X (RMS)\",\"Description\":\"ac\",\"Value\":7936}],\"Description\":null},{\"Name\":\"Accelerometer (Primary)\",\"registers\":[{\"Name\":\"Accelerometer (Primary) - X (Avg)\",\"Description\":\"ac\",\"Value\":0},{\"Name\":\"Accelerometer (Primary) - X (Std)\",\"Description\":\"ac\",\"Value\":0},{\"Name\":\"Accelerometer (Primary) - X (RMS)\",\"Description\":\"ac\",\"Value\":1280}],\"Description\":null},{\"Name\":\"Temperature\",\"registers\":[{\"Name\":\"Temperature\",\"Description\":\"ac\",\"Value\":192}],\"Description\":null},{\"Name\":\"Microphone\",\"registers\":[{\"Name\":\"Microphone - Avg\",\"Description\":\"ac\",\"Value\":256},{\"Name\":\"Microphone - Std\",\"Description\":\"ac\",\"Value\":6912},{\"Name\":\"Microphone - RMS\",\"Description\":\"ac\",\"Value\":6912}],\"Description\":null}],\"Id\":\"00000000-0000-0000-0000-000000000000\",\"CreateDate\":\"0001-01-01T00:00:00Z\",\"UpdateDate\":\"0001-01-01T00:00:00Z\",\"Name\":null}]";
+    
     private void tmrUpdateMQTT_Tick(object sender, EventArgs e)
     {
       //ReadMQTT();
@@ -256,7 +260,8 @@ namespace DataloggerDesktops
       var dataMQTT = Welcome2.FromJson(stringJson);
       var listObj = dataMQTT.FirstOrDefault().Sensors.SelectMany(s => s.Registers);
 
-      this.dataGridView2.DataSource = listObj.ToList();
+      this.dataGridView1.DataSource = listObj.ToList();
+      
 
       var arrlistObj = listObj.ToArray();
 
@@ -309,22 +314,20 @@ namespace DataloggerDesktops
 
     public void ReadDb()
     {
-      dataGridView1.Rows.Clear();
+      //dataGridView1.Rows.Clear();
       
-      for (int i = 0; i < 13; i++)
-      {
-        try
-        {
-          var db = _registerManager.GetData(Name[i]);
-          dataGridView1.Rows.Add(db[0].registerAddress, db[0].registerValue);
-        }
-        catch (Exception ex)
-        {
-          MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-      }
+      //for (int i = 0; i < 13; i++)
+      //{
+      //  try
+      //  {
+      //    var db = _registerManager.GetData(Name[i]);
+      //    dataGridView1.Rows.Add(db[0].registerAddress, db[0].registerValue);
+      //  }
+      //  catch (Exception ex)
+      //  {
+      //    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+      //  }
+      //}
     }
-
-
   }
 }

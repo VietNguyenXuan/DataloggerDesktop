@@ -31,19 +31,19 @@
       this.panelDashBoardFull = new System.Windows.Forms.Panel();
       this.panelAcousticData = new System.Windows.Forms.Panel();
       this.label10 = new System.Windows.Forms.Label();
-      this.panelMFD = new System.Windows.Forms.Panel();
-      this.labelMFD = new System.Windows.Forms.Label();
-      this.panelScatter = new System.Windows.Forms.Panel();
-      this.label12 = new System.Windows.Forms.Label();
       this.panelVibrationData = new System.Windows.Forms.Panel();
       this.label9 = new System.Windows.Forms.Label();
-      this.panelTrend = new System.Windows.Forms.Panel();
-      this.label8 = new System.Windows.Forms.Label();
+      this.panelScatter = new System.Windows.Forms.Panel();
+      this.label12 = new System.Windows.Forms.Label();
+      this.panelMFD = new System.Windows.Forms.Panel();
+      this.labelMFD = new System.Windows.Forms.Label();
       this.panelSpeech = new System.Windows.Forms.Panel();
       this.circularProgressBarSpeech = new CircularProgressBar.CircularProgressBar();
       this.label6 = new System.Windows.Forms.Label();
       this.panelStatus = new System.Windows.Forms.Panel();
       this.label7 = new System.Windows.Forms.Label();
+      this.panelTrend = new System.Windows.Forms.Panel();
+      this.label8 = new System.Windows.Forms.Label();
       this.panelDevice = new System.Windows.Forms.Panel();
       this.label4 = new System.Windows.Forms.Label();
       this.label3 = new System.Windows.Forms.Label();
@@ -59,12 +59,12 @@
       this.circularProgressBarTemp = new CircularProgressBar.CircularProgressBar();
       this.panelDashBoardFull.SuspendLayout();
       this.panelAcousticData.SuspendLayout();
-      this.panelMFD.SuspendLayout();
-      this.panelScatter.SuspendLayout();
       this.panelVibrationData.SuspendLayout();
-      this.panelTrend.SuspendLayout();
+      this.panelScatter.SuspendLayout();
+      this.panelMFD.SuspendLayout();
       this.panelSpeech.SuspendLayout();
       this.panelStatus.SuspendLayout();
+      this.panelTrend.SuspendLayout();
       this.panelDevice.SuspendLayout();
       this.panelMon.SuspendLayout();
       this.panelTemp.SuspendLayout();
@@ -74,6 +74,8 @@
       // 
       this.panelDashBoardFull.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(44)))));
       this.panelDashBoardFull.Controls.Add(this.panelAcousticData);
+      this.panelDashBoardFull.Controls.Add(this.panelMFD);
+      this.panelDashBoardFull.Controls.Add(this.panelTrend);
       this.panelDashBoardFull.Controls.Add(this.panelVibrationData);
       this.panelDashBoardFull.Controls.Add(this.panelScatter);
       this.panelDashBoardFull.Controls.Add(this.panelSpeech);
@@ -91,7 +93,7 @@
       // 
       this.panelAcousticData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelAcousticData.Controls.Add(this.label10);
-      this.panelAcousticData.Location = new System.Drawing.Point(142, 410);
+      this.panelAcousticData.Location = new System.Drawing.Point(764, 430);
       this.panelAcousticData.Name = "panelAcousticData";
       this.panelAcousticData.Size = new System.Drawing.Size(354, 177);
       this.panelAcousticData.TabIndex = 16;
@@ -107,31 +109,30 @@
       this.label10.TabIndex = 11;
       this.label10.Text = "Acoustic Data";
       // 
-      // panelMFD
+      // panelVibrationData
       // 
-      this.panelMFD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.panelMFD.Controls.Add(this.labelMFD);
-      this.panelMFD.Location = new System.Drawing.Point(34, 61);
-      this.panelMFD.Name = "panelMFD";
-      this.panelMFD.Size = new System.Drawing.Size(356, 177);
-      this.panelMFD.TabIndex = 15;
+      this.panelVibrationData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.panelVibrationData.Controls.Add(this.label9);
+      this.panelVibrationData.Location = new System.Drawing.Point(764, 227);
+      this.panelVibrationData.Name = "panelVibrationData";
+      this.panelVibrationData.Size = new System.Drawing.Size(354, 177);
+      this.panelVibrationData.TabIndex = 13;
       // 
-      // labelMFD
+      // label9
       // 
-      this.labelMFD.AutoSize = true;
-      this.labelMFD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.labelMFD.ForeColor = System.Drawing.Color.Transparent;
-      this.labelMFD.Location = new System.Drawing.Point(3, 3);
-      this.labelMFD.Name = "labelMFD";
-      this.labelMFD.Size = new System.Drawing.Size(203, 28);
-      this.labelMFD.TabIndex = 11;
-      this.labelMFD.Text = "Magnetic Field Data";
+      this.label9.AutoSize = true;
+      this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.label9.ForeColor = System.Drawing.Color.Transparent;
+      this.label9.Location = new System.Drawing.Point(3, 3);
+      this.label9.Name = "label9";
+      this.label9.Size = new System.Drawing.Size(151, 28);
+      this.label9.TabIndex = 11;
+      this.label9.Text = "Vibration Data";
       // 
       // panelScatter
       // 
       this.panelScatter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelScatter.Controls.Add(this.label12);
-      this.panelScatter.Controls.Add(this.panelMFD);
       this.panelScatter.Location = new System.Drawing.Point(36, 430);
       this.panelScatter.Name = "panelScatter";
       this.panelScatter.Size = new System.Drawing.Size(316, 177);
@@ -148,45 +149,25 @@
       this.label12.TabIndex = 11;
       this.label12.Text = "Scatter";
       // 
-      // panelVibrationData
+      // panelMFD
       // 
-      this.panelVibrationData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.panelVibrationData.Controls.Add(this.label9);
-      this.panelVibrationData.Location = new System.Drawing.Point(139, 206);
-      this.panelVibrationData.Name = "panelVibrationData";
-      this.panelVibrationData.Size = new System.Drawing.Size(354, 177);
-      this.panelVibrationData.TabIndex = 13;
+      this.panelMFD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.panelMFD.Controls.Add(this.labelMFD);
+      this.panelMFD.Location = new System.Drawing.Point(384, 430);
+      this.panelMFD.Name = "panelMFD";
+      this.panelMFD.Size = new System.Drawing.Size(356, 177);
+      this.panelMFD.TabIndex = 15;
       // 
-      // label9
+      // labelMFD
       // 
-      this.label9.AutoSize = true;
-      this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.label9.ForeColor = System.Drawing.Color.Transparent;
-      this.label9.Location = new System.Drawing.Point(3, 3);
-      this.label9.Name = "label9";
-      this.label9.Size = new System.Drawing.Size(151, 28);
-      this.label9.TabIndex = 11;
-      this.label9.Text = "Vibration Data";
-      // 
-      // panelTrend
-      // 
-      this.panelTrend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.panelTrend.Controls.Add(this.label8);
-      this.panelTrend.Location = new System.Drawing.Point(62, 67);
-      this.panelTrend.Name = "panelTrend";
-      this.panelTrend.Size = new System.Drawing.Size(356, 177);
-      this.panelTrend.TabIndex = 12;
-      // 
-      // label8
-      // 
-      this.label8.AutoSize = true;
-      this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.label8.ForeColor = System.Drawing.Color.Transparent;
-      this.label8.Location = new System.Drawing.Point(3, 3);
-      this.label8.Name = "label8";
-      this.label8.Size = new System.Drawing.Size(65, 28);
-      this.label8.TabIndex = 11;
-      this.label8.Text = "Trend";
+      this.labelMFD.AutoSize = true;
+      this.labelMFD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.labelMFD.ForeColor = System.Drawing.Color.Transparent;
+      this.labelMFD.Location = new System.Drawing.Point(3, 3);
+      this.labelMFD.Name = "labelMFD";
+      this.labelMFD.Size = new System.Drawing.Size(203, 28);
+      this.labelMFD.TabIndex = 11;
+      this.labelMFD.Text = "Magnetic Field Data";
       // 
       // panelSpeech
       // 
@@ -246,7 +227,6 @@
       // 
       this.panelStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.panelStatus.Controls.Add(this.label7);
-      this.panelStatus.Controls.Add(this.panelTrend);
       this.panelStatus.Location = new System.Drawing.Point(36, 227);
       this.panelStatus.Name = "panelStatus";
       this.panelStatus.Size = new System.Drawing.Size(316, 177);
@@ -262,6 +242,26 @@
       this.label7.Size = new System.Drawing.Size(71, 28);
       this.label7.TabIndex = 11;
       this.label7.Text = "Status";
+      // 
+      // panelTrend
+      // 
+      this.panelTrend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.panelTrend.Controls.Add(this.label8);
+      this.panelTrend.Location = new System.Drawing.Point(381, 227);
+      this.panelTrend.Name = "panelTrend";
+      this.panelTrend.Size = new System.Drawing.Size(356, 177);
+      this.panelTrend.TabIndex = 12;
+      // 
+      // label8
+      // 
+      this.label8.AutoSize = true;
+      this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.label8.ForeColor = System.Drawing.Color.Transparent;
+      this.label8.Location = new System.Drawing.Point(3, 3);
+      this.label8.Name = "label8";
+      this.label8.Size = new System.Drawing.Size(65, 28);
+      this.label8.TabIndex = 11;
+      this.label8.Text = "Trend";
       // 
       // panelDevice
       // 
@@ -426,18 +426,18 @@
       this.panelDashBoardFull.ResumeLayout(false);
       this.panelAcousticData.ResumeLayout(false);
       this.panelAcousticData.PerformLayout();
-      this.panelMFD.ResumeLayout(false);
-      this.panelMFD.PerformLayout();
-      this.panelScatter.ResumeLayout(false);
-      this.panelScatter.PerformLayout();
       this.panelVibrationData.ResumeLayout(false);
       this.panelVibrationData.PerformLayout();
-      this.panelTrend.ResumeLayout(false);
-      this.panelTrend.PerformLayout();
+      this.panelScatter.ResumeLayout(false);
+      this.panelScatter.PerformLayout();
+      this.panelMFD.ResumeLayout(false);
+      this.panelMFD.PerformLayout();
       this.panelSpeech.ResumeLayout(false);
       this.panelSpeech.PerformLayout();
       this.panelStatus.ResumeLayout(false);
       this.panelStatus.PerformLayout();
+      this.panelTrend.ResumeLayout(false);
+      this.panelTrend.PerformLayout();
       this.panelDevice.ResumeLayout(false);
       this.panelDevice.PerformLayout();
       this.panelMon.ResumeLayout(false);
