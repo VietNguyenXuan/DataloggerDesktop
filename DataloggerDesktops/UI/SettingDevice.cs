@@ -16,5 +16,10 @@ namespace DataloggerDesktops
     {
       InitializeComponent();
     }
+
+    private void SettingDevice_Load(object sender, EventArgs e)
+    {
+        comboBox1.SelectedIndex= 0;
+    }
   }
 }
