@@ -8,22 +8,17 @@
     ".NETCoreApp,Version=v5.0": {
       "DataloggerDesktops/1.0.0": {
         "dependencies": {
-          "Chart.js": "3.7.1",
           "CircularProgressBar_NET5": "3.0.0",
-          "LiveCharts": "0.9.7",
-          "LiveCharts.WinForms": "0.9.7.1",
-          "M2Mqtt": "4.3.0",
+          "Json.Net": "1.0.33",
           "MQTTnet": "4.1.4.563",
-          "MQTTnet.Extensions.ManagedClient": "4.1.4.563",
-          "MetroFramework": "1.2.0.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17",
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
           "Newtonsoft.Json": "13.0.2"
         },
         "runtime": {
           "DataloggerDesktops.dll": {}
         }
       },
-      "Chart.js/3.7.1": {},
       "CircularProgressBar_NET5/3.0.0": {
         "dependencies": {
           "WinFormAnimation-NET5": "2.0.0"
@@ -35,82 +30,23 @@
           }
         }
       },
-      "LiveCharts/0.9.7": {
+      "Humanizer.Core/2.8.26": {
         "runtime": {
-          "lib/net45/LiveCharts.dll": {
-            "assemblyVersion": "0.9.7.0",
-            "fileVersion": "0.9.7.0"
+          "lib/netstandard2.0/Humanizer.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.26.1919"
           }
         }
       },
-      "LiveCharts.WinForms/0.9.7.1": {
-        "dependencies": {
-          "LiveCharts": "0.9.7",
-          "LiveCharts.Wpf": "0.9.7"
-        },
+      "Json.Net/1.0.33": {
         "runtime": {
-          "lib/net45/LiveCharts.WinForms.dll": {
-            "assemblyVersion": "0.9.7.1",
-            "fileVersion": "0.9.7.1"
+          "lib/netstandard2.0/Json.Net.dll": {
+            "assemblyVersion": "1.0.33.1",
+            "fileVersion": "1.0.33.1"
           }
         }
       },
-      "LiveCharts.Wpf/0.9.7": {
-        "dependencies": {
-          "LiveCharts": "0.9.7"
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.Wpf.dll": {
-            "assemblyVersion": "0.9.7.0",
-            "fileVersion": "0.9.7.0"
-          }
-        }
-      },
-      "M2Mqtt/4.3.0": {
-        "runtime": {
-          "lib/net45/M2Mqtt.Net.dll": {
-            "assemblyVersion": "4.3.0.0",
-            "fileVersion": "4.3.0.0"
-          }
-        }
-      },
-      "MetroFramework/1.2.0.3": {
-        "dependencies": {
-          "MetroFramework.Design": "1.2.0.3",
-          "MetroFramework.Fonts": "1.2.0.3",
-          "MetroFramework.RunTime": "1.2.0.3"
-        }
-      },
-      "MetroFramework.Design/1.2.0.3": {
-        "dependencies": {
-          "MetroFramework.RunTime": "1.2.0.3"
-        },
-        "runtime": {
-          "lib/net40/MetroFramework.Design.dll": {
-            "assemblyVersion": "1.2.0.3",
-            "fileVersion": "1.2.0.3"
-          }
-        }
-      },
-      "MetroFramework.Fonts/1.2.0.3": {
-        "dependencies": {
-          "MetroFramework.RunTime": "1.2.0.3"
-        },
-        "runtime": {
-          "lib/net40/MetroFramework.Fonts.dll": {
-            "assemblyVersion": "1.2.0.3",
-            "fileVersion": "1.2.0.3"
-          }
-        }
-      },
-      "MetroFramework.RunTime/1.2.0.3": {
-        "runtime": {
-          "lib/net40-Client/MetroFramework.dll": {
-            "assemblyVersion": "1.2.0.3",
-            "fileVersion": "1.2.0.3"
-          }
-        }
-      },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.Sqlite.Core/5.0.17": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
@@ -157,6 +93,19 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.17": {},
+      "Microsoft.EntityFrameworkCore.Design/5.0.17": {
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.17"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "5.0.17.0",
+            "fileVersion": "5.0.1722.21206"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.17": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -187,6 +136,11 @@
             "assemblyVersion": "5.0.17.0",
             "fileVersion": "5.0.1722.21206"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/5.0.17": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.17"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
@@ -298,17 +252,6 @@
       "MQTTnet/4.1.4.563": {
         "runtime": {
           "lib/net5.0/MQTTnet.dll": {
-            "assemblyVersion": "4.1.4.563",
-            "fileVersion": "4.1.4.563"
-          }
-        }
-      },
-      "MQTTnet.Extensions.ManagedClient/4.1.4.563": {
-        "dependencies": {
-          "MQTTnet": "4.1.4.563"
-        },
-        "runtime": {
-          "lib/net5.0/MQTTnet.Extensions.ManagedClient.dll": {
             "assemblyVersion": "4.1.4.563",
             "fileVersion": "4.1.4.563"
           }
@@ -457,13 +400,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Chart.js/3.7.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-gJunTMEueTNdA5Hp92J9sv363msSemW+GSy1VtbrwjxCaMrp+/mgB20EdVezbP34dbM+h+A8G5XbEuL6tOJoCw==",
-      "path": "chart.js/3.7.1",
-      "hashPath": "chart.js.3.7.1.nupkg.sha512"
-    },
     "CircularProgressBar_NET5/3.0.0": {
       "type": "package",
       "serviceable": true,
@@ -471,61 +407,26 @@
       "path": "circularprogressbar_net5/3.0.0",
       "hashPath": "circularprogressbar_net5.3.0.0.nupkg.sha512"
     },
-    "LiveCharts/0.9.7": {
+    "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
-      "path": "livecharts/0.9.7",
-      "hashPath": "livecharts.0.9.7.nupkg.sha512"
+      "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "path": "humanizer.core/2.8.26",
+      "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-    "LiveCharts.WinForms/0.9.7.1": {
+    "Json.Net/1.0.33": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eCBsVaxpUKHLpvlJEAhm+BQDWltnzc4VFhM4k4gJ+MsqyGQ/aq/AOWqTWx8OSJ0H52mDTJ1tQjErTYWeikLEOA==",
-      "path": "livecharts.winforms/0.9.7.1",
-      "hashPath": "livecharts.winforms.0.9.7.1.nupkg.sha512"
+      "sha512": "sha512-5tE+db6BqhRAvITIVBeRsQorLGshPExfm4FmMRvWWAfs4RxeTbFFj2PIEybwmMW0qR30HKkXDYhq0YkDK2Jtxw==",
+      "path": "json.net/1.0.33",
+      "hashPath": "json.net.1.0.33.nupkg.sha512"
     },
-    "LiveCharts.Wpf/0.9.7": {
+    "Microsoft.CSharp/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
-      "path": "livecharts.wpf/0.9.7",
-      "hashPath": "livecharts.wpf.0.9.7.nupkg.sha512"
-    },
-    "M2Mqtt/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2A1uM20uxuovQKPA0dkZUqD9gUpIMaX7KxdLiVM7IEXdPRL709hGuudHnvlDxm2/6b2LcOjshrYGVG9vdpipag==",
-      "path": "m2mqtt/4.3.0",
-      "hashPath": "m2mqtt.4.3.0.nupkg.sha512"
-    },
-    "MetroFramework/1.2.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-PldREwx2yJ9GFXoR4IsXgsrTuOOEL1c5qZYeIfv9SVCSd7cJobmNRDHo+2v78E6U1lIWHM+ZIceZEETdOj0+oA==",
-      "path": "metroframework/1.2.0.3",
-      "hashPath": "metroframework.1.2.0.3.nupkg.sha512"
-    },
-    "MetroFramework.Design/1.2.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-JhXzz2m1ofJu+vcqxib1s9nmI1akoDHTRweNISsVcvk38bVabqHpwrTpwvz3z4lcwqIe19/B6M4Rrk5uXdNmhA==",
-      "path": "metroframework.design/1.2.0.3",
-      "hashPath": "metroframework.design.1.2.0.3.nupkg.sha512"
-    },
-    "MetroFramework.Fonts/1.2.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-5PAtJsIKfg4bzXPH3MeS4UFDxc4bgCe9yEEg+HS9+lOuwdChpMtawFw0XK4/u7OZxnCfkcHbnjTpu4IUpBBsfA==",
-      "path": "metroframework.fonts/1.2.0.3",
-      "hashPath": "metroframework.fonts.1.2.0.3.nupkg.sha512"
-    },
-    "MetroFramework.RunTime/1.2.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7AFviJ+uFd/jApvUzOU8mMzl3NCj/sjIKQgCeJqqEEc78R6LoOTH+qGFZBRIEV+6nqgt9h2Y/ei6xVkTNZ3sJA==",
-      "path": "metroframework.runtime/1.2.0.3",
-      "hashPath": "metroframework.runtime.1.2.0.3.nupkg.sha512"
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/5.0.17": {
       "type": "package",
@@ -562,6 +463,13 @@
       "path": "microsoft.entityframeworkcore.analyzers/5.0.17",
       "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.17.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.Design/5.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DD6dtl3nK+vVAI7c+ip8Wuu8XX4Ou8n/V+dZjf7qybXDh7h2i/BViVBt6nPoEa0oVC9cW1qHLu3iZiyqfbQTuw==",
+      "path": "microsoft.entityframeworkcore.design/5.0.17",
+      "hashPath": "microsoft.entityframeworkcore.design.5.0.17.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/5.0.17": {
       "type": "package",
       "serviceable": true,
@@ -582,6 +490,13 @@
       "sha512": "sha512-ceXvWhjwHRVR6c6bQzr4Mej9vED2mC/RLitcd1IYjS0pi+0hZ/xXULbxQyQZ65bkMiQnV4IbZ5iSJJL0j2+dpQ==",
       "path": "microsoft.entityframeworkcore.sqlite.core/5.0.17",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.5.0.17.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/5.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wwo0jkprYU6FIm9a+4b6bGT7OQ8Oehn6nECeveofoygi+DN5ft1DmshidoTn6a/5VPzWbzFhkX1bEeW2xSU2+A==",
+      "path": "microsoft.entityframeworkcore.tools/5.0.17",
+      "hashPath": "microsoft.entityframeworkcore.tools.5.0.17.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
       "type": "package",
@@ -659,13 +574,6 @@
       "sha512": "sha512-gO9segUcKyQJcjV7w7OOdoAIkec7cUN65vEhYutbdWcj4rbtz/oL/RDvQVVbameXc6ChkjKx7/HbO+R8ejAUZQ==",
       "path": "mqttnet/4.1.4.563",
       "hashPath": "mqttnet.4.1.4.563.nupkg.sha512"
-    },
-    "MQTTnet.Extensions.ManagedClient/4.1.4.563": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-QgrSDz12YnVUdbV5Wu1tP9sgTRUJbN4jZUsHC2Bh93tAPf+6vPaeq2WAEPoyJ7MjCadyGSW0n4QFyCjgNG8Odg==",
-      "path": "mqttnet.extensions.managedclient/4.1.4.563",
-      "hashPath": "mqttnet.extensions.managedclient.4.1.4.563.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.2": {
       "type": "package",

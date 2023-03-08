@@ -647,6 +647,7 @@
       this.ClientSize = new System.Drawing.Size(1148, 633);
       this.Controls.Add(this.tableLayoutPanel1);
       this.Name = "DashBoard";
+      this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "FormDashBoard";
       this.Load += new System.EventHandler(this.DashBoard_Load);
       this.tableLayoutPanel1.ResumeLayout(false);

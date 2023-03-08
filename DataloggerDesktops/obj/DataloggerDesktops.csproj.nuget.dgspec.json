@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops - Copy\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj": {}
+    "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj": {}
   },
   "projects": {
-    "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops - Copy\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj": {
+    "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops - Copy\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+        "projectUniqueName": "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
         "projectName": "DataloggerDesktops",
-        "projectPath": "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops - Copy\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
+        "projectPath": "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
         "packagesPath": "C:\\Users\\19146\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops - Copy\\DataloggerDesktop\\DataloggerDesktops\\obj\\",
+        "outputPath": "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops\\DataloggerDesktop\\DataloggerDesktops\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,39 +45,25 @@
         "net5.0-windows8.0": {
           "targetAlias": "net5.0-windows8.0",
           "dependencies": {
-            "Chart.js": {
-              "target": "Package",
-              "version": "[3.7.1, )"
-            },
             "CircularProgressBar_NET5": {
               "target": "Package",
               "version": "[3.0.0, )"
             },
-            "LiveCharts": {
+            "Json.Net": {
               "target": "Package",
-              "version": "[0.9.7, )"
-            },
-            "LiveCharts.WinForms": {
-              "target": "Package",
-              "version": "[0.9.7.1, )"
-            },
-            "M2Mqtt": {
-              "target": "Package",
-              "version": "[4.3.0, )"
+              "version": "[1.0.33, )"
             },
             "MQTTnet": {
               "target": "Package",
               "version": "[4.1.4.563, )"
             },
-            "MQTTnet.Extensions.ManagedClient": {
-              "target": "Package",
-              "version": "[4.1.4.563, )"
-            },
-            "MetroFramework": {
-              "target": "Package",
-              "version": "[1.2.0.3, )"
-            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.17, )"
             },

@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="MQTTClass.cs">
+    <Compile Update="UI\AddDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AddFactoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AddLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\SettingParametter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\DashBoard.cs">
@@ -16,13 +25,22 @@
     <Compile Update="UI\SettingDevice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\SettingParametter.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="UI\SettingUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\UpdateDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\UpdateFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\UpdateLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\ViewSettingDeviceForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

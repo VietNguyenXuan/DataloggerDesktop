@@ -74,7 +74,7 @@
       this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelMain.Location = new System.Drawing.Point(0, 0);
       this.panelMain.Name = "panelMain";
-      this.panelMain.Size = new System.Drawing.Size(1314, 682);
+      this.panelMain.Size = new System.Drawing.Size(1427, 819);
       this.panelMain.TabIndex = 0;
       // 
       // panelBody
@@ -86,18 +86,18 @@
       this.panelBody.Location = new System.Drawing.Point(0, 50);
       this.panelBody.Margin = new System.Windows.Forms.Padding(0);
       this.panelBody.Name = "panelBody";
-      this.panelBody.Size = new System.Drawing.Size(1314, 632);
+      this.panelBody.Size = new System.Drawing.Size(1427, 769);
       this.panelBody.TabIndex = 2;
       this.panelBody.TabStop = true;
       // 
       // dataGridView1
       // 
       this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView1.Location = new System.Drawing.Point(346, 83);
+      this.dataGridView1.Location = new System.Drawing.Point(200, 36);
       this.dataGridView1.Name = "dataGridView1";
       this.dataGridView1.RowHeadersWidth = 51;
       this.dataGridView1.RowTemplate.Height = 29;
-      this.dataGridView1.Size = new System.Drawing.Size(659, 333);
+      this.dataGridView1.Size = new System.Drawing.Size(1074, 394);
       this.dataGridView1.TabIndex = 2;
       // 
       // panelControl
@@ -114,7 +114,7 @@
       this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
       this.panelControl.Location = new System.Drawing.Point(0, 0);
       this.panelControl.Name = "panelControl";
-      this.panelControl.Size = new System.Drawing.Size(155, 632);
+      this.panelControl.Size = new System.Drawing.Size(155, 769);
       this.panelControl.TabIndex = 1;
       // 
       // txb
@@ -231,7 +231,7 @@
       this.panelHeading.Dock = System.Windows.Forms.DockStyle.Top;
       this.panelHeading.Location = new System.Drawing.Point(0, 0);
       this.panelHeading.Name = "panelHeading";
-      this.panelHeading.Size = new System.Drawing.Size(1314, 50);
+      this.panelHeading.Size = new System.Drawing.Size(1427, 50);
       this.panelHeading.TabIndex = 0;
       // 
       // tableLayoutPanel1
@@ -254,7 +254,7 @@
       this.tableLayoutPanel1.Name = "tableLayoutPanel1";
       this.tableLayoutPanel1.RowCount = 1;
       this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-      this.tableLayoutPanel1.Size = new System.Drawing.Size(1159, 50);
+      this.tableLayoutPanel1.Size = new System.Drawing.Size(1272, 50);
       this.tableLayoutPanel1.TabIndex = 2;
       // 
       // pictureBox1
@@ -270,7 +270,7 @@
       // pictureBox2
       // 
       this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-      this.pictureBox2.Location = new System.Drawing.Point(1110, 3);
+      this.pictureBox2.Location = new System.Drawing.Point(1223, 3);
       this.pictureBox2.Name = "pictureBox2";
       this.pictureBox2.Size = new System.Drawing.Size(46, 44);
       this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -280,7 +280,7 @@
       // pictureBox3
       // 
       this.pictureBox3.Image = global::DataloggerDesktops.Properties.Resources.chat_message_48px;
-      this.pictureBox3.Location = new System.Drawing.Point(1058, 3);
+      this.pictureBox3.Location = new System.Drawing.Point(1171, 3);
       this.pictureBox3.Name = "pictureBox3";
       this.pictureBox3.Size = new System.Drawing.Size(46, 44);
       this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -290,7 +290,7 @@
       // pictureBox4
       // 
       this.pictureBox4.Image = global::DataloggerDesktops.Properties.Resources.notification_48px;
-      this.pictureBox4.Location = new System.Drawing.Point(1006, 3);
+      this.pictureBox4.Location = new System.Drawing.Point(1119, 3);
       this.pictureBox4.Name = "pictureBox4";
       this.pictureBox4.Size = new System.Drawing.Size(46, 44);
       this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,7 +305,7 @@
       this.panel1.Controls.Add(this.textBox1);
       this.panel1.Location = new System.Drawing.Point(63, 3);
       this.panel1.Name = "panel1";
-      this.panel1.Size = new System.Drawing.Size(811, 44);
+      this.panel1.Size = new System.Drawing.Size(924, 44);
       this.panel1.TabIndex = 4;
       // 
       // textBox1
@@ -317,7 +317,7 @@
       this.textBox1.Location = new System.Drawing.Point(0, 0);
       this.textBox1.Multiline = true;
       this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(811, 44);
+      this.textBox1.Size = new System.Drawing.Size(924, 44);
       this.textBox1.TabIndex = 0;
       this.textBox1.TabStop = false;
       this.textBox1.Text = "Seach somthing";
@@ -352,9 +352,10 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1314, 682);
+      this.ClientSize = new System.Drawing.Size(1427, 819);
       this.Controls.Add(this.panelMain);
-      //this.Name = "FormMain";
+      this.Name = "FormMain";
+      this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Form1";
       this.Load += new System.EventHandler(this.FormMain_Load);
       this.panelMain.ResumeLayout(false);

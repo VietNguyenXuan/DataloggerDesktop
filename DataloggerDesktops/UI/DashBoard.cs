@@ -1,5 +1,4 @@
-﻿using DataloggerDesktops.Manager;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +17,7 @@ namespace DataloggerDesktops
       InitializeComponent();
     }
 
-    RegisterManager _registerManager = new RegisterManager();
+    //RegisterManager _registerManager = new RegisterManager();
 
 
 
@@ -31,8 +30,8 @@ namespace DataloggerDesktops
     {
       try
       {
-        var db = _registerManager.GetData("Temperature");
-        circularProgressBarTemp.Text = db[0].registerValue.ToString();
+        //var db = _registerManager.GetData("Temperature");
+        //circularProgressBarTemp.Text = db[0].registerValue.ToString();
       }
       catch (Exception ex)
       {
