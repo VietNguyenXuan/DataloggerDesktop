@@ -45,6 +45,12 @@ namespace DataloggerDesktops.UI
       imgRemove.HeaderText = "Delete";
       imgRemove.Name = "imgDelete";
       dgvViewSettingDevice.Columns.Add(imgRemove);
+
+
+      //DataGridViewButtonColumn Remove = new DataGridViewButtonColumn();
+      //Remove.HeaderText = "Delete";
+      //Remove.Name = "imgDelete";
+      //dgvViewSettingDevice.Columns.Add(Remove);
     }
 
 

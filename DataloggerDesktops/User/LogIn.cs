@@ -19,75 +19,89 @@ namespace DataloggerDesktops.User
       InitializeComponent();
     }
 
-    
+
     private void btnLogIn_Click(object sender, EventArgs e)
     {
       try
       {
-        RepositoryUser _managerUsers = new RepositoryUser();
-        var NameLogIn = _managerUsers.GetNameUsers();
-
-        if (NameLogIn != null)
+        var _name = txbLogInName.Text;
+        var _pass = txbPass.Text;
+        // check logic
+        //check usser name
+        if (_name == null)
         {
-          
-
-
-          foreach (var User in NameLogIn)
-          {
-            if (User == txbLogInName.Text)
-            {
-              if (_managerUsers.GetPassByName(User.ToString())[0].ToString() != txbPass.Text)
-              {
-                MessageBox.Show("Mật khẩu sai");
-                txbPass.Text = string.Empty;
-              }
-              else
-              {
-                // Thêm dữ liệu xuống db đã đăng nhập vào hệ thống
-                RepositoryUserHisrorical _managerUserHisrorical = new RepositoryUserHisrorical();
-                UserHistorical user = new UserHistorical();
-                user.NameLogIn = txbLogInName.Text;
-                user.DateLogIn = DateTime.Now;
-                _managerUserHisrorical.Add(user);
-
-
-                //this.Hide();
-
-                FormMain frmMain = new FormMain();
-                frmMain.Show();
-
-                //frmMain=null;
-                //this.Show();
-
-
-
-
-
-                return;
-              }
-
-            }
-          }
-          MessageBox.Show("Tên đăng nhập sai"); return;
+          // msg
+          return;
         }
-        else return;
+        if (_pass == null)
+        {
+          // msg
+          return;
+        }
+        //check pass
+
+
+        // db
+        RepositoryUser _managerUsers = new RepositoryUser();
+
+        var _user = _managerUsers.LogIn(_name, _pass);
+
+        if (_user != null)
+        {
+          // Thêm dữ liệu xuống db lịch sử đăng nhập vào app
+          RepositoryUserHisrorical _managerUserHisrorical = new RepositoryUserHisrorical();
+          UserHistorical user = new UserHistorical();
+          user.NameLogIn = txbLogInName.Text;
+          user.DateLogIn = DateTime.Now;
+          _managerUserHisrorical.Add(user);
+
+          this.DialogResult = DialogResult.OK;
+        }
+        else
+        {
+          //this.DialogResult = DialogResult.Cancel;
+          MessageBox.Show("Tài khoản không tồn tại");
+        }
+
       }
-      catch (Exception)
+      catch (Exception ex)
       {
-        throw;
+        // msg
+        this.DialogResult = DialogResult.Cancel;
+        //throw;
+        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
       }
-
-
     }
 
     private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
     {
-      
+
     }
 
     private void LogIn_FormClosed(object sender, FormClosedEventArgs e)
     {
-      
+
+    }
+
+    private void LogIn_Load(object sender, EventArgs e)
+    {
+      lbErr.Visible= false;
+    }
+
+    private void txbPass_TextChanged(object sender, EventArgs e)
+    {
+      lbErr.Visible = true;
+      if (txbPass.Text.Length < 8)
+      {
+        lbErr.Text = "Passwords phải lớn hơn 8 kí tự";
+        lbErr.ForeColor = Color.Red;
+      }
+
+      else
+      {
+        lbErr.Text = "Passwords hợp lệ"; 
+        lbErr.ForeColor = Color.Green;
+      } 
     }
   }
 }

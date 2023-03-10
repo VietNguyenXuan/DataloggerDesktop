@@ -4,7 +4,7 @@
 //
 //    using CodeBeautify;
 //
-//    var welcome2 = Welcome2.FromJson(jsonString);
+//    var welcome6 = Welcome6.FromJson(jsonString);
 
 namespace CodeBeautify
 {
@@ -12,65 +12,81 @@ namespace CodeBeautify
   using System.Collections.Generic;
 
   using System.Globalization;
-  using System.Text.Json.Serialization;
-  using System.Text.Json;
   using Newtonsoft.Json;
   using Newtonsoft.Json.Converters;
-  using JsonConverter = Newtonsoft.Json.JsonConverter;
-  using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
-  public partial class Welcome2
+  public partial class Welcome6
   {
-    [JsonProperty("sensors")]
-    public Sensor[] Sensors { get; set; }
+    [JsonProperty("msg")]
+    public Msg Msg { get; set; }
 
-    [JsonProperty("Id")]
-    public Guid Id { get; set; }
-
-    [JsonProperty("CreateDate")]
-    public DateTimeOffset CreateDate { get; set; }
-
-    [JsonProperty("UpdateDate")]
-    public DateTimeOffset UpdateDate { get; set; }
-
-    [JsonProperty("Name")]
-    public object Name { get; set; }
+    [JsonProperty("content")]
+    public Content Content { get; set; }
   }
 
-  public partial class Sensor
+  public partial class Content
   {
-    [JsonProperty("Name")]
-    public string Name { get; set; }
+    [JsonProperty("controller")]
+    public Controller Controller { get; set; }
 
-    [JsonProperty("registers")]
-    public Register[] Registers { get; set; }
+    [JsonProperty("tanks")]
+    public object[] Tanks { get; set; }
 
-    [JsonProperty("Description")]
-    public object Description { get; set; }
+    [JsonProperty("devices")]
+    public Device[] Devices { get; set; }
   }
 
-  public partial class Register
+  public partial class Controller
   {
-    [JsonProperty("Name")]
-    public string Name { get; set; }
+    [JsonProperty("operation_mode")]
+    public string OperationMode { get; set; }
+  }
 
-    [JsonProperty("Description")]
-    public Description Description { get; set; }
+  public partial class Device
+  {
+    [JsonProperty("solution")]
+    public Solution[] Solution { get; set; }
 
-    [JsonProperty("Value")]
+    [JsonProperty("serial")]
+    public string Serial { get; set; }
+
+    [JsonProperty("value")]
+    public string Value { get; set; }
+  }
+
+  public partial class Solution
+  {
+    [JsonProperty("env")]
+    public string Env { get; set; }
+
+    [JsonProperty("value")]
+    [JsonConverter(typeof(ParseStringConverter))]
     public long Value { get; set; }
   }
 
-  public enum Description { Ac };
-
-  public partial class Welcome2
+  public partial class Msg
   {
-    public static Welcome2[] FromJson(string json) => JsonConvert.DeserializeObject<Welcome2[]>(json, CodeBeautify.Converter.Settings);
+    [JsonProperty("title")]
+    public string Title { get; set; }
+
+    [JsonProperty("sender")]
+    public string Sender { get; set; }
+
+    [JsonProperty("group")]
+    public string Group { get; set; }
+
+    [JsonProperty("date")]
+    public long Date { get; set; }
+  }
+
+  public partial class Welcome6
+  {
+    public static Welcome6 FromJson(string json) => JsonConvert.DeserializeObject<Welcome6>(json, CodeBeautify.Converter.Settings);
   }
 
   public static class Serialize
   {
-    public static string ToJson(this Welcome2[] self) => JsonConvert.SerializeObject(self, CodeBeautify.Converter.Settings);
+    public static string ToJson(this Welcome6 self) => JsonConvert.SerializeObject(self, CodeBeautify.Converter.Settings);
   }
 
   internal static class Converter
@@ -81,25 +97,25 @@ namespace CodeBeautify
       DateParseHandling = DateParseHandling.None,
       Converters =
             {
-                DescriptionConverter.Singleton,
                 new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
             },
     };
   }
 
-  internal class DescriptionConverter : JsonConverter
+  internal class ParseStringConverter : JsonConverter
   {
-    public override bool CanConvert(Type t) => t == typeof(Description) || t == typeof(Description?);
+    public override bool CanConvert(Type t) => t == typeof(long) || t == typeof(long?);
 
     public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
     {
       if (reader.TokenType == JsonToken.Null) return null;
       var value = serializer.Deserialize<string>(reader);
-      if (value == "ac")
+      long l;
+      if (Int64.TryParse(value, out l))
       {
-        return Description.Ac;
+        return l;
       }
-      throw new Exception("Cannot unmarshal type Description");
+      throw new Exception("Cannot unmarshal type long");
     }
 
     public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
@@ -109,15 +125,11 @@ namespace CodeBeautify
         serializer.Serialize(writer, null);
         return;
       }
-      var value = (Description)untypedValue;
-      if (value == Description.Ac)
-      {
-        serializer.Serialize(writer, "ac");
-        return;
-      }
-      throw new Exception("Cannot marshal type Description");
+      var value = (long)untypedValue;
+      serializer.Serialize(writer, value.ToString());
+      return;
     }
 
-    public static readonly DescriptionConverter Singleton = new DescriptionConverter();
+    public static readonly ParseStringConverter Singleton = new ParseStringConverter();
   }
 }

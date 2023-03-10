@@ -1,10 +1,13 @@
 ﻿using DataloggerDesktops.Models;
+using DataloggerDesktops.User;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace DataloggerDesktops.Repository
 {
@@ -136,7 +139,10 @@ namespace DataloggerDesktops.Repository
       return null;
     }
 
-
+    public Users LogIn(string username, string password)
+    {
+      return _dbContext.Users.FirstOrDefault(user => user.NameLogIn == username && user.Password == password);
+    }
 
 
 

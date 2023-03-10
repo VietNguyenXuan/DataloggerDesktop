@@ -39,6 +39,8 @@
       this.panel2 = new System.Windows.Forms.Panel();
       this.label9 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
+      this.panel5 = new System.Windows.Forms.Panel();
+      this.lbErr = new System.Windows.Forms.Label();
       this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
       this.panel1 = new System.Windows.Forms.Panel();
       this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +52,7 @@
       this.panel4.SuspendLayout();
       this.panel3.SuspendLayout();
       this.panel2.SuspendLayout();
+      this.panel5.SuspendLayout();
       this.tableLayoutPanel3.SuspendLayout();
       this.panel1.SuspendLayout();
       this.tableLayoutPanel4.SuspendLayout();
@@ -89,11 +92,14 @@
       this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 1);
       this.tableLayoutPanel2.Controls.Add(this.panel3, 1, 0);
       this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 0);
+      this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 2);
       this.tableLayoutPanel2.Location = new System.Drawing.Point(13, 93);
       this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-      this.tableLayoutPanel2.RowCount = 2;
+      this.tableLayoutPanel2.RowCount = 4;
       this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
       this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+      this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
       this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
       this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
       this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -107,20 +113,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.panel9.Controls.Add(this.txbPass);
-      this.panel9.Location = new System.Drawing.Point(184, 76);
+      this.panel9.Location = new System.Drawing.Point(184, 56);
       this.panel9.Name = "panel9";
-      this.panel9.Size = new System.Drawing.Size(298, 67);
+      this.panel9.Size = new System.Drawing.Size(298, 47);
       this.panel9.TabIndex = 4;
       // 
       // txbPass
       // 
-      this.txbPass.Location = new System.Drawing.Point(16, 20);
+      this.txbPass.Location = new System.Drawing.Point(16, 10);
       this.txbPass.Name = "txbPass";
       this.txbPass.Size = new System.Drawing.Size(268, 27);
       this.txbPass.TabIndex = 1;
       this.txbPass.Text = "33333333";
       this.txbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       this.txbPass.UseSystemPasswordChar = true;
+      this.txbPass.TextChanged += new System.EventHandler(this.txbPass_TextChanged);
       // 
       // panel4
       // 
@@ -128,9 +135,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.panel4.Controls.Add(this.label3);
-      this.panel4.Location = new System.Drawing.Point(3, 76);
+      this.panel4.Location = new System.Drawing.Point(3, 56);
       this.panel4.Name = "panel4";
-      this.panel4.Size = new System.Drawing.Size(175, 67);
+      this.panel4.Size = new System.Drawing.Size(175, 47);
       this.panel4.TabIndex = 3;
       // 
       // label3
@@ -141,7 +148,7 @@
       this.label3.AutoSize = true;
       this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
       this.label3.ForeColor = System.Drawing.Color.White;
-      this.label3.Location = new System.Drawing.Point(3, 20);
+      this.label3.Location = new System.Drawing.Point(3, 9);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(107, 28);
       this.label3.TabIndex = 0;
@@ -155,7 +162,7 @@
       this.panel3.Controls.Add(this.txbLogInName);
       this.panel3.Location = new System.Drawing.Point(184, 3);
       this.panel3.Name = "panel3";
-      this.panel3.Size = new System.Drawing.Size(298, 67);
+      this.panel3.Size = new System.Drawing.Size(298, 47);
       this.panel3.TabIndex = 3;
       // 
       // txbLogInName
@@ -164,7 +171,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.txbLogInName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.txbLogInName.Location = new System.Drawing.Point(16, 12);
+      this.txbLogInName.Location = new System.Drawing.Point(16, 7);
       this.txbLogInName.Name = "txbLogInName";
       this.txbLogInName.Size = new System.Drawing.Size(268, 34);
       this.txbLogInName.TabIndex = 1;
@@ -180,7 +187,7 @@
       this.panel2.Controls.Add(this.label2);
       this.panel2.Location = new System.Drawing.Point(3, 3);
       this.panel2.Name = "panel2";
-      this.panel2.Size = new System.Drawing.Size(175, 67);
+      this.panel2.Size = new System.Drawing.Size(175, 47);
       this.panel2.TabIndex = 2;
       // 
       // label9
@@ -191,7 +198,7 @@
       this.label9.AutoSize = true;
       this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
       this.label9.ForeColor = System.Drawing.Color.White;
-      this.label9.Location = new System.Drawing.Point(3, 12);
+      this.label9.Location = new System.Drawing.Point(3, 9);
       this.label9.Name = "label9";
       this.label9.Size = new System.Drawing.Size(157, 28);
       this.label9.TabIndex = 2;
@@ -209,6 +216,27 @@
       this.label2.Size = new System.Drawing.Size(144, 28);
       this.label2.TabIndex = 0;
       this.label2.Text = "Tên đăng nhập:";
+      // 
+      // panel5
+      // 
+      this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.panel5.Controls.Add(this.lbErr);
+      this.panel5.Location = new System.Drawing.Point(184, 109);
+      this.panel5.Name = "panel5";
+      this.panel5.Size = new System.Drawing.Size(298, 21);
+      this.panel5.TabIndex = 5;
+      // 
+      // lbErr
+      // 
+      this.lbErr.AutoSize = true;
+      this.lbErr.ForeColor = System.Drawing.Color.Red;
+      this.lbErr.Location = new System.Drawing.Point(16, 0);
+      this.lbErr.Name = "lbErr";
+      this.lbErr.Size = new System.Drawing.Size(27, 20);
+      this.lbErr.TabIndex = 0;
+      this.lbErr.Text = "err";
       // 
       // tableLayoutPanel3
       // 
@@ -294,6 +322,7 @@
       this.Text = "LogIn";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogIn_FormClosing);
       this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LogIn_FormClosed);
+      this.Load += new System.EventHandler(this.LogIn_Load);
       this.tableLayoutPanel1.ResumeLayout(false);
       this.tableLayoutPanel2.ResumeLayout(false);
       this.panel9.ResumeLayout(false);
@@ -304,6 +333,8 @@
       this.panel3.PerformLayout();
       this.panel2.ResumeLayout(false);
       this.panel2.PerformLayout();
+      this.panel5.ResumeLayout(false);
+      this.panel5.PerformLayout();
       this.tableLayoutPanel3.ResumeLayout(false);
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
@@ -330,5 +361,7 @@
     private System.Windows.Forms.Button btnLogIn;
     private System.Windows.Forms.TextBox txbLogInName;
     private System.Windows.Forms.TextBox txbPass;
+    private System.Windows.Forms.Panel panel5;
+    private System.Windows.Forms.Label lbErr;
   }
 }

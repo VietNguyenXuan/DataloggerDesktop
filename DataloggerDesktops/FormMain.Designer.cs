@@ -346,7 +346,7 @@
       // 
       // tmrUpdateMQTT
       // 
-      this.tmrUpdateMQTT.Interval = 5000;
+      this.tmrUpdateMQTT.Interval = 1000;
       this.tmrUpdateMQTT.Tick += new System.EventHandler(this.tmrUpdateMQTT_Tick);
       // 
       // FormMain
@@ -358,6 +358,7 @@
       this.Name = "FormMain";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Form1";
+      this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
       this.Load += new System.EventHandler(this.FormMain_Load);
       this.panelMain.ResumeLayout(false);
       this.panelBody.ResumeLayout(false);

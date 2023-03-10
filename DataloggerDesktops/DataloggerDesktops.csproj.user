@@ -61,7 +61,7 @@
     <Compile Update="User\UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="User\UserForm.cs">
+    <Compile Update="User\UserInfomation.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
