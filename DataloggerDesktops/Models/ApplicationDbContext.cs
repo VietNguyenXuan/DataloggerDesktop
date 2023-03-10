@@ -20,5 +20,8 @@ namespace DataloggerDesktops.Models
     public DbSet<Line>? Lines { get; set; }
     public DbSet<Device>? Devices { get; set; }
 
+    public DbSet<Users>? Users { get; set; }
+    public DbSet<UserHistorical> UserHistoricals { get; set; }
+
   }
 }

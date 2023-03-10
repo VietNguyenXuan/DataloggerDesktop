@@ -22,6 +22,25 @@ namespace DataloggerDesktops.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    NameLogIn = table.Column<string>(type: "TEXT", nullable: true),
+                    Fullname = table.Column<string>(type: "TEXT", nullable: true),
+                    BirthDay = table.Column<string>(type: "TEXT", nullable: true),
+                    Email = table.Column<string>(type: "TEXT", nullable: true),
+                    Mobile = table.Column<string>(type: "TEXT", nullable: true),
+                    DateCreate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Password = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Lines",
                 columns: table => new
                 {
@@ -80,6 +99,9 @@ namespace DataloggerDesktops.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Devices");
+
+            migrationBuilder.DropTable(
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Lines");

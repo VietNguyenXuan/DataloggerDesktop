@@ -52,8 +52,6 @@ namespace DataloggerDesktops.UI
     {
       if (e.ColumnIndex == 0)
       {
-        
-
         switch (status)
         {
           case 1:

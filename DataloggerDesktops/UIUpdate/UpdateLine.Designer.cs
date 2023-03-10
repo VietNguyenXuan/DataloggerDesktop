@@ -1,6 +1,6 @@
 ﻿namespace DataloggerDesktops.UI
 {
-  partial class AddDeviceForm
+  partial class UpdateLine
   {
     /// <summary>
     /// Required designer variable.
@@ -31,19 +31,19 @@
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
       this.panel7 = new System.Windows.Forms.Panel();
-      this.txbCodeDevice = new System.Windows.Forms.TextBox();
+      this.txbUpdateLine = new System.Windows.Forms.TextBox();
       this.panel6 = new System.Windows.Forms.Panel();
       this.label3 = new System.Windows.Forms.Label();
       this.panel4 = new System.Windows.Forms.Panel();
       this.label1 = new System.Windows.Forms.Label();
       this.panel2 = new System.Windows.Forms.Panel();
-      this.txbNewDevice = new System.Windows.Forms.TextBox();
+      this.txbNameLine = new System.Windows.Forms.TextBox();
       this.panel3 = new System.Windows.Forms.Panel();
       this.label2 = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
-      this.cbAddDevice = new System.Windows.Forms.ComboBox();
+      this.cbUpdateIdFactoryLine = new System.Windows.Forms.ComboBox();
       this.panel5 = new System.Windows.Forms.Panel();
-      this.btnAddDevice = new System.Windows.Forms.Button();
+      this.btnUpdateLine = new System.Windows.Forms.Button();
       this.tableLayoutPanel1.SuspendLayout();
       this.tableLayoutPanel2.SuspendLayout();
       this.panel7.SuspendLayout();
@@ -57,6 +57,7 @@
       // 
       // tableLayoutPanel1
       // 
+      this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(96)))));
       this.tableLayoutPanel1.ColumnCount = 3;
       this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
       this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -68,11 +69,11 @@
       this.tableLayoutPanel1.Name = "tableLayoutPanel1";
       this.tableLayoutPanel1.RowCount = 4;
       this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.75748F));
-      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.24253F));
+      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.72112F));
+      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.27888F));
       this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-      this.tableLayoutPanel1.Size = new System.Drawing.Size(473, 361);
-      this.tableLayoutPanel1.TabIndex = 2;
+      this.tableLayoutPanel1.Size = new System.Drawing.Size(508, 294);
+      this.tableLayoutPanel1.TabIndex = 5;
       // 
       // tableLayoutPanel2
       // 
@@ -80,8 +81,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.tableLayoutPanel2.ColumnCount = 2;
-      this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.58823F));
-      this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.41177F));
+      this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.33932F));
+      this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.66068F));
       this.tableLayoutPanel2.Controls.Add(this.panel7, 1, 1);
       this.tableLayoutPanel2.Controls.Add(this.panel6, 0, 1);
       this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 0);
@@ -94,7 +95,8 @@
       this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
       this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
       this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.tableLayoutPanel2.Size = new System.Drawing.Size(427, 227);
+      this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+      this.tableLayoutPanel2.Size = new System.Drawing.Size(462, 171);
       this.tableLayoutPanel2.TabIndex = 1;
       // 
       // panel7
@@ -102,19 +104,19 @@
       this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel7.Controls.Add(this.txbCodeDevice);
-      this.panel7.Location = new System.Drawing.Point(150, 78);
+      this.panel7.Controls.Add(this.txbUpdateLine);
+      this.panel7.Location = new System.Drawing.Point(143, 60);
       this.panel7.Name = "panel7";
-      this.panel7.Size = new System.Drawing.Size(274, 69);
-      this.panel7.TabIndex = 3;
+      this.panel7.Size = new System.Drawing.Size(316, 51);
+      this.panel7.TabIndex = 5;
       // 
-      // txbCodeDevice
+      // txbUpdateLine
       // 
-      this.txbCodeDevice.Location = new System.Drawing.Point(6, 18);
-      this.txbCodeDevice.Multiline = true;
-      this.txbCodeDevice.Name = "txbCodeDevice";
-      this.txbCodeDevice.Size = new System.Drawing.Size(261, 34);
-      this.txbCodeDevice.TabIndex = 0;
+      this.txbUpdateLine.Location = new System.Drawing.Point(6, 8);
+      this.txbUpdateLine.Multiline = true;
+      this.txbUpdateLine.Name = "txbUpdateLine";
+      this.txbUpdateLine.Size = new System.Drawing.Size(296, 34);
+      this.txbUpdateLine.TabIndex = 0;
       // 
       // panel6
       // 
@@ -122,20 +124,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.panel6.Controls.Add(this.label3);
-      this.panel6.Location = new System.Drawing.Point(3, 78);
+      this.panel6.Location = new System.Drawing.Point(3, 60);
       this.panel6.Name = "panel6";
-      this.panel6.Size = new System.Drawing.Size(141, 69);
+      this.panel6.Size = new System.Drawing.Size(134, 51);
       this.panel6.TabIndex = 4;
       // 
       // label3
       // 
       this.label3.AutoSize = true;
       this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.label3.Location = new System.Drawing.Point(9, 19);
+      this.label3.ForeColor = System.Drawing.Color.White;
+      this.label3.Location = new System.Drawing.Point(4, 11);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(122, 28);
+      this.label3.Size = new System.Drawing.Size(85, 28);
       this.label3.TabIndex = 0;
-      this.label3.Text = "Mã thiết bị:";
+      this.label3.Text = "Update:";
       // 
       // panel4
       // 
@@ -145,37 +148,39 @@
       this.panel4.Controls.Add(this.label1);
       this.panel4.Location = new System.Drawing.Point(3, 3);
       this.panel4.Name = "panel4";
-      this.panel4.Size = new System.Drawing.Size(141, 69);
+      this.panel4.Size = new System.Drawing.Size(134, 51);
       this.panel4.TabIndex = 4;
       // 
       // label1
       // 
       this.label1.AutoSize = true;
       this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.label1.Location = new System.Drawing.Point(9, 19);
+      this.label1.ForeColor = System.Drawing.Color.White;
+      this.label1.Location = new System.Drawing.Point(3, 10);
       this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(125, 28);
+      this.label1.Size = new System.Drawing.Size(91, 28);
       this.label1.TabIndex = 0;
-      this.label1.Text = "Tên thiết bị:";
+      this.label1.Text = "Tên line:";
       // 
       // panel2
       // 
       this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel2.Controls.Add(this.txbNewDevice);
-      this.panel2.Location = new System.Drawing.Point(150, 3);
+      this.panel2.Controls.Add(this.txbNameLine);
+      this.panel2.Location = new System.Drawing.Point(143, 3);
       this.panel2.Name = "panel2";
-      this.panel2.Size = new System.Drawing.Size(274, 69);
+      this.panel2.Size = new System.Drawing.Size(316, 51);
       this.panel2.TabIndex = 2;
       // 
-      // txbNewDevice
+      // txbNameLine
       // 
-      this.txbNewDevice.Location = new System.Drawing.Point(6, 18);
-      this.txbNewDevice.Multiline = true;
-      this.txbNewDevice.Name = "txbNewDevice";
-      this.txbNewDevice.Size = new System.Drawing.Size(261, 34);
-      this.txbNewDevice.TabIndex = 0;
+      this.txbNameLine.Enabled = false;
+      this.txbNameLine.Location = new System.Drawing.Point(6, 8);
+      this.txbNameLine.Multiline = true;
+      this.txbNameLine.Name = "txbNameLine";
+      this.txbNameLine.Size = new System.Drawing.Size(296, 34);
+      this.txbNameLine.TabIndex = 1;
       // 
       // panel3
       // 
@@ -183,71 +188,73 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.panel3.Controls.Add(this.label2);
-      this.panel3.Location = new System.Drawing.Point(3, 153);
+      this.panel3.Location = new System.Drawing.Point(3, 117);
       this.panel3.Name = "panel3";
-      this.panel3.Size = new System.Drawing.Size(141, 71);
+      this.panel3.Size = new System.Drawing.Size(134, 51);
       this.panel3.TabIndex = 3;
       // 
       // label2
       // 
       this.label2.AutoSize = true;
       this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.label2.Location = new System.Drawing.Point(9, 22);
+      this.label2.ForeColor = System.Drawing.Color.White;
+      this.label2.Location = new System.Drawing.Point(3, 11);
       this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(91, 28);
+      this.label2.Size = new System.Drawing.Size(126, 28);
       this.label2.TabIndex = 0;
-      this.label2.Text = "Tên line:";
+      this.label2.Text = "Tên Factory:";
       // 
       // panel1
       // 
       this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel1.Controls.Add(this.cbAddDevice);
-      this.panel1.Location = new System.Drawing.Point(150, 153);
+      this.panel1.Controls.Add(this.cbUpdateIdFactoryLine);
+      this.panel1.Location = new System.Drawing.Point(143, 117);
       this.panel1.Name = "panel1";
-      this.panel1.Size = new System.Drawing.Size(274, 71);
+      this.panel1.Size = new System.Drawing.Size(316, 51);
       this.panel1.TabIndex = 1;
       // 
-      // cbAddDevice
+      // cbUpdateIdFactoryLine
       // 
-      this.cbAddDevice.FormattingEnabled = true;
-      this.cbAddDevice.Location = new System.Drawing.Point(6, 22);
-      this.cbAddDevice.Name = "cbAddDevice";
-      this.cbAddDevice.Size = new System.Drawing.Size(261, 28);
-      this.cbAddDevice.TabIndex = 0;
+      this.cbUpdateIdFactoryLine.FormattingEnabled = true;
+      this.cbUpdateIdFactoryLine.Location = new System.Drawing.Point(6, 12);
+      this.cbUpdateIdFactoryLine.Name = "cbUpdateIdFactoryLine";
+      this.cbUpdateIdFactoryLine.Size = new System.Drawing.Size(296, 28);
+      this.cbUpdateIdFactoryLine.TabIndex = 0;
       // 
       // panel5
       // 
       this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel5.Controls.Add(this.btnAddDevice);
-      this.panel5.Location = new System.Drawing.Point(23, 256);
+      this.panel5.Controls.Add(this.btnUpdateLine);
+      this.panel5.Location = new System.Drawing.Point(23, 200);
       this.panel5.Name = "panel5";
-      this.panel5.Size = new System.Drawing.Size(427, 81);
+      this.panel5.Size = new System.Drawing.Size(462, 70);
       this.panel5.TabIndex = 2;
       // 
-      // btnAddDevice
+      // btnUpdateLine
       // 
-      this.btnAddDevice.Location = new System.Drawing.Point(12, 23);
-      this.btnAddDevice.Name = "btnAddDevice";
-      this.btnAddDevice.Size = new System.Drawing.Size(404, 40);
-      this.btnAddDevice.TabIndex = 0;
-      this.btnAddDevice.Text = "Add";
-      this.btnAddDevice.UseVisualStyleBackColor = true;
-      this.btnAddDevice.Click += new System.EventHandler(this.btnAddDevice_Click);
+      this.btnUpdateLine.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.btnUpdateLine.Location = new System.Drawing.Point(6, 12);
+      this.btnUpdateLine.Name = "btnUpdateLine";
+      this.btnUpdateLine.Size = new System.Drawing.Size(439, 46);
+      this.btnUpdateLine.TabIndex = 0;
+      this.btnUpdateLine.Text = "Update";
+      this.btnUpdateLine.UseVisualStyleBackColor = true;
+      this.btnUpdateLine.Click += new System.EventHandler(this.btnUpdateLine_Click);
       // 
-      // AddDeviceForm
+      // UpdateLine
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(473, 361);
+      this.ClientSize = new System.Drawing.Size(508, 294);
       this.Controls.Add(this.tableLayoutPanel1);
-      this.Name = "AddDeviceForm";
+      this.Name = "UpdateLine";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "Thêm thiết bị mới";
-      this.Load += new System.EventHandler(this.AddDeviceForm_Load);
+      this.Text = "UpdateLine";
+      this.Load += new System.EventHandler(this.UpdateLine_Load);
       this.tableLayoutPanel1.ResumeLayout(false);
       this.tableLayoutPanel2.ResumeLayout(false);
       this.panel7.ResumeLayout(false);
@@ -269,20 +276,20 @@
     #endregion
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-    private System.Windows.Forms.ComboBox cbAddDevice;
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.TextBox txbNewDevice;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-    private System.Windows.Forms.Panel panel4;
-    private System.Windows.Forms.Panel panel1;
-    private System.Windows.Forms.Panel panel2;
-    private System.Windows.Forms.Panel panel3;
-    private System.Windows.Forms.Panel panel5;
-    private System.Windows.Forms.Button btnAddDevice;
     private System.Windows.Forms.Panel panel7;
-    private System.Windows.Forms.TextBox txbCodeDevice;
+    private System.Windows.Forms.TextBox txbUpdateLine;
     private System.Windows.Forms.Panel panel6;
     private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Panel panel4;
+    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Panel panel2;
+    private System.Windows.Forms.TextBox txbNameLine;
+    private System.Windows.Forms.Panel panel3;
+    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Panel panel1;
+    private System.Windows.Forms.ComboBox cbUpdateIdFactoryLine;
+    private System.Windows.Forms.Panel panel5;
+    private System.Windows.Forms.Button btnUpdateLine;
   }
 }

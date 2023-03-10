@@ -14,6 +14,7 @@ using MQTTChanel;
 using CodeBeautify;
 using System.Runtime.Intrinsics.X86;
 using DataloggerDesktops.Models;
+using DataloggerDesktops.User;
 
 namespace DataloggerDesktops
 {
@@ -23,6 +24,9 @@ namespace DataloggerDesktops
     {
       InitializeComponent();
     }
+    
+
+
     MQTTClass mqttClass = new MQTTClass();
 
    
@@ -83,15 +87,19 @@ namespace DataloggerDesktops
 
       // Khi chạy mặc định vào form dashboard
       //btnDashBoard.PerformClick();
+
+      //btnSetting.PerformClick();
+      //btnDevice.PerformClick();
+
       btnSetting.PerformClick();
-      btnDevice.PerformClick();
+      btnUser.PerformClick();
 
       // load image
       //pictureBox_tab.Image = new Bitmap(Application.StartupPath + "\\Resources\\collapse_icon.png");
       //pictureBox_tab.SizeMode = PictureBoxSizeMode.StretchImage;
 
 
-      
+
     }
 
     private void btnDashBoard_Click(object sender, EventArgs e)
@@ -324,6 +332,12 @@ namespace DataloggerDesktops
       ////{
       ////  MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
       ////}
+    }
+
+    private void picUser_Click(object sender, EventArgs e)
+    {
+      UserForm frmUser = new UserForm();
+      frmUser.ShowDialog();
     }
   }
 }

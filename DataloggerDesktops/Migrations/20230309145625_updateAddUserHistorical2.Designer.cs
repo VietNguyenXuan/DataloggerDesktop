@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataloggerDesktops.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230308124358_inital")]
-    partial class inital
+    [Migration("20230309145625_updateAddUserHistorical2")]
+    partial class updateAddUserHistorical2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -83,6 +83,55 @@ namespace DataloggerDesktops.Migrations
                     b.HasIndex("FactoryId");
 
                     b.ToTable("Lines");
+                });
+
+            modelBuilder.Entity("DataloggerDesktops.Models.UserHistorical", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateLogIn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NameLogIn")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserHistoricals");
+                });
+
+            modelBuilder.Entity("DataloggerDesktops.Models.Users", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("BirthDay")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DateCreate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Fullname")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Mobile")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NameLogIn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("DataloggerDesktops.Models.Device", b =>

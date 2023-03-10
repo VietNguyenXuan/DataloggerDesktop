@@ -1,3 +1,4 @@
+using DataloggerDesktops.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,8 @@ namespace DataloggerDesktops
       Application.SetHighDpiMode(HighDpiMode.SystemAware);
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new FormMain());
+      Application.Run(new LogIn());
+      //Application.Run(new FormMain());
     }
   }
 }

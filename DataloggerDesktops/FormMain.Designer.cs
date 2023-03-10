@@ -45,7 +45,7 @@
       this.panelHeading = new System.Windows.Forms.Panel();
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
-      this.pictureBox2 = new System.Windows.Forms.PictureBox();
+      this.picUser = new System.Windows.Forms.PictureBox();
       this.pictureBox3 = new System.Windows.Forms.PictureBox();
       this.pictureBox4 = new System.Windows.Forms.PictureBox();
       this.panel1 = new System.Windows.Forms.Panel();
@@ -60,7 +60,7 @@
       this.panelHeading.SuspendLayout();
       this.tableLayoutPanel1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
       this.panel1.SuspendLayout();
@@ -245,7 +245,7 @@
       this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
       this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
       this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
-      this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 5, 0);
+      this.tableLayoutPanel1.Controls.Add(this.picUser, 5, 0);
       this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 4, 0);
       this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
       this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
@@ -267,15 +267,16 @@
       this.pictureBox1.TabIndex = 0;
       this.pictureBox1.TabStop = false;
       // 
-      // pictureBox2
+      // picUser
       // 
-      this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-      this.pictureBox2.Location = new System.Drawing.Point(1223, 3);
-      this.pictureBox2.Name = "pictureBox2";
-      this.pictureBox2.Size = new System.Drawing.Size(46, 44);
-      this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox2.TabIndex = 1;
-      this.pictureBox2.TabStop = false;
+      this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
+      this.picUser.Location = new System.Drawing.Point(1223, 3);
+      this.picUser.Name = "picUser";
+      this.picUser.Size = new System.Drawing.Size(46, 44);
+      this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.picUser.TabIndex = 1;
+      this.picUser.TabStop = false;
+      this.picUser.Click += new System.EventHandler(this.picUser_Click);
       // 
       // pictureBox3
       // 
@@ -366,7 +367,7 @@
       this.panelHeading.ResumeLayout(false);
       this.tableLayoutPanel1.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
       this.panel1.ResumeLayout(false);
@@ -396,7 +397,7 @@
     private System.Windows.Forms.DataGridView dataGridView1;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     private System.Windows.Forms.PictureBox pictureBox1;
-    private System.Windows.Forms.PictureBox pictureBox2;
+    private System.Windows.Forms.PictureBox picUser;
     private System.Windows.Forms.PictureBox pictureBox3;
     private System.Windows.Forms.PictureBox pictureBox4;
     private System.Windows.Forms.Panel panel1;

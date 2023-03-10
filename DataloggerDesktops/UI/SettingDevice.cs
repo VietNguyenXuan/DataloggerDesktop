@@ -11,9 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
-
 namespace DataloggerDesktops
 {
   public partial class SettingDevice : Form
@@ -30,29 +27,25 @@ namespace DataloggerDesktops
       tmrUpdateData.Start();
     }
 
-    
-    private void btnAddFactory_Click(object sender, EventArgs e)
+    private void lbAddFactory_Click(object sender, EventArgs e)
     {
       AddFactoryForm frm = new AddFactoryForm();
       frm.ShowDialog();
     }
-
-
-    public int viewSettingDevice;
-    private void btnAddLine_Click(object sender, EventArgs e)
+    private void lbAddLine_Click(object sender, EventArgs e)
     {
       AddLineForm frm = new AddLineForm();
       frm.ShowDialog();
     }
-
-    private void btnAdđevice_Click(object sender, EventArgs e)
+    private void lbAddDevice_Click(object sender, EventArgs e)
     {
       AddDeviceForm frm = new AddDeviceForm();
       frm.ShowDialog();
     }
 
 
-
+    //public int viewSettingDevice;
+   
     public void lbSeeMoreFatory_Click(object sender, EventArgs e)
     {
       ViewSettingDeviceForm frm = new ViewSettingDeviceForm("1");
@@ -83,7 +76,12 @@ namespace DataloggerDesktops
 
       //MessageBox.Show("A");
     }
-
+    public void LoadImage(string filename)
+    {
+      //load image
+      picDisplay.Image = new Bitmap(Application.StartupPath + $"\\Resources\\{filename}.png");
+      picDisplay.SizeMode = PictureBoxSizeMode.StretchImage;
+    }
     public void UpdateData()
     {
       RepositoryFactory _managerFactory = new RepositoryFactory();
@@ -104,12 +102,16 @@ namespace DataloggerDesktops
         {
           case 0:
             dgvSettingDevice.DataSource = factory;
+            LoadImage("factory");
+
             break;
           case 1:
             dgvSettingDevice.DataSource = line;
+            LoadImage("line");
             break;
           case 2:
             dgvSettingDevice.DataSource = device;
+            LoadImage("device");
             break;
         }
       }
@@ -119,5 +121,7 @@ namespace DataloggerDesktops
       }
 
     }
+
+    
   }
 }
