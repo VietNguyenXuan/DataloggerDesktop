@@ -226,3 +226,4 @@ C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy\DataloggerDesktop\D
 C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy\DataloggerDesktop\DataloggerDesktops\obj\Debug\net5.0-windows8.0\DataloggerDesktops.pdb
 C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy\DataloggerDesktop\DataloggerDesktops\obj\Debug\net5.0-windows8.0\DataloggerDesktops.genruntimeconfig.cache
 C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy\DataloggerDesktop\DataloggerDesktops\obj\Debug\net5.0-windows8.0\ref\DataloggerDesktops.dll
+C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy\DataloggerDesktop\DataloggerDesktops\obj\Debug\net5.0-windows8.0\DataloggerDesktops.User.Profile.resources

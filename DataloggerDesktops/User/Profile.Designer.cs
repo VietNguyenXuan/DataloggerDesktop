@@ -41,15 +41,11 @@
       this.label24 = new System.Windows.Forms.Label();
       this.label25 = new System.Windows.Forms.Label();
       this.panel15 = new System.Windows.Forms.Panel();
-      this.txbRepass = new System.Windows.Forms.TextBox();
       this.panel14 = new System.Windows.Forms.Panel();
-      this.txbPass = new System.Windows.Forms.TextBox();
       this.panel13 = new System.Windows.Forms.Panel();
-      this.label20 = new System.Windows.Forms.Label();
       this.label21 = new System.Windows.Forms.Label();
       this.label22 = new System.Windows.Forms.Label();
       this.panel12 = new System.Windows.Forms.Panel();
-      this.label16 = new System.Windows.Forms.Label();
       this.label18 = new System.Windows.Forms.Label();
       this.label19 = new System.Windows.Forms.Label();
       this.panel11 = new System.Windows.Forms.Panel();
@@ -89,8 +85,6 @@
       this.tableLayoutPanel2.SuspendLayout();
       this.panel17.SuspendLayout();
       this.panel16.SuspendLayout();
-      this.panel15.SuspendLayout();
-      this.panel14.SuspendLayout();
       this.panel13.SuspendLayout();
       this.panel12.SuspendLayout();
       this.panel11.SuspendLayout();
@@ -311,68 +305,32 @@
       this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel15.Controls.Add(this.txbRepass);
       this.panel15.Location = new System.Drawing.Point(198, 437);
       this.panel15.Name = "panel15";
       this.panel15.Size = new System.Drawing.Size(311, 53);
       this.panel15.TabIndex = 8;
-      // 
-      // txbRepass
-      // 
-      this.txbRepass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.txbRepass.Location = new System.Drawing.Point(15, 10);
-      this.txbRepass.Name = "txbRepass";
-      this.txbRepass.Size = new System.Drawing.Size(282, 27);
-      this.txbRepass.TabIndex = 3;
-      this.txbRepass.UseSystemPasswordChar = true;
       // 
       // panel14
       // 
       this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel14.Controls.Add(this.txbPass);
       this.panel14.Location = new System.Drawing.Point(198, 351);
       this.panel14.Name = "panel14";
       this.panel14.Size = new System.Drawing.Size(311, 50);
       this.panel14.TabIndex = 7;
-      // 
-      // txbPass
-      // 
-      this.txbPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.txbPass.Location = new System.Drawing.Point(15, 9);
-      this.txbPass.Name = "txbPass";
-      this.txbPass.Size = new System.Drawing.Size(282, 27);
-      this.txbPass.TabIndex = 3;
-      this.txbPass.UseSystemPasswordChar = true;
       // 
       // panel13
       // 
       this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel13.Controls.Add(this.label20);
       this.panel13.Controls.Add(this.label21);
       this.panel13.Controls.Add(this.label22);
       this.panel13.Location = new System.Drawing.Point(3, 437);
       this.panel13.Name = "panel13";
       this.panel13.Size = new System.Drawing.Size(189, 53);
       this.panel13.TabIndex = 9;
-      // 
-      // label20
-      // 
-      this.label20.AutoSize = true;
-      this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.label20.ForeColor = System.Drawing.Color.White;
-      this.label20.Location = new System.Drawing.Point(4, 9);
-      this.label20.Name = "label20";
-      this.label20.Size = new System.Drawing.Size(175, 28);
-      this.label20.TabIndex = 3;
-      this.label20.Text = "Nhập lại mật khẩu:";
       // 
       // label21
       // 
@@ -406,24 +364,12 @@
       this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel12.Controls.Add(this.label16);
       this.panel12.Controls.Add(this.label18);
       this.panel12.Controls.Add(this.label19);
       this.panel12.Location = new System.Drawing.Point(3, 351);
       this.panel12.Name = "panel12";
       this.panel12.Size = new System.Drawing.Size(189, 50);
       this.panel12.TabIndex = 8;
-      // 
-      // label16
-      // 
-      this.label16.AutoSize = true;
-      this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.label16.ForeColor = System.Drawing.Color.White;
-      this.label16.Location = new System.Drawing.Point(4, 9);
-      this.label16.Name = "label16";
-      this.label16.Size = new System.Drawing.Size(98, 28);
-      this.label16.TabIndex = 3;
-      this.label16.Text = "Mật khẩu:";
       // 
       // label18
       // 
@@ -580,7 +526,7 @@
       this.txbLogInName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.txbLogInName.Location = new System.Drawing.Point(15, 9);
+      this.txbLogInName.Location = new System.Drawing.Point(15, 13);
       this.txbLogInName.Name = "txbLogInName";
       this.txbLogInName.Size = new System.Drawing.Size(282, 27);
       this.txbLogInName.TabIndex = 3;
@@ -837,10 +783,6 @@
       this.panel17.PerformLayout();
       this.panel16.ResumeLayout(false);
       this.panel16.PerformLayout();
-      this.panel15.ResumeLayout(false);
-      this.panel15.PerformLayout();
-      this.panel14.ResumeLayout(false);
-      this.panel14.PerformLayout();
       this.panel13.ResumeLayout(false);
       this.panel13.PerformLayout();
       this.panel12.ResumeLayout(false);
@@ -883,15 +825,11 @@
     private System.Windows.Forms.Label label24;
     private System.Windows.Forms.Label label25;
     private System.Windows.Forms.Panel panel15;
-    private System.Windows.Forms.TextBox txbRepass;
     private System.Windows.Forms.Panel panel14;
-    private System.Windows.Forms.TextBox txbPass;
     private System.Windows.Forms.Panel panel13;
-    private System.Windows.Forms.Label label20;
     private System.Windows.Forms.Label label21;
     private System.Windows.Forms.Label label22;
     private System.Windows.Forms.Panel panel12;
-    private System.Windows.Forms.Label label16;
     private System.Windows.Forms.Label label18;
     private System.Windows.Forms.Label label19;
     private System.Windows.Forms.Panel panel11;
