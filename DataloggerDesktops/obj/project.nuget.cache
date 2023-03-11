@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qWdbFXnLaaCd4gUQSQe1+2fkGCAy4Z1nj4PPYgQSa4TfLW02fbpvov4LVN6TdgpJJ3hLwezYbl6YKtSvT/KSvg==",
+  "dgSpecHash": "PNU1QowmaN7M6Qsm2KZ8gN8EMxz1inMb18aH+UCjDIMDRGnAjrI2CQNDc3av9DGvelwKbFzCWK91Gq7qrLP6EQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\19146\\OneDrive\\Máy tính\\DataloggerDesktops - Copy - Copy (2)\\DataloggerDesktop\\DataloggerDesktops\\DataloggerDesktops.csproj",
   "expectedPackageFiles": [
@@ -42,7 +42,8 @@
     "C:\\Users\\19146\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\19146\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\19146\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\19146\\.nuget\\packages\\winformanimation-net5\\2.0.0\\winformanimation-net5.2.0.0.nupkg.sha512"
+    "C:\\Users\\19146\\.nuget\\packages\\winformanimation-net5\\2.0.0\\winformanimation-net5.2.0.0.nupkg.sha512",
+    "C:\\Users\\19146\\.nuget\\packages\\winforms.datavisualization\\1.7.0\\winforms.datavisualization.1.7.0.nupkg.sha512"
   ],
   "logs": [
     {

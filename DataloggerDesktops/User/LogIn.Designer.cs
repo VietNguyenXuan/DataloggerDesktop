@@ -124,7 +124,7 @@
       this.txbPass.Name = "txbPass";
       this.txbPass.Size = new System.Drawing.Size(268, 27);
       this.txbPass.TabIndex = 1;
-      this.txbPass.Text = "33333333";
+      this.txbPass.Text = "11111111";
       this.txbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       this.txbPass.UseSystemPasswordChar = true;
       this.txbPass.TextChanged += new System.EventHandler(this.txbPass_TextChanged);
@@ -175,7 +175,7 @@
       this.txbLogInName.Name = "txbLogInName";
       this.txbLogInName.Size = new System.Drawing.Size(268, 34);
       this.txbLogInName.TabIndex = 1;
-      this.txbLogInName.Text = "admin2";
+      this.txbLogInName.Text = "admin";
       this.txbLogInName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
       // panel2

@@ -81,3 +81,5 @@ C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy - Copy (2)\Datalogg
 C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy - Copy (2)\DataloggerDesktop\DataloggerDesktops\obj\Debug\net7.0-windows\DataloggerDesktops.pdb
 C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy - Copy (2)\DataloggerDesktop\DataloggerDesktops\obj\Debug\net7.0-windows\DataloggerDesktops.genruntimeconfig.cache
 C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy - Copy (2)\DataloggerDesktop\DataloggerDesktops\obj\Debug\net7.0-windows\ref\DataloggerDesktops.dll
+C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy - Copy (2)\DataloggerDesktop\DataloggerDesktops\bin\Debug\net7.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\19146\OneDrive\Máy tính\DataloggerDesktops - Copy - Copy (2)\DataloggerDesktop\DataloggerDesktops\bin\Debug\net7.0-windows\WinForms.DataVisualization.dll

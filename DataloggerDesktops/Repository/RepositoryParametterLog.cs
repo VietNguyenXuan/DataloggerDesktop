@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace DataloggerDesktops.Repository
 {
@@ -43,21 +44,10 @@ namespace DataloggerDesktops.Repository
       return null;
     }
 
-    public float? GetValueByIdParametter(int id)
+    public List<ParametterLog>? GetValuesByIdParametter(int idPara)
     {
       _dbContext.Database.EnsureCreated();
-      var value = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == id).OrderByDescending(s=>s.Id).Select(s => s.Value).FirstOrDefault();
-      if (value != null)
-      {
-        return value;
-      }
-      return null;
-    }
-
-    public List<ParametterLog> GetValuesByIdParametter(int idPara)
-    {
-      _dbContext.Database.EnsureCreated();
-      var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).OrderByDescending(s => s.Id).Take(10).ToList();
+      var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).OrderByDescending(s => s.Id).ToList();
       if (values != null)
       {
         return values;
@@ -66,18 +56,16 @@ namespace DataloggerDesktops.Repository
     }
 
 
-
-
-    //public List<ParametterLog> GetValuesByIdParametter(int idPara)
-    //{
-    //  _dbContext.Database.EnsureCreated();
-    //  var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).OrderByDescending(s => s.Id).Select(s => s.Value).Take(10).ToList();
-    //  if (values != null)
-    //  {
-    //    return values;
-    //  }
-    //  return null;
-    //}
+    public ParametterLog? iChart(int idPara, int hour)
+    {
+      _dbContext.Database.EnsureCreated();
+      var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).Where(x => x.DateCreate.Hour == hour).OrderByDescending(s => s.Id).FirstOrDefault();
+      if (values != null)
+      {
+        return values;
+      }
+      return null;
+    }
 
   }
 }

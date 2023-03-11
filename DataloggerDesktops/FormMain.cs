@@ -62,7 +62,7 @@ namespace DataloggerDesktops
       //var _diaRe = _login.ShowDialog();
       //if (_diaRe == DialogResult.OK)
       //{
-      //  donothing
+      //  //donothing
       //}
       //else
       //{
