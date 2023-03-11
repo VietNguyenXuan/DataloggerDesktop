@@ -15,6 +15,7 @@ using CodeBeautify;
 using System.Runtime.Intrinsics.X86;
 using DataloggerDesktops.Models;
 using DataloggerDesktops.User;
+using DataloggerDesktops.Repository;
 
 namespace DataloggerDesktops
 {
@@ -25,14 +26,10 @@ namespace DataloggerDesktops
       InitializeComponent();
     }
 
+    MQTTClass _mqttClass = new MQTTClass();
 
 
-    MQTTClass mqttClass = new MQTTClass();
-
-
-
-
-    // funstion off boading buttons
+    // Funstion off boading buttons
     private void OffButtonBord(Button button)
     {
       button.TabStop = false;
@@ -41,7 +38,7 @@ namespace DataloggerDesktops
       button.TextAlign = ContentAlignment.MiddleLeft;
     }
 
-    // transfer forms
+    // Transfer forms
     private Form currentFormChild;
     private void openFormChild(Form formChild)
     {
@@ -65,7 +62,7 @@ namespace DataloggerDesktops
       //var _diaRe = _login.ShowDialog();
       //if (_diaRe == DialogResult.OK)
       //{
-      //  // donothing
+      //  donothing
       //}
       //else
       //{
@@ -73,16 +70,15 @@ namespace DataloggerDesktops
       //}
 
 
+
       // Tắt đường viền nút nhấn
       OffButtonBord(btnDashBoard);
       OffButtonBord(btnHistorical);
       OffButtonBord(btnStatistics);
       OffButtonBord(btnSetting);
-
       OffButtonBord(btnParameter);
       OffButtonBord(btnDevice);
       OffButtonBord(btnUser);
-
       OffButtonBord(btnTab);
 
       btnParameter.Visible = false;
@@ -91,8 +87,9 @@ namespace DataloggerDesktops
 
       btnTab.BackColor = Color.FromArgb(8, 46, 112);
 
+
       // Khi chạy mặc định vào form dashboard
-      //btnDashBoard.PerformClick();
+      btnDashBoard.PerformClick();
 
       //btnSetting.PerformClick();
       //btnDevice.PerformClick();
@@ -104,6 +101,7 @@ namespace DataloggerDesktops
       //pictureBox_tab.Image = new Bitmap(Application.StartupPath + "\\Resources\\collapse_icon.png");
       //pictureBox_tab.SizeMode = PictureBoxSizeMode.StretchImage;
 
+      _mqttClass.Connect();
       tmrUpdateMQTT.Start();
     }
 
@@ -255,45 +253,68 @@ namespace DataloggerDesktops
 
     }
 
-
+    public string? jsonString = null;
     public void ReadMQTT_WriteDB()
     {
-      //mqttClass.publish("A", pl);
-      //mqttClass.subcribe("A");
-      //stringJson = mqttClass.payloadResult();
-      //txb.Text = stringJson;
+      string topic = "/vule/projects/datalogger/shiratechPoE/data";
+      //_mqttClass.publish("A", topic);
+      
+      try
+      {
+        _mqttClass.subcribe(topic);
+        jsonString = _mqttClass.payLoadResult();
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+      }
+      
+      // Kiểm tra chuỗi Json
+      if (string.IsNullOrWhiteSpace(jsonString)) return;
 
-      string jsonString = "{\"msg\":{\"title\":\"Monitor station\",\"sender\":\"Shiratech\",\"group\":\"Datalogger\",\"date\":1678184475},\"content\":{\"controller\":{\"operation_mode\":\"auto\"},\"tanks\":[],\"devices\":[{\"solution\":[{\"env\":\"Magnetometer - X (Avg)\",\"value\":\"36\"},{\"env\":\"Magnetometer - X (Std)\",\"value\":\"61\"},{\"env\":\"Magnetometer - X (RMS)\",\"value\":\"22\"}],\"serial\":\"Shiratech.Magnetometer\",\"value\":\"ON\"},{\"solution\":[{\"env\":\"Accelerometer (Secondary) - X (Avg)\",\"value\":\"11\"},{\"env\":\"Accelerometer (Secondary) - X (Std)\",\"value\":\"66\"},{\"env\":\"Accelerometer (Secondary) - X (RMS)\",\"value\":\"3\"}],\"serial\":\"Shiratech.Accelerometer\",\"value\":\"ON\"},{\"solution\":[{\"env\":\"Accelerometer (Primary) - X (Avg)\",\"value\":\"38\"},{\"env\":\"Accelerometer (Primary) - X (Std)\",\"value\":\"41\"},{\"env\":\"Accelerometer (Primary) - X (RMS)\",\"value\":\"-6\"}],\"serial\":\"Shiratech.Accelerometer (Primary)\",\"value\":\"ON\"},{\"solution\":[{\"env\":\"Temperature\",\"value\":\"16\"}],\"serial\":\"Shiratech.Temperature\",\"value\":\"ON\"},{\"solution\":[{\"env\":\"Microphone - Avg\",\"value\":\"43\"},{\"env\":\"Microphone - Std\",\"value\":\"-8\"},{\"env\":\"Microphone - RMS\",\"value\":\"58\"}],\"serial\":\"Shiratech.Microphone\",\"value\":\"ON\"}]}}";
 
+      var dataFromMqtt = Welcome6.FromJson(jsonString);
 
-      //if (string.IsNullOrWhiteSpace(stringJson)) return;
-
-      var welcome6 = Welcome6.FromJson(jsonString);
-
-      if (welcome6 != null)
+      if (dataFromMqtt != null)
       {
         // Lấy tất cả data của device
-        var listObj = welcome6.Content.Devices.SelectMany(s=>s.Solution).ToList();
+        var listObj = dataFromMqtt.Content.Devices.SelectMany(s => s.Solution).ToList();
 
         //Lấy data từng device
-        //var listObj = welcome6.Content.Devices[1].Solution.ToList();
+        //var listObj = welcome6.Content.Devices[0].Solution.ToList();
 
-        dataGridView1.DataSource = listObj;
+        // Convert to array
+        var arrParametter = listObj.ToArray();
+
+        RepositoryParametterSensors _managerParametterSensors = new RepositoryParametterSensors();
+
+
+        if (_managerParametterSensors.GetAll().Count < 13)
+        {
+          foreach (var item in arrParametter)
+          {
+            ParametterSensor parametterSensor = new ParametterSensor();
+
+            parametterSensor.Name = item.Env.ToString();
+            _managerParametterSensors.Add(parametterSensor);
+          }
+        }
+
+        RepositoryParametterLog _managerParametterLog = new RepositoryParametterLog();
+        foreach (var item in arrParametter)
+        {
+          ParametterLog parametterLog = new ParametterLog();
+          parametterLog.Value = item.Value;
+          parametterLog.DateCreate = DateTime.Now;
+          parametterLog.ParametterSensorId = _managerParametterSensors.GetIdByName(item.Env.ToString());
+
+          _managerParametterLog.Add(parametterLog);
+        }
+
       }
 
-      
 
 
-
-
-
-
-      //var listObj = dataMQTT.FirstOrDefault().Sensors.SelectMany(s => s.Registers);
-
-      txb.Text = jsonString;
-      //this.dataGridView1.DataSource = listObj.ToList();
-
-      //var arrlistObj = listObj.ToArray();
 
 
       //for (int i = 0; i < 13; i++)

@@ -41,7 +41,7 @@
       this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
       this.panel3 = new System.Windows.Forms.Panel();
-      this.circularProgressBar1 = new CircularProgressBar_NET5.CircularProgressBar();
+      this.cpbSpeed = new CircularProgressBar_NET5.CircularProgressBar();
       this.label13 = new System.Windows.Forms.Label();
       this.label6 = new System.Windows.Forms.Label();
       this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,7 +57,7 @@
       this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
       this.label5 = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
-      this.circularProgressBarTemp = new CircularProgressBar_NET5.CircularProgressBar();
+      this.cpbTemp = new CircularProgressBar_NET5.CircularProgressBar();
       this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
       this.panelStatus = new System.Windows.Forms.Panel();
       this.label7 = new System.Windows.Forms.Label();
@@ -248,46 +248,46 @@
       this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel3.Controls.Add(this.circularProgressBar1);
+      this.panel3.Controls.Add(this.cpbSpeed);
       this.panel3.Location = new System.Drawing.Point(3, 33);
       this.panel3.Name = "panel3";
       this.panel3.Size = new System.Drawing.Size(215, 152);
       this.panel3.TabIndex = 12;
       // 
-      // circularProgressBar1
+      // cpbSpeed
       // 
-      this.circularProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+      this.cpbSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.circularProgressBar1.AnimationFunction = WinFormAnimation_NET5.KnownAnimationFunctions.Linear;
-      this.circularProgressBar1.AnimationSpeed = 500;
-      this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
-      this.circularProgressBar1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.circularProgressBar1.ForeColor = System.Drawing.Color.White;
-      this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.circularProgressBar1.InnerMargin = 2;
-      this.circularProgressBar1.InnerWidth = -1;
-      this.circularProgressBar1.Location = new System.Drawing.Point(31, 3);
-      this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
-      this.circularProgressBar1.Name = "circularProgressBar1";
-      this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
-      this.circularProgressBar1.OuterMargin = -5;
-      this.circularProgressBar1.OuterWidth = 3;
-      this.circularProgressBar1.ProgressColor = System.Drawing.Color.Blue;
-      this.circularProgressBar1.ProgressWidth = 10;
-      this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.circularProgressBar1.Size = new System.Drawing.Size(149, 149);
-      this.circularProgressBar1.StartAngle = 270;
-      this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-      this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-      this.circularProgressBar1.SubscriptText = "";
-      this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.White;
-      this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-      this.circularProgressBar1.SuperscriptText = "°C";
-      this.circularProgressBar1.TabIndex = 1;
-      this.circularProgressBar1.Text = "68";
-      this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-      this.circularProgressBar1.Value = 68;
+      this.cpbSpeed.AnimationFunction = WinFormAnimation_NET5.KnownAnimationFunctions.Linear;
+      this.cpbSpeed.AnimationSpeed = 500;
+      this.cpbSpeed.BackColor = System.Drawing.Color.Transparent;
+      this.cpbSpeed.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.cpbSpeed.ForeColor = System.Drawing.Color.White;
+      this.cpbSpeed.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.cpbSpeed.InnerMargin = 2;
+      this.cpbSpeed.InnerWidth = -1;
+      this.cpbSpeed.Location = new System.Drawing.Point(31, 3);
+      this.cpbSpeed.MarqueeAnimationSpeed = 2000;
+      this.cpbSpeed.Name = "cpbSpeed";
+      this.cpbSpeed.OuterColor = System.Drawing.Color.Gray;
+      this.cpbSpeed.OuterMargin = -5;
+      this.cpbSpeed.OuterWidth = 3;
+      this.cpbSpeed.ProgressColor = System.Drawing.Color.Blue;
+      this.cpbSpeed.ProgressWidth = 10;
+      this.cpbSpeed.SecondaryFont = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.cpbSpeed.Size = new System.Drawing.Size(149, 149);
+      this.cpbSpeed.StartAngle = 270;
+      this.cpbSpeed.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+      this.cpbSpeed.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+      this.cpbSpeed.SubscriptText = "";
+      this.cpbSpeed.SuperscriptColor = System.Drawing.Color.White;
+      this.cpbSpeed.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+      this.cpbSpeed.SuperscriptText = "°C";
+      this.cpbSpeed.TabIndex = 1;
+      this.cpbSpeed.Text = "68";
+      this.cpbSpeed.TextMargin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+      this.cpbSpeed.Value = 68;
       // 
       // label13
       // 
@@ -307,9 +307,9 @@
       this.label6.ForeColor = System.Drawing.Color.Transparent;
       this.label6.Location = new System.Drawing.Point(3, 0);
       this.label6.Name = "label6";
-      this.label6.Size = new System.Drawing.Size(79, 28);
+      this.label6.Size = new System.Drawing.Size(69, 28);
       this.label6.TabIndex = 13;
-      this.label6.Text = "Speech";
+      this.label6.Text = "Speed";
       this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
       // 
       // tableLayoutPanel5
@@ -474,46 +474,46 @@
       this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel1.Controls.Add(this.circularProgressBarTemp);
+      this.panel1.Controls.Add(this.cpbTemp);
       this.panel1.Location = new System.Drawing.Point(3, 33);
       this.panel1.Name = "panel1";
       this.panel1.Size = new System.Drawing.Size(215, 152);
       this.panel1.TabIndex = 12;
       // 
-      // circularProgressBarTemp
+      // cpbTemp
       // 
-      this.circularProgressBarTemp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+      this.cpbTemp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.circularProgressBarTemp.AnimationFunction = WinFormAnimation_NET5.KnownAnimationFunctions.Linear;
-      this.circularProgressBarTemp.AnimationSpeed = 500;
-      this.circularProgressBarTemp.BackColor = System.Drawing.Color.Transparent;
-      this.circularProgressBarTemp.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.circularProgressBarTemp.ForeColor = System.Drawing.Color.White;
-      this.circularProgressBarTemp.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.circularProgressBarTemp.InnerMargin = 2;
-      this.circularProgressBarTemp.InnerWidth = -1;
-      this.circularProgressBarTemp.Location = new System.Drawing.Point(33, 3);
-      this.circularProgressBarTemp.MarqueeAnimationSpeed = 2000;
-      this.circularProgressBarTemp.Name = "circularProgressBarTemp";
-      this.circularProgressBarTemp.OuterColor = System.Drawing.Color.Gray;
-      this.circularProgressBarTemp.OuterMargin = -5;
-      this.circularProgressBarTemp.OuterWidth = 3;
-      this.circularProgressBarTemp.ProgressColor = System.Drawing.Color.Red;
-      this.circularProgressBarTemp.ProgressWidth = 10;
-      this.circularProgressBarTemp.SecondaryFont = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.circularProgressBarTemp.Size = new System.Drawing.Size(149, 149);
-      this.circularProgressBarTemp.StartAngle = 270;
-      this.circularProgressBarTemp.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-      this.circularProgressBarTemp.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-      this.circularProgressBarTemp.SubscriptText = "";
-      this.circularProgressBarTemp.SuperscriptColor = System.Drawing.Color.White;
-      this.circularProgressBarTemp.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-      this.circularProgressBarTemp.SuperscriptText = "°C";
-      this.circularProgressBarTemp.TabIndex = 0;
-      this.circularProgressBarTemp.Text = "68";
-      this.circularProgressBarTemp.TextMargin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-      this.circularProgressBarTemp.Value = 68;
+      this.cpbTemp.AnimationFunction = WinFormAnimation_NET5.KnownAnimationFunctions.Linear;
+      this.cpbTemp.AnimationSpeed = 500;
+      this.cpbTemp.BackColor = System.Drawing.Color.Transparent;
+      this.cpbTemp.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.cpbTemp.ForeColor = System.Drawing.Color.White;
+      this.cpbTemp.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.cpbTemp.InnerMargin = 2;
+      this.cpbTemp.InnerWidth = -1;
+      this.cpbTemp.Location = new System.Drawing.Point(33, 3);
+      this.cpbTemp.MarqueeAnimationSpeed = 2000;
+      this.cpbTemp.Name = "cpbTemp";
+      this.cpbTemp.OuterColor = System.Drawing.Color.Gray;
+      this.cpbTemp.OuterMargin = -5;
+      this.cpbTemp.OuterWidth = 3;
+      this.cpbTemp.ProgressColor = System.Drawing.Color.Red;
+      this.cpbTemp.ProgressWidth = 10;
+      this.cpbTemp.SecondaryFont = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.cpbTemp.Size = new System.Drawing.Size(149, 149);
+      this.cpbTemp.StartAngle = 270;
+      this.cpbTemp.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+      this.cpbTemp.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+      this.cpbTemp.SubscriptText = "";
+      this.cpbTemp.SuperscriptColor = System.Drawing.Color.White;
+      this.cpbTemp.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+      this.cpbTemp.SuperscriptText = "°C";
+      this.cpbTemp.TabIndex = 0;
+      this.cpbTemp.Text = "68";
+      this.cpbTemp.TextMargin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+      this.cpbTemp.Value = 68;
       // 
       // tableLayoutPanel3
       // 
@@ -722,7 +722,7 @@
     private System.Windows.Forms.Label label11;
     private System.Windows.Forms.Panel panel2;
     
-    private CircularProgressBar_NET5.CircularProgressBar circularProgressBarTemp;
-    private CircularProgressBar_NET5.CircularProgressBar circularProgressBar1;
+    private CircularProgressBar_NET5.CircularProgressBar cpbTemp;
+    private CircularProgressBar_NET5.CircularProgressBar cpbSpeed;
   }
 }

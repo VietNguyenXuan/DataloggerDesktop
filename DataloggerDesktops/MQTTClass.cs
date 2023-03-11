@@ -11,126 +11,128 @@ using System.Windows.Forms;
 
 namespace MQTTChanel
 {
-  public partial class MQTTClass //: MetroFramework.Forms.MetroForm
+  public partial class MQTTClass : MetroFramework.Forms.MetroForm
   {
-    //MQTT Setting
-    //private IMqttClient client;
-    //private MqttClientOptions clientOptions;
-    //public delegate void _ShowMessageRT(string msg, string s);
+    //MQTT Inital
+    private IMqttClient client;
+    private MqttClientOptions clientOptions;
+    public delegate void _ShowMessageRT(string msg, string s);
 
+    // Settinh dress & port
     //string BrokerAddress = "ismaillowkey.my.id";
-    //int BrokerPort = 1883;
+    string BrokerAddress = "113.161.93.162";
+    int BrokerPort = 1883;
 
-    //string output;
+    string output;
 
     //MQTT
-    //public async void Connect()
-    //{
-    //  use a unique id as client id, each time we start the application
-    //  var clientId = Guid.NewGuid().ToString();
+    public async void Connect()
+    {
+      //use a unique id as client id, each time we start the application
+      var clientId = Guid.NewGuid().ToString();
 
-    //  var factory = new MqttFactory();
-    //  client = factory.CreateMqttClient();
-    //  clientOptions = new MqttClientOptionsBuilder()
-    //      .WithTcpServer(BrokerAddress, BrokerPort) // Port is optional
-    //      .WithClientId(clientId)
-    //      .Build();
+      var factory = new MqttFactory();
+      client = factory.CreateMqttClient();
+      clientOptions = new MqttClientOptionsBuilder()
+          .WithTcpServer(BrokerAddress, BrokerPort) // Port is optional
+          .WithClientId(clientId)
+          .Build();
 
-    //  client.ConnectedAsync += Client_ConnectedAsync;
-    //  client.ConnectingAsync += Client_ConnectingAsync;
-    //  client.DisconnectedAsync += Client_DisconnectedAsync;
-    //  client.ApplicationMessageReceivedAsync += Client_ApplicationMessageReceivedAsync;
+      client.ConnectedAsync += Client_ConnectedAsync;
+      client.ConnectingAsync += Client_ConnectingAsync;
+      client.DisconnectedAsync += Client_DisconnectedAsync;
+      client.ApplicationMessageReceivedAsync += Client_ApplicationMessageReceivedAsync;
 
-    //  await client.ConnectAsync(clientOptions, CancellationToken.None);
+      await client.ConnectAsync(clientOptions, CancellationToken.None);
 
-    //  MessageBox.Show("Connect Sucsess");
-    //}
-    //private Task Client_ApplicationMessageReceivedAsync(MqttApplicationMessageReceivedEventArgs arg)
-    //{
-    //  get payload
-    //  string ReceivedMessage = Encoding.UTF8.GetString(arg.ApplicationMessage.Payload);
+      //MessageBox.Show("Connect Sucsess");
+    }
+    private Task Client_ApplicationMessageReceivedAsync(MqttApplicationMessageReceivedEventArgs arg)
+    {
+      //get payload
+      string ReceivedMessage = Encoding.UTF8.GetString(arg.ApplicationMessage.Payload);
 
-    //  get topic name
-    //  string TopicReceived = arg.ApplicationMessage.Topic;
+      //get topic name
+      string TopicReceived = arg.ApplicationMessage.Topic;
 
-    //  Show message
-    //  ShowMessageRT(ReceivedMessage, TopicReceived);
+      //Show message
+      ShowMessageRT(ReceivedMessage, TopicReceived);
 
-    //  return Task.CompletedTask;
-    //}
+      return Task.CompletedTask;
+    }
 
     //Disconnect
-    //private async Task Client_DisconnectedAsync(MqttClientDisconnectedEventArgs arg)
-    //{
-    //  await Task.Delay(TimeSpan.FromSeconds(3));
-    //  await client.ConnectAsync(clientOptions, CancellationToken.None);
-    //  await Task.CompletedTask;
-    //}
+    private async Task Client_DisconnectedAsync(MqttClientDisconnectedEventArgs arg)
+    {
+      await Task.Delay(TimeSpan.FromSeconds(3));
+      await client.ConnectAsync(clientOptions, CancellationToken.None);
+      await Task.CompletedTask;
+    }
 
     //Connecting
-    //private async Task Client_ConnectingAsync(MqttClientConnectingEventArgs arg)
-    //{
-    //  await Task.CompletedTask;
-    //}
+    private async Task Client_ConnectingAsync(MqttClientConnectingEventArgs arg)
+    {
+      await Task.CompletedTask;
+    }
 
     //Connected
-    //private async Task Client_ConnectedAsync(MqttClientConnectedEventArgs arg)
-    //{
-    //  await Task.CompletedTask;
-    //}
+    private async Task Client_ConnectedAsync(MqttClientConnectedEventArgs arg)
+    {
+      await Task.CompletedTask;
+    }
 
-    //public void ShowMessageRT(String msg, String s)
-    //{
-    //  if (InvokeRequired)
-    //  {
-    //    Invoke(new _ShowMessageRT(ShowMessageRT), new Object[] { msg, s });
-    //    return;
-    //  }
-    //  output = msg;
-    //}
+    public void ShowMessageRT(String msg, String s)
+    {
+      if (InvokeRequired)
+      {
+        Invoke(new _ShowMessageRT(ShowMessageRT), new Object[] { msg, s });
+        return;
+      }
+      output = msg;
+    }
 
-    //public async void publish(string topic, string payload)
-    //{
-    //  try
-    //  {
-    //    var message = new MqttApplicationMessageBuilder()
-    //        .WithTopic(topic.Trim())
-    //        .WithPayload(payload)
-    //        .WithQualityOfServiceLevel(MqttQualityOfServiceLevel.AtLeastOnce)
-    //        .WithRetainFlag()
-    //        .Build();
-    //    await client.PublishAsync(message, CancellationToken.None);
-    //  }
-    //  catch (Exception ex)
-    //  {
-    //    MessageBox.Show(ex.Message);
-    //  }
-    //}
+    public async void publish(string topic, string payload)
+    {
+      try
+      {
+        var message = new MqttApplicationMessageBuilder()
+            .WithTopic(topic.Trim())
+            .WithPayload(payload)
+            .WithQualityOfServiceLevel(MqttQualityOfServiceLevel.AtLeastOnce)
+            .WithRetainFlag()
+            .Build();
+        await client.PublishAsync(message, CancellationToken.None);
+      }
+      catch (Exception ex)
+      {
+        //MessageBox.Show(ex.Message);
+        MessageBox.Show("Err public");
+      }
+    }
 
-    //public async void subcribe(string topic)
-    //{
-    //  try
-    //  {
-    //    var topic_sub = new MqttTopicFilterBuilder()
-    //        .WithTopic(topic)
-    //        .WithAtMostOnceQoS()
-    //        .Build();
+    public async void subcribe(string topic)
+    {
+      try
+      {
+        var topic_sub = new MqttTopicFilterBuilder()
+            .WithTopic(topic)
+            .WithAtMostOnceQoS()
+            .Build();
 
-    //    await client.SubscribeAsync(topic_sub);
-    //  }
-    //  catch (Exception ex)
-    //  {
-    //    MessageBox.Show(ex.Message);
-    //  }
-    //}
-
-
-    //public string payloadResult()
-    //{
-    //  return output;
-    //}
+        await client.SubscribeAsync(topic_sub);
+      }
+      catch (Exception ex)
+      {
+        //MessageBox.Show(ex.Message);
+        MessageBox.Show("Err sub");
+      }
+    }
 
 
+    public string payLoadResult()
+    {
+      return output;
+    }
 
 
   }

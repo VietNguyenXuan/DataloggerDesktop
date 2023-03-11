@@ -35,6 +35,11 @@
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
       this.panel1 = new System.Windows.Forms.Panel();
@@ -87,11 +92,12 @@
       this.panel26 = new System.Windows.Forms.Panel();
       this.pictureBox2 = new System.Windows.Forms.PictureBox();
       this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-      this.dataGridViewTemp = new System.Windows.Forms.DataGridView();
+      this.dgvTemp = new System.Windows.Forms.DataGridView();
       this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.Thoigian = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.Nhietdo = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+      this.dgvSpeed = new System.Windows.Forms.DataGridView();
       this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
       this.panel10 = new System.Windows.Forms.Panel();
       this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
@@ -114,6 +120,9 @@
       this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
       this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
       this.tmrStatistics = new System.Windows.Forms.Timer(this.components);
+      this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.tableLayoutPanel1.SuspendLayout();
       this.tableLayoutPanel2.SuspendLayout();
       this.panel1.SuspendLayout();
@@ -144,7 +153,9 @@
       this.panel26.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.tableLayoutPanel7.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTemp)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.dgvTemp)).BeginInit();
+      this.tableLayoutPanel9.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.dgvSpeed)).BeginInit();
       this.tableLayoutPanel3.SuspendLayout();
       this.panel10.SuspendLayout();
       this.panel11.SuspendLayout();
@@ -391,7 +402,7 @@
       this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
       this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
       this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
       this.tableLayoutPanel4.Controls.Add(this.panel8, 9, 0);
       this.tableLayoutPanel4.Controls.Add(this.panel12, 8, 0);
       this.tableLayoutPanel4.Controls.Add(this.panel13, 6, 0);
@@ -410,7 +421,7 @@
       // panel8
       // 
       this.panel8.Controls.Add(this.button2);
-      this.panel8.Location = new System.Drawing.Point(1193, 3);
+      this.panel8.Location = new System.Drawing.Point(1189, 3);
       this.panel8.Name = "panel8";
       this.panel8.Size = new System.Drawing.Size(99, 38);
       this.panel8.TabIndex = 0;
@@ -427,7 +438,7 @@
       // panel12
       // 
       this.panel12.Controls.Add(this.button1);
-      this.panel12.Location = new System.Drawing.Point(1093, 3);
+      this.panel12.Location = new System.Drawing.Point(1089, 3);
       this.panel12.Name = "panel12";
       this.panel12.Size = new System.Drawing.Size(94, 38);
       this.panel12.TabIndex = 1;
@@ -447,7 +458,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.panel13.Controls.Add(this.dateTimePicker5);
-      this.panel13.Location = new System.Drawing.Point(883, 3);
+      this.panel13.Location = new System.Drawing.Point(879, 3);
       this.panel13.Name = "panel13";
       this.panel13.Size = new System.Drawing.Size(144, 38);
       this.panel13.TabIndex = 2;
@@ -463,7 +474,7 @@
       // panel14
       // 
       this.panel14.Controls.Add(this.label6);
-      this.panel14.Location = new System.Drawing.Point(783, 3);
+      this.panel14.Location = new System.Drawing.Point(779, 3);
       this.panel14.Name = "panel14";
       this.panel14.Size = new System.Drawing.Size(94, 38);
       this.panel14.TabIndex = 3;
@@ -482,7 +493,7 @@
       // panel15
       // 
       this.panel15.Controls.Add(this.dateTimePicker6);
-      this.panel15.Location = new System.Drawing.Point(633, 3);
+      this.panel15.Location = new System.Drawing.Point(629, 3);
       this.panel15.Name = "panel15";
       this.panel15.Size = new System.Drawing.Size(144, 38);
       this.panel15.TabIndex = 4;
@@ -499,7 +510,7 @@
       // 
       this.panel16.Controls.Add(this.label5);
       this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panel16.Location = new System.Drawing.Point(533, 3);
+      this.panel16.Location = new System.Drawing.Point(529, 3);
       this.panel16.Name = "panel16";
       this.panel16.Size = new System.Drawing.Size(94, 38);
       this.panel16.TabIndex = 5;
@@ -521,7 +532,7 @@
       this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panel17.Location = new System.Drawing.Point(22, 3);
       this.panel17.Name = "panel17";
-      this.panel17.Size = new System.Drawing.Size(505, 38);
+      this.panel17.Size = new System.Drawing.Size(501, 38);
       this.panel17.TabIndex = 6;
       // 
       // label7
@@ -538,7 +549,7 @@
       // panel18
       // 
       this.panel18.Controls.Add(this.pictureBox1);
-      this.panel18.Location = new System.Drawing.Point(1033, 3);
+      this.panel18.Location = new System.Drawing.Point(1029, 3);
       this.panel18.Name = "panel18";
       this.panel18.Size = new System.Drawing.Size(54, 38);
       this.panel18.TabIndex = 7;
@@ -570,7 +581,7 @@
       this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
       this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
       this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-      this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+      this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
       this.tableLayoutPanel6.Controls.Add(this.panel19, 9, 0);
       this.tableLayoutPanel6.Controls.Add(this.panel20, 8, 0);
       this.tableLayoutPanel6.Controls.Add(this.panel21, 6, 0);
@@ -589,7 +600,7 @@
       // panel19
       // 
       this.panel19.Controls.Add(this.button3);
-      this.panel19.Location = new System.Drawing.Point(1193, 3);
+      this.panel19.Location = new System.Drawing.Point(1189, 3);
       this.panel19.Name = "panel19";
       this.panel19.Size = new System.Drawing.Size(99, 38);
       this.panel19.TabIndex = 0;
@@ -606,7 +617,7 @@
       // panel20
       // 
       this.panel20.Controls.Add(this.button4);
-      this.panel20.Location = new System.Drawing.Point(1093, 3);
+      this.panel20.Location = new System.Drawing.Point(1089, 3);
       this.panel20.Name = "panel20";
       this.panel20.Size = new System.Drawing.Size(94, 38);
       this.panel20.TabIndex = 1;
@@ -626,7 +637,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.panel21.Controls.Add(this.dateTimePicker9);
-      this.panel21.Location = new System.Drawing.Point(883, 3);
+      this.panel21.Location = new System.Drawing.Point(879, 3);
       this.panel21.Name = "panel21";
       this.panel21.Size = new System.Drawing.Size(144, 38);
       this.panel21.TabIndex = 2;
@@ -642,7 +653,7 @@
       // panel22
       // 
       this.panel22.Controls.Add(this.label8);
-      this.panel22.Location = new System.Drawing.Point(783, 3);
+      this.panel22.Location = new System.Drawing.Point(779, 3);
       this.panel22.Name = "panel22";
       this.panel22.Size = new System.Drawing.Size(94, 38);
       this.panel22.TabIndex = 3;
@@ -661,7 +672,7 @@
       // panel23
       // 
       this.panel23.Controls.Add(this.dateTimePicker10);
-      this.panel23.Location = new System.Drawing.Point(633, 3);
+      this.panel23.Location = new System.Drawing.Point(629, 3);
       this.panel23.Name = "panel23";
       this.panel23.Size = new System.Drawing.Size(144, 38);
       this.panel23.TabIndex = 4;
@@ -677,7 +688,7 @@
       // panel24
       // 
       this.panel24.Controls.Add(this.label9);
-      this.panel24.Location = new System.Drawing.Point(533, 3);
+      this.panel24.Location = new System.Drawing.Point(529, 3);
       this.panel24.Name = "panel24";
       this.panel24.Size = new System.Drawing.Size(94, 38);
       this.panel24.TabIndex = 5;
@@ -699,7 +710,7 @@
       this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panel25.Location = new System.Drawing.Point(22, 3);
       this.panel25.Name = "panel25";
-      this.panel25.Size = new System.Drawing.Size(505, 38);
+      this.panel25.Size = new System.Drawing.Size(501, 38);
       this.panel25.TabIndex = 6;
       // 
       // label10
@@ -709,14 +720,14 @@
       this.label10.ForeColor = System.Drawing.Color.Transparent;
       this.label10.Location = new System.Drawing.Point(3, 5);
       this.label10.Name = "label10";
-      this.label10.Size = new System.Drawing.Size(89, 28);
+      this.label10.Size = new System.Drawing.Size(72, 28);
       this.label10.TabIndex = 6;
-      this.label10.Text = "Nhiệt độ";
+      this.label10.Text = "Tốc độ";
       // 
       // panel26
       // 
       this.panel26.Controls.Add(this.pictureBox2);
-      this.panel26.Location = new System.Drawing.Point(1033, 3);
+      this.panel26.Location = new System.Drawing.Point(1029, 3);
       this.panel26.Name = "panel26";
       this.panel26.Size = new System.Drawing.Size(54, 38);
       this.panel26.TabIndex = 7;
@@ -740,7 +751,7 @@
       this.tableLayoutPanel7.ColumnCount = 2;
       this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
       this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-      this.tableLayoutPanel7.Controls.Add(this.dataGridViewTemp, 0, 0);
+      this.tableLayoutPanel7.Controls.Add(this.dgvTemp, 0, 0);
       this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 108);
       this.tableLayoutPanel7.Name = "tableLayoutPanel7";
       this.tableLayoutPanel7.RowCount = 1;
@@ -748,17 +759,17 @@
       this.tableLayoutPanel7.Size = new System.Drawing.Size(1350, 212);
       this.tableLayoutPanel7.TabIndex = 9;
       // 
-      // dataGridViewTemp
+      // dgvTemp
       // 
       dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
       dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.dataGridViewTemp.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-      this.dataGridViewTemp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+      this.dgvTemp.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+      this.dgvTemp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.dataGridViewTemp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-      this.dataGridViewTemp.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.dgvTemp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+      this.dgvTemp.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
       dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -766,9 +777,9 @@
       dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
       dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
       dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-      this.dataGridViewTemp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-      this.dataGridViewTemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridViewTemp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+      this.dgvTemp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+      this.dgvTemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dgvTemp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Thoigian,
             this.Nhietdo});
@@ -779,10 +790,10 @@
       dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
       dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
       dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-      this.dataGridViewTemp.DefaultCellStyle = dataGridViewCellStyle3;
-      this.dataGridViewTemp.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.dataGridViewTemp.Location = new System.Drawing.Point(3, 3);
-      this.dataGridViewTemp.Name = "dataGridViewTemp";
+      this.dgvTemp.DefaultCellStyle = dataGridViewCellStyle3;
+      this.dgvTemp.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.dgvTemp.Location = new System.Drawing.Point(3, 3);
+      this.dgvTemp.Name = "dgvTemp";
       dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
       dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -790,14 +801,14 @@
       dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
       dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
       dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-      this.dataGridViewTemp.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-      this.dataGridViewTemp.RowHeadersVisible = false;
-      this.dataGridViewTemp.RowHeadersWidth = 51;
+      this.dgvTemp.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+      this.dgvTemp.RowHeadersVisible = false;
+      this.dgvTemp.RowHeadersWidth = 51;
       dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.dataGridViewTemp.RowsDefaultCellStyle = dataGridViewCellStyle5;
-      this.dataGridViewTemp.RowTemplate.Height = 29;
-      this.dataGridViewTemp.Size = new System.Drawing.Size(804, 206);
-      this.dataGridViewTemp.TabIndex = 0;
+      this.dgvTemp.RowsDefaultCellStyle = dataGridViewCellStyle5;
+      this.dgvTemp.RowTemplate.Height = 29;
+      this.dgvTemp.Size = new System.Drawing.Size(804, 206);
+      this.dgvTemp.TabIndex = 0;
       // 
       // ID
       // 
@@ -826,12 +837,64 @@
       this.tableLayoutPanel9.ColumnCount = 2;
       this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
       this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+      this.tableLayoutPanel9.Controls.Add(this.dgvSpeed, 0, 0);
       this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 381);
       this.tableLayoutPanel9.Name = "tableLayoutPanel9";
       this.tableLayoutPanel9.RowCount = 1;
       this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
       this.tableLayoutPanel9.Size = new System.Drawing.Size(1350, 212);
       this.tableLayoutPanel9.TabIndex = 10;
+      // 
+      // dgvSpeed
+      // 
+      dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+      dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.dgvSpeed.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+      this.dgvSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.dgvSpeed.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+      this.dgvSpeed.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+      dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+      dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+      this.dgvSpeed.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+      this.dgvSpeed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dgvSpeed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+      dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+      dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+      dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+      this.dgvSpeed.DefaultCellStyle = dataGridViewCellStyle8;
+      this.dgvSpeed.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.dgvSpeed.Location = new System.Drawing.Point(3, 3);
+      this.dgvSpeed.Name = "dgvSpeed";
+      dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+      dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+      dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+      this.dgvSpeed.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+      this.dgvSpeed.RowHeadersVisible = false;
+      this.dgvSpeed.RowHeadersWidth = 51;
+      dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.dgvSpeed.RowsDefaultCellStyle = dataGridViewCellStyle10;
+      this.dgvSpeed.RowTemplate.Height = 29;
+      this.dgvSpeed.Size = new System.Drawing.Size(804, 206);
+      this.dgvSpeed.TabIndex = 1;
       // 
       // tableLayoutPanel3
       // 
@@ -1083,6 +1146,24 @@
       this.dateTimePicker8.Size = new System.Drawing.Size(185, 27);
       this.dateTimePicker8.TabIndex = 7;
       // 
+      // dataGridViewTextBoxColumn1
+      // 
+      this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+      this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+      this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+      // 
+      // dataGridViewTextBoxColumn2
+      // 
+      this.dataGridViewTextBoxColumn2.HeaderText = "Thời gian";
+      this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+      this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+      // 
+      // dataGridViewTextBoxColumn3
+      // 
+      this.dataGridViewTextBoxColumn3.HeaderText = "Tốc độ";
+      this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+      this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+      // 
       // Historical
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1133,7 +1214,9 @@
       this.panel26.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
       this.tableLayoutPanel7.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTemp)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.dgvTemp)).EndInit();
+      this.tableLayoutPanel9.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.dgvSpeed)).EndInit();
       this.tableLayoutPanel3.ResumeLayout(false);
       this.panel10.ResumeLayout(false);
       this.panel11.ResumeLayout(false);
@@ -1222,10 +1305,14 @@
     private System.Windows.Forms.PictureBox pictureBox2;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-    private System.Windows.Forms.DataGridView dataGridViewTemp;
+    private System.Windows.Forms.DataGridView dgvTemp;
     private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     private System.Windows.Forms.DataGridViewTextBoxColumn Thoigian;
     private System.Windows.Forms.DataGridViewTextBoxColumn Nhietdo;
     private System.Windows.Forms.Timer tmrStatistics;
+    private System.Windows.Forms.DataGridView dgvSpeed;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
   }
 }

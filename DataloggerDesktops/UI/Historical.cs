@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataloggerDesktops.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,29 +17,37 @@ namespace DataloggerDesktops
     {
       InitializeComponent();
     }
+    RepositoryParametterLog _managerParalog = new RepositoryParametterLog();
 
     private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
     {
 
     }
 
-    ///*RegisterM*/anager _registerManager = new RegisterManager();
     private void Historical_Load(object sender, EventArgs e)
     {
-
-      //try
-      //{
-      //  var db = _registerManager.GetData("Temperature");
-      //  for (int i = 0;i < db.Count; i++)
-      //  {
-      //    dataGridViewTemp.Rows.Add(i+1 , db[i].dateTime, db[i].registerValue);
-      //  }
-        
-      //}
-      //catch (Exception ex)
-      //{
-      //  MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-      //}
+      LoadData();
     }
+
+    public void LoadData()
+    {
+      try
+      {
+        var valuesTemp = _managerParalog.GetValuesByIdParametter(9);
+        var valuesSpeed = _managerParalog.GetValuesByIdParametter(3);
+        for (int i = 0; i < 10; i++)
+        {
+          dgvTemp.Rows.Add(i + 1, valuesTemp[i].DateCreate, valuesTemp[i].Value);
+          dgvSpeed.Rows.Add(i + 1, valuesSpeed[i].DateCreate, valuesSpeed[i].Value);
+        }
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+      }
+    }
+
+
+
   }
 }

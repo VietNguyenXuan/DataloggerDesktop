@@ -83,6 +83,47 @@ namespace DataloggerDesktops.Migrations
                     b.ToTable("Lines");
                 });
 
+            modelBuilder.Entity("DataloggerDesktops.Models.ParametterLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateCreate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("ParametterSensorId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<float?>("Value")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParametterSensorId");
+
+                    b.ToTable("ParametterLogs");
+                });
+
+            modelBuilder.Entity("DataloggerDesktops.Models.ParametterSensor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("DeviceId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DeviceId");
+
+                    b.ToTable("ParametterSensors");
+                });
+
             modelBuilder.Entity("DataloggerDesktops.Models.UserHistorical", b =>
                 {
                     b.Property<int>("Id")
@@ -150,6 +191,27 @@ namespace DataloggerDesktops.Migrations
                     b.Navigation("Factory");
                 });
 
+            modelBuilder.Entity("DataloggerDesktops.Models.ParametterLog", b =>
+                {
+                    b.HasOne("DataloggerDesktops.Models.ParametterSensor", "ParametterSensor")
+                        .WithMany("ParametterLogs")
+                        .HasForeignKey("ParametterSensorId");
+
+                    b.Navigation("ParametterSensor");
+                });
+
+            modelBuilder.Entity("DataloggerDesktops.Models.ParametterSensor", b =>
+                {
+                    b.HasOne("DataloggerDesktops.Models.Device", null)
+                        .WithMany("ParametterSensors")
+                        .HasForeignKey("DeviceId");
+                });
+
+            modelBuilder.Entity("DataloggerDesktops.Models.Device", b =>
+                {
+                    b.Navigation("ParametterSensors");
+                });
+
             modelBuilder.Entity("DataloggerDesktops.Models.Factory", b =>
                 {
                     b.Navigation("Line");
@@ -158,6 +220,11 @@ namespace DataloggerDesktops.Migrations
             modelBuilder.Entity("DataloggerDesktops.Models.Line", b =>
                 {
                     b.Navigation("Devices");
+                });
+
+            modelBuilder.Entity("DataloggerDesktops.Models.ParametterSensor", b =>
+                {
+                    b.Navigation("ParametterLogs");
                 });
 #pragma warning restore 612, 618
         }

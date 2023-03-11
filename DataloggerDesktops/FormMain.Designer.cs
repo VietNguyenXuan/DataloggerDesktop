@@ -32,9 +32,7 @@
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
       this.panelMain = new System.Windows.Forms.Panel();
       this.panelBody = new System.Windows.Forms.Panel();
-      this.dataGridView1 = new System.Windows.Forms.DataGridView();
       this.panelControl = new System.Windows.Forms.Panel();
-      this.txb = new System.Windows.Forms.TextBox();
       this.btnUser = new System.Windows.Forms.Button();
       this.btnDevice = new System.Windows.Forms.Button();
       this.btnParameter = new System.Windows.Forms.Button();
@@ -55,7 +53,6 @@
       this.tmrUpdateMQTT = new System.Windows.Forms.Timer(this.components);
       this.panelMain.SuspendLayout();
       this.panelBody.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
       this.panelControl.SuspendLayout();
       this.panelHeading.SuspendLayout();
       this.tableLayoutPanel1.SuspendLayout();
@@ -74,36 +71,24 @@
       this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelMain.Location = new System.Drawing.Point(0, 0);
       this.panelMain.Name = "panelMain";
-      this.panelMain.Size = new System.Drawing.Size(1427, 819);
+      this.panelMain.Size = new System.Drawing.Size(1427, 844);
       this.panelMain.TabIndex = 0;
       // 
       // panelBody
       // 
       this.panelBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
-      this.panelBody.Controls.Add(this.dataGridView1);
       this.panelBody.Controls.Add(this.panelControl);
       this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelBody.Location = new System.Drawing.Point(0, 50);
       this.panelBody.Margin = new System.Windows.Forms.Padding(0);
       this.panelBody.Name = "panelBody";
-      this.panelBody.Size = new System.Drawing.Size(1427, 769);
+      this.panelBody.Size = new System.Drawing.Size(1427, 794);
       this.panelBody.TabIndex = 2;
       this.panelBody.TabStop = true;
-      // 
-      // dataGridView1
-      // 
-      this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView1.Location = new System.Drawing.Point(200, 36);
-      this.dataGridView1.Name = "dataGridView1";
-      this.dataGridView1.RowHeadersWidth = 51;
-      this.dataGridView1.RowTemplate.Height = 29;
-      this.dataGridView1.Size = new System.Drawing.Size(1074, 394);
-      this.dataGridView1.TabIndex = 2;
       // 
       // panelControl
       // 
       this.panelControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(61)))));
-      this.panelControl.Controls.Add(this.txb);
       this.panelControl.Controls.Add(this.btnUser);
       this.panelControl.Controls.Add(this.btnDevice);
       this.panelControl.Controls.Add(this.btnParameter);
@@ -114,17 +99,8 @@
       this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
       this.panelControl.Location = new System.Drawing.Point(0, 0);
       this.panelControl.Name = "panelControl";
-      this.panelControl.Size = new System.Drawing.Size(155, 769);
+      this.panelControl.Size = new System.Drawing.Size(155, 794);
       this.panelControl.TabIndex = 1;
-      // 
-      // txb
-      // 
-      this.txb.Enabled = false;
-      this.txb.Location = new System.Drawing.Point(12, 333);
-      this.txb.Multiline = true;
-      this.txb.Name = "txb";
-      this.txb.Size = new System.Drawing.Size(116, 252);
-      this.txb.TabIndex = 2;
       // 
       // btnUser
       // 
@@ -346,14 +322,14 @@
       // 
       // tmrUpdateMQTT
       // 
-      this.tmrUpdateMQTT.Interval = 1000;
+      this.tmrUpdateMQTT.Interval = 3000;
       this.tmrUpdateMQTT.Tick += new System.EventHandler(this.tmrUpdateMQTT_Tick);
       // 
       // FormMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1427, 819);
+      this.ClientSize = new System.Drawing.Size(1427, 844);
       this.Controls.Add(this.panelMain);
       this.Name = "FormMain";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -362,9 +338,7 @@
       this.Load += new System.EventHandler(this.FormMain_Load);
       this.panelMain.ResumeLayout(false);
       this.panelBody.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
       this.panelControl.ResumeLayout(false);
-      this.panelControl.PerformLayout();
       this.panelHeading.ResumeLayout(false);
       this.tableLayoutPanel1.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -385,7 +359,6 @@
     private System.Windows.Forms.Panel panelTab;
     private System.Windows.Forms.Button btnTab;
     private System.Windows.Forms.Timer tmrUpdateMQTT;
-    private System.Windows.Forms.TextBox txb;
     private System.Windows.Forms.Panel panelBody;
     private System.Windows.Forms.Panel panelControl;
     private System.Windows.Forms.Button btnUser;
@@ -395,7 +368,6 @@
     private System.Windows.Forms.Button btnStatistics;
     private System.Windows.Forms.Button btnHistorical;
     private System.Windows.Forms.Button btnDashBoard;
-    private System.Windows.Forms.DataGridView dataGridView1;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.PictureBox picUser;

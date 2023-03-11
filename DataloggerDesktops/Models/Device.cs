@@ -26,5 +26,9 @@ namespace DataloggerDesktops.Models
     [Browsable(false)]
     public Line? Line { get; set; }
 
+
+    [Browsable(false)]
+    public List<ParametterSensor>? ParametterSensors { get; set; }
+
   }
 }

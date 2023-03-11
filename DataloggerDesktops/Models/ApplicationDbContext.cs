@@ -21,7 +21,10 @@ namespace DataloggerDesktops.Models
     public DbSet<Device>? Devices { get; set; }
 
     public DbSet<Users>? Users { get; set; }
-    public DbSet<UserHistorical> UserHistoricals { get; set; }
+    public DbSet<UserHistorical>? UserHistoricals { get; set; }
+
+    public DbSet<ParametterSensor>? ParametterSensors { get; set;}
+    public DbSet<ParametterLog>? ParametterLogs { get; set; }
 
   }
 }

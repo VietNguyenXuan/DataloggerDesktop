@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataloggerDesktops.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,21 +18,25 @@ namespace DataloggerDesktops
       InitializeComponent();
     }
 
-    //RegisterManager _registerManager = new RegisterManager();
-
-
+    RepositoryParametterLog _managerParalog=new RepositoryParametterLog();
 
     private void DashBoard_Load(object sender, EventArgs e)
     {
-
+      LoadValueTemp();
     }
 
     private void tmrDashBoard_Tick(object sender, EventArgs e)
     {
+      LoadValueTemp();
+    }
+
+
+    public void LoadValueTemp()
+    {
       try
       {
-        //var db = _registerManager.GetData("Temperature");
-        //circularProgressBarTemp.Text = db[0].registerValue.ToString();
+        cpbTemp.Text = _managerParalog.GetValuesByIdParametter(9)[0].Value.ToString();
+        cpbSpeed.Text = _managerParalog.GetValuesByIdParametter(3)[0].Value.ToString();
       }
       catch (Exception ex)
       {

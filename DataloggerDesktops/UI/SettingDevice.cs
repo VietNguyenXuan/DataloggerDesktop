@@ -96,28 +96,21 @@ namespace DataloggerDesktops
       lbNumbersLine.Text = line.Count.ToString();
       lbNumbersDevice.Text = device.Count.ToString();
 
-      try
+      switch (cbDisplay.SelectedIndex)
       {
-        switch (cbDisplay.SelectedIndex)
-        {
-          case 0:
-            dgvSettingDevice.DataSource = factory;
-            LoadImage("factory");
+        case 0:
+          dgvSettingDevice.DataSource = factory;
+          LoadImage("factory");
 
-            break;
-          case 1:
-            dgvSettingDevice.DataSource = line;
-            LoadImage("line");
-            break;
-          case 2:
-            dgvSettingDevice.DataSource = device;
-            LoadImage("device");
-            break;
-        }
-      }
-      catch (Exception ex)
-      {
-        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          break;
+        case 1:
+          dgvSettingDevice.DataSource = line;
+          LoadImage("line");
+          break;
+        case 2:
+          dgvSettingDevice.DataSource = device;
+          LoadImage("device");
+          break;
       }
 
     }
