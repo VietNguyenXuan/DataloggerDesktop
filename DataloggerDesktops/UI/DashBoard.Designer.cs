@@ -29,14 +29,27 @@
     private void InitializeComponent()
     {
       this.components = new System.ComponentModel.Container();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
       this.tmrDashBoard = new System.Windows.Forms.Timer(this.components);
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+      this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+      this.chartMagFd = new System.Windows.Forms.DataVisualization.Charting.Chart();
+      this.panel11 = new System.Windows.Forms.Panel();
+      this.labelMFD = new System.Windows.Forms.Label();
       this.panelScatter = new System.Windows.Forms.Panel();
       this.label12 = new System.Windows.Forms.Label();
-      this.panelMFD = new System.Windows.Forms.Panel();
-      this.labelMFD = new System.Windows.Forms.Label();
-      this.panelAcousticData = new System.Windows.Forms.Panel();
+      this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+      this.chartAccoustic = new System.Windows.Forms.DataVisualization.Charting.Chart();
+      this.panel9 = new System.Windows.Forms.Panel();
       this.label10 = new System.Windows.Forms.Label();
       this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,20 +72,28 @@
       this.panel1 = new System.Windows.Forms.Panel();
       this.cpbTemp = new CircularProgressBar_NET5.CircularProgressBar();
       this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+      this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+      this.panel7 = new System.Windows.Forms.Panel();
+      this.label14 = new System.Windows.Forms.Label();
+      this.chartVibration = new System.Windows.Forms.DataVisualization.Charting.Chart();
       this.panelStatus = new System.Windows.Forms.Panel();
       this.label7 = new System.Windows.Forms.Label();
-      this.panelTrend = new System.Windows.Forms.Panel();
+      this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+      this.panel5 = new System.Windows.Forms.Panel();
+      this.panel4 = new System.Windows.Forms.Panel();
       this.label8 = new System.Windows.Forms.Label();
-      this.panelVibrationData = new System.Windows.Forms.Panel();
-      this.label9 = new System.Windows.Forms.Label();
       this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
       this.label11 = new System.Windows.Forms.Label();
       this.panel2 = new System.Windows.Forms.Panel();
       this.tableLayoutPanel1.SuspendLayout();
       this.tableLayoutPanel4.SuspendLayout();
+      this.tableLayoutPanel13.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chartMagFd)).BeginInit();
+      this.panel11.SuspendLayout();
       this.panelScatter.SuspendLayout();
-      this.panelMFD.SuspendLayout();
-      this.panelAcousticData.SuspendLayout();
+      this.tableLayoutPanel12.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chartAccoustic)).BeginInit();
+      this.panel9.SuspendLayout();
       this.tableLayoutPanel2.SuspendLayout();
       this.tableLayoutPanel9.SuspendLayout();
       this.panel3.SuspendLayout();
@@ -81,9 +102,12 @@
       this.tableLayoutPanel7.SuspendLayout();
       this.panel1.SuspendLayout();
       this.tableLayoutPanel3.SuspendLayout();
+      this.tableLayoutPanel11.SuspendLayout();
+      this.panel7.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chartVibration)).BeginInit();
       this.panelStatus.SuspendLayout();
-      this.panelTrend.SuspendLayout();
-      this.panelVibrationData.SuspendLayout();
+      this.tableLayoutPanel10.SuspendLayout();
+      this.panel4.SuspendLayout();
       this.tableLayoutPanel8.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -120,20 +144,119 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.tableLayoutPanel4.ColumnCount = 5;
-      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.7424F));
-      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.699463F));
-      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.34168F));
-      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.341682F));
-      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.78533F));
+      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.53131F));
+      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.073345F));
+      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.55993F));
+      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.252236F));
+      this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.49374F));
+      this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel13, 2, 0);
       this.tableLayoutPanel4.Controls.Add(this.panelScatter, 0, 0);
-      this.tableLayoutPanel4.Controls.Add(this.panelMFD, 2, 0);
-      this.tableLayoutPanel4.Controls.Add(this.panelAcousticData, 4, 0);
+      this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel12, 4, 0);
       this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 432);
       this.tableLayoutPanel4.Name = "tableLayoutPanel4";
       this.tableLayoutPanel4.RowCount = 1;
       this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
       this.tableLayoutPanel4.Size = new System.Drawing.Size(1118, 174);
       this.tableLayoutPanel4.TabIndex = 3;
+      // 
+      // tableLayoutPanel13
+      // 
+      this.tableLayoutPanel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.tableLayoutPanel13.ColumnCount = 1;
+      this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+      this.tableLayoutPanel13.Controls.Add(this.chartMagFd, 0, 1);
+      this.tableLayoutPanel13.Controls.Add(this.panel11, 0, 0);
+      this.tableLayoutPanel13.Location = new System.Drawing.Point(211, 3);
+      this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+      this.tableLayoutPanel13.RowCount = 2;
+      this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.36527F));
+      this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.63473F));
+      this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+      this.tableLayoutPanel13.Size = new System.Drawing.Size(481, 168);
+      this.tableLayoutPanel13.TabIndex = 18;
+      // 
+      // chartMagFd
+      // 
+      this.chartMagFd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.chartMagFd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.chartMagFd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.chartMagFd.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+      this.chartMagFd.BackSecondaryColor = System.Drawing.Color.White;
+      this.chartMagFd.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.chartMagFd.BorderSkin.BorderColor = System.Drawing.Color.Red;
+      chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
+      chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+      chartArea1.BorderColor = System.Drawing.Color.IndianRed;
+      chartArea1.Name = "ChartArea1";
+      this.chartMagFd.ChartAreas.Add(chartArea1);
+      legend1.BackImageTransparentColor = System.Drawing.Color.White;
+      legend1.BackSecondaryColor = System.Drawing.Color.White;
+      legend1.BorderColor = System.Drawing.Color.Transparent;
+      legend1.Enabled = false;
+      legend1.InterlacedRowsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+      legend1.Name = "Legend1";
+      legend1.Position.Auto = false;
+      legend1.Position.Height = 15.26316F;
+      legend1.Position.Width = 19.43463F;
+      legend1.Position.X = 77.56537F;
+      legend1.Position.Y = 3F;
+      this.chartMagFd.Legends.Add(legend1);
+      this.chartMagFd.Location = new System.Drawing.Point(3, 32);
+      this.chartMagFd.Name = "chartMagFd";
+      this.chartMagFd.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+      series1.BackImage = "19, 33, 73";
+      series1.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series1.BorderWidth = 4;
+      series1.ChartArea = "ChartArea1";
+      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+      series1.Color = System.Drawing.Color.Red;
+      series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      series1.LabelBackColor = System.Drawing.Color.White;
+      series1.LabelBorderColor = System.Drawing.Color.White;
+      series1.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+      series1.LabelForeColor = System.Drawing.Color.White;
+      series1.Legend = "Legend1";
+      series1.MarkerBorderColor = System.Drawing.Color.BlueViolet;
+      series1.MarkerBorderWidth = 2;
+      series1.MarkerColor = System.Drawing.Color.Lime;
+      series1.MarkerImageTransparentColor = System.Drawing.Color.White;
+      series1.MarkerSize = 7;
+      series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+      series1.Name = "Dữ liệu từ trường";
+      this.chartMagFd.Series.Add(series1);
+      this.chartMagFd.Size = new System.Drawing.Size(475, 133);
+      this.chartMagFd.SuppressExceptions = true;
+      this.chartMagFd.TabIndex = 16;
+      this.chartMagFd.Text = "chartMagFd";
+      // 
+      // panel11
+      // 
+      this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.panel11.Controls.Add(this.labelMFD);
+      this.panel11.Location = new System.Drawing.Point(3, 3);
+      this.panel11.Name = "panel11";
+      this.panel11.Size = new System.Drawing.Size(475, 23);
+      this.panel11.TabIndex = 0;
+      // 
+      // labelMFD
+      // 
+      this.labelMFD.AutoSize = true;
+      this.labelMFD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.labelMFD.ForeColor = System.Drawing.Color.Transparent;
+      this.labelMFD.Location = new System.Drawing.Point(1, -6);
+      this.labelMFD.Name = "labelMFD";
+      this.labelMFD.Size = new System.Drawing.Size(390, 28);
+      this.labelMFD.TabIndex = 11;
+      this.labelMFD.Text = "Magnetic Field Data | Dữ liệu từ trường";
       // 
       // panelScatter
       // 
@@ -142,7 +265,7 @@
       this.panelScatter.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelScatter.Location = new System.Drawing.Point(3, 3);
       this.panelScatter.Name = "panelScatter";
-      this.panelScatter.Size = new System.Drawing.Size(170, 168);
+      this.panelScatter.Size = new System.Drawing.Size(190, 168);
       this.panelScatter.TabIndex = 15;
       // 
       // label12
@@ -156,47 +279,104 @@
       this.label12.TabIndex = 11;
       this.label12.Text = "Scatter";
       // 
-      // panelMFD
+      // tableLayoutPanel12
       // 
-      this.panelMFD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.panelMFD.Controls.Add(this.labelMFD);
-      this.panelMFD.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panelMFD.Location = new System.Drawing.Point(198, 3);
-      this.panelMFD.Name = "panelMFD";
-      this.panelMFD.Size = new System.Drawing.Size(568, 168);
-      this.panelMFD.TabIndex = 16;
+      this.tableLayoutPanel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.tableLayoutPanel12.ColumnCount = 1;
+      this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+      this.tableLayoutPanel12.Controls.Add(this.chartAccoustic, 0, 1);
+      this.tableLayoutPanel12.Controls.Add(this.panel9, 0, 0);
+      this.tableLayoutPanel12.Location = new System.Drawing.Point(712, 3);
+      this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+      this.tableLayoutPanel12.RowCount = 2;
+      this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.36527F));
+      this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.63473F));
+      this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+      this.tableLayoutPanel12.Size = new System.Drawing.Size(403, 168);
+      this.tableLayoutPanel12.TabIndex = 17;
       // 
-      // labelMFD
+      // chartAccoustic
       // 
-      this.labelMFD.AutoSize = true;
-      this.labelMFD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.labelMFD.ForeColor = System.Drawing.Color.Transparent;
-      this.labelMFD.Location = new System.Drawing.Point(3, 3);
-      this.labelMFD.Name = "labelMFD";
-      this.labelMFD.Size = new System.Drawing.Size(203, 28);
-      this.labelMFD.TabIndex = 11;
-      this.labelMFD.Text = "Magnetic Field Data";
+      this.chartAccoustic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.chartAccoustic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.chartAccoustic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.chartAccoustic.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+      this.chartAccoustic.BackSecondaryColor = System.Drawing.Color.White;
+      this.chartAccoustic.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.chartAccoustic.BorderSkin.BorderColor = System.Drawing.Color.Red;
+      chartArea2.AxisX.TitleForeColor = System.Drawing.Color.White;
+      chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+      chartArea2.BorderColor = System.Drawing.Color.IndianRed;
+      chartArea2.Name = "ChartArea1";
+      this.chartAccoustic.ChartAreas.Add(chartArea2);
+      legend2.BackImageTransparentColor = System.Drawing.Color.White;
+      legend2.BackSecondaryColor = System.Drawing.Color.White;
+      legend2.BorderColor = System.Drawing.Color.Transparent;
+      legend2.Enabled = false;
+      legend2.InterlacedRowsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+      legend2.Name = "Legend1";
+      legend2.Position.Auto = false;
+      legend2.Position.Height = 15.26316F;
+      legend2.Position.Width = 19.43463F;
+      legend2.Position.X = 77.56537F;
+      legend2.Position.Y = 3F;
+      this.chartAccoustic.Legends.Add(legend2);
+      this.chartAccoustic.Location = new System.Drawing.Point(3, 32);
+      this.chartAccoustic.Name = "chartAccoustic";
+      this.chartAccoustic.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+      series2.BackImage = "19, 33, 73";
+      series2.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series2.BorderWidth = 4;
+      series2.ChartArea = "ChartArea1";
+      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+      series2.Color = System.Drawing.Color.Red;
+      series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      series2.LabelBackColor = System.Drawing.Color.White;
+      series2.LabelBorderColor = System.Drawing.Color.White;
+      series2.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+      series2.LabelForeColor = System.Drawing.Color.White;
+      series2.Legend = "Legend1";
+      series2.MarkerBorderColor = System.Drawing.Color.BlueViolet;
+      series2.MarkerBorderWidth = 2;
+      series2.MarkerColor = System.Drawing.Color.Lime;
+      series2.MarkerImageTransparentColor = System.Drawing.Color.White;
+      series2.MarkerSize = 7;
+      series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+      series2.Name = "Dữ liệu âm thanh";
+      this.chartAccoustic.Series.Add(series2);
+      this.chartAccoustic.Size = new System.Drawing.Size(397, 133);
+      this.chartAccoustic.SuppressExceptions = true;
+      this.chartAccoustic.TabIndex = 15;
+      this.chartAccoustic.Text = "chartAccoustic";
       // 
-      // panelAcousticData
+      // panel9
       // 
-      this.panelAcousticData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.panelAcousticData.Controls.Add(this.label10);
-      this.panelAcousticData.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panelAcousticData.Location = new System.Drawing.Point(787, 3);
-      this.panelAcousticData.Name = "panelAcousticData";
-      this.panelAcousticData.Size = new System.Drawing.Size(328, 168);
-      this.panelAcousticData.TabIndex = 17;
+      this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.panel9.Controls.Add(this.label10);
+      this.panel9.Location = new System.Drawing.Point(3, 3);
+      this.panel9.Name = "panel9";
+      this.panel9.Size = new System.Drawing.Size(397, 23);
+      this.panel9.TabIndex = 0;
       // 
       // label10
       // 
       this.label10.AutoSize = true;
       this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
       this.label10.ForeColor = System.Drawing.Color.Transparent;
-      this.label10.Location = new System.Drawing.Point(3, 3);
+      this.label10.Location = new System.Drawing.Point(-3, -6);
       this.label10.Name = "label10";
-      this.label10.Size = new System.Drawing.Size(144, 28);
+      this.label10.Size = new System.Drawing.Size(328, 28);
       this.label10.TabIndex = 11;
-      this.label10.Text = "Acoustic Data";
+      this.label10.Text = "Acoustic Data | Dữ liệu âm thanh";
       // 
       // tableLayoutPanel2
       // 
@@ -521,20 +701,120 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.tableLayoutPanel3.ColumnCount = 5;
-      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.65295F));
-      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.788909F));
-      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.07335F));
-      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.341682F));
-      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.05367F));
+      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.62075F));
+      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9838998F));
+      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.64937F));
+      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.2213F));
+      this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.41101F));
+      this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel11, 4, 0);
       this.tableLayoutPanel3.Controls.Add(this.panelStatus, 0, 0);
-      this.tableLayoutPanel3.Controls.Add(this.panelTrend, 2, 0);
-      this.tableLayoutPanel3.Controls.Add(this.panelVibrationData, 4, 0);
+      this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel10, 2, 0);
       this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 243);
       this.tableLayoutPanel3.Name = "tableLayoutPanel3";
       this.tableLayoutPanel3.RowCount = 1;
       this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
       this.tableLayoutPanel3.Size = new System.Drawing.Size(1118, 173);
       this.tableLayoutPanel3.TabIndex = 2;
+      // 
+      // tableLayoutPanel11
+      // 
+      this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.tableLayoutPanel11.ColumnCount = 1;
+      this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+      this.tableLayoutPanel11.Controls.Add(this.panel7, 0, 0);
+      this.tableLayoutPanel11.Controls.Add(this.chartVibration, 0, 1);
+      this.tableLayoutPanel11.Location = new System.Drawing.Point(712, 3);
+      this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+      this.tableLayoutPanel11.RowCount = 2;
+      this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.36527F));
+      this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.63473F));
+      this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+      this.tableLayoutPanel11.Size = new System.Drawing.Size(403, 167);
+      this.tableLayoutPanel11.TabIndex = 16;
+      // 
+      // panel7
+      // 
+      this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.panel7.Controls.Add(this.label14);
+      this.panel7.Location = new System.Drawing.Point(3, 3);
+      this.panel7.Name = "panel7";
+      this.panel7.Size = new System.Drawing.Size(397, 23);
+      this.panel7.TabIndex = 0;
+      // 
+      // label14
+      // 
+      this.label14.AutoSize = true;
+      this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.label14.ForeColor = System.Drawing.Color.Transparent;
+      this.label14.Location = new System.Drawing.Point(-3, -6);
+      this.label14.Name = "label14";
+      this.label14.Size = new System.Drawing.Size(320, 28);
+      this.label14.TabIndex = 11;
+      this.label14.Text = "Vibration Data | Dữ liệu độ rung";
+      // 
+      // chartVibration
+      // 
+      this.chartVibration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.chartVibration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.chartVibration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.chartVibration.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+      this.chartVibration.BackSecondaryColor = System.Drawing.Color.White;
+      this.chartVibration.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      this.chartVibration.BorderSkin.BorderColor = System.Drawing.Color.Red;
+      chartArea3.Area3DStyle.Enable3D = true;
+      chartArea3.AxisX.TitleForeColor = System.Drawing.Color.White;
+      chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      chartArea3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+      chartArea3.BorderColor = System.Drawing.Color.IndianRed;
+      chartArea3.Name = "ChartArea1";
+      this.chartVibration.ChartAreas.Add(chartArea3);
+      legend3.BackImageTransparentColor = System.Drawing.Color.White;
+      legend3.BackSecondaryColor = System.Drawing.Color.White;
+      legend3.BorderColor = System.Drawing.Color.Transparent;
+      legend3.Enabled = false;
+      legend3.InterlacedRowsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+      legend3.Name = "Legend1";
+      legend3.Position.Auto = false;
+      legend3.Position.Height = 15.26316F;
+      legend3.Position.Width = 19.43463F;
+      legend3.Position.X = 77.56537F;
+      legend3.Position.Y = 3F;
+      this.chartVibration.Legends.Add(legend3);
+      this.chartVibration.Location = new System.Drawing.Point(3, 32);
+      this.chartVibration.Name = "chartVibration";
+      this.chartVibration.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+      series3.BackImage = "19, 33, 73";
+      series3.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+      series3.BorderWidth = 4;
+      series3.ChartArea = "ChartArea1";
+      series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+      series3.Color = System.Drawing.Color.Red;
+      series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      series3.LabelBackColor = System.Drawing.Color.White;
+      series3.LabelBorderColor = System.Drawing.Color.White;
+      series3.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+      series3.LabelForeColor = System.Drawing.Color.White;
+      series3.Legend = "Legend1";
+      series3.MarkerBorderColor = System.Drawing.Color.BlueViolet;
+      series3.MarkerBorderWidth = 2;
+      series3.MarkerColor = System.Drawing.Color.Lime;
+      series3.MarkerImageTransparentColor = System.Drawing.Color.White;
+      series3.MarkerSize = 7;
+      series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+      series3.Name = "Dữ liệu độ rung";
+      this.chartVibration.Series.Add(series3);
+      this.chartVibration.Size = new System.Drawing.Size(397, 132);
+      this.chartVibration.SuppressExceptions = true;
+      this.chartVibration.TabIndex = 14;
+      this.chartVibration.Text = "chartVibration";
       // 
       // panelStatus
       // 
@@ -543,7 +823,7 @@
       this.panelStatus.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelStatus.Location = new System.Drawing.Point(3, 3);
       this.panelStatus.Name = "panelStatus";
-      this.panelStatus.Size = new System.Drawing.Size(169, 167);
+      this.panelStatus.Size = new System.Drawing.Size(191, 167);
       this.panelStatus.TabIndex = 5;
       // 
       // label7
@@ -557,47 +837,55 @@
       this.label7.TabIndex = 11;
       this.label7.Text = "Status";
       // 
-      // panelTrend
+      // tableLayoutPanel10
       // 
-      this.panelTrend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.panelTrend.Controls.Add(this.label8);
-      this.panelTrend.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panelTrend.Location = new System.Drawing.Point(198, 3);
-      this.panelTrend.Name = "panelTrend";
-      this.panelTrend.Size = new System.Drawing.Size(565, 167);
-      this.panelTrend.TabIndex = 13;
+      this.tableLayoutPanel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.tableLayoutPanel10.ColumnCount = 1;
+      this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+      this.tableLayoutPanel10.Controls.Add(this.panel5, 0, 1);
+      this.tableLayoutPanel10.Controls.Add(this.panel4, 0, 0);
+      this.tableLayoutPanel10.Location = new System.Drawing.Point(211, 3);
+      this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+      this.tableLayoutPanel10.RowCount = 2;
+      this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.36527F));
+      this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.63473F));
+      this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+      this.tableLayoutPanel10.Size = new System.Drawing.Size(482, 167);
+      this.tableLayoutPanel10.TabIndex = 15;
+      // 
+      // panel5
+      // 
+      this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.panel5.Location = new System.Drawing.Point(3, 32);
+      this.panel5.Name = "panel5";
+      this.panel5.Size = new System.Drawing.Size(476, 132);
+      this.panel5.TabIndex = 1;
+      // 
+      // panel4
+      // 
+      this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.panel4.Controls.Add(this.label8);
+      this.panel4.Location = new System.Drawing.Point(3, 3);
+      this.panel4.Name = "panel4";
+      this.panel4.Size = new System.Drawing.Size(476, 23);
+      this.panel4.TabIndex = 0;
       // 
       // label8
       // 
       this.label8.AutoSize = true;
       this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
       this.label8.ForeColor = System.Drawing.Color.Transparent;
-      this.label8.Location = new System.Drawing.Point(3, 3);
+      this.label8.Location = new System.Drawing.Point(-3, -3);
       this.label8.Name = "label8";
-      this.label8.Size = new System.Drawing.Size(65, 28);
+      this.label8.Size = new System.Drawing.Size(238, 28);
       this.label8.TabIndex = 11;
-      this.label8.Text = "Trend";
-      // 
-      // panelVibrationData
-      // 
-      this.panelVibrationData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-      this.panelVibrationData.Controls.Add(this.label9);
-      this.panelVibrationData.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.panelVibrationData.Location = new System.Drawing.Point(784, 3);
-      this.panelVibrationData.Name = "panelVibrationData";
-      this.panelVibrationData.Size = new System.Drawing.Size(331, 167);
-      this.panelVibrationData.TabIndex = 14;
-      // 
-      // label9
-      // 
-      this.label9.AutoSize = true;
-      this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.label9.ForeColor = System.Drawing.Color.Transparent;
-      this.label9.Location = new System.Drawing.Point(3, 3);
-      this.label9.Name = "label9";
-      this.label9.Size = new System.Drawing.Size(151, 28);
-      this.label9.TabIndex = 11;
-      this.label9.Text = "Vibration Data";
+      this.label8.Text = "Trend | Dự đoán dữ liệu";
       // 
       // tableLayoutPanel8
       // 
@@ -652,12 +940,16 @@
       this.Load += new System.EventHandler(this.DashBoard_Load);
       this.tableLayoutPanel1.ResumeLayout(false);
       this.tableLayoutPanel4.ResumeLayout(false);
+      this.tableLayoutPanel13.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.chartMagFd)).EndInit();
+      this.panel11.ResumeLayout(false);
+      this.panel11.PerformLayout();
       this.panelScatter.ResumeLayout(false);
       this.panelScatter.PerformLayout();
-      this.panelMFD.ResumeLayout(false);
-      this.panelMFD.PerformLayout();
-      this.panelAcousticData.ResumeLayout(false);
-      this.panelAcousticData.PerformLayout();
+      this.tableLayoutPanel12.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.chartAccoustic)).EndInit();
+      this.panel9.ResumeLayout(false);
+      this.panel9.PerformLayout();
       this.tableLayoutPanel2.ResumeLayout(false);
       this.tableLayoutPanel9.ResumeLayout(false);
       this.tableLayoutPanel9.PerformLayout();
@@ -669,12 +961,15 @@
       this.tableLayoutPanel7.PerformLayout();
       this.panel1.ResumeLayout(false);
       this.tableLayoutPanel3.ResumeLayout(false);
+      this.tableLayoutPanel11.ResumeLayout(false);
+      this.panel7.ResumeLayout(false);
+      this.panel7.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.chartVibration)).EndInit();
       this.panelStatus.ResumeLayout(false);
       this.panelStatus.PerformLayout();
-      this.panelTrend.ResumeLayout(false);
-      this.panelTrend.PerformLayout();
-      this.panelVibrationData.ResumeLayout(false);
-      this.panelVibrationData.PerformLayout();
+      this.tableLayoutPanel10.ResumeLayout(false);
+      this.panel4.ResumeLayout(false);
+      this.panel4.PerformLayout();
       this.tableLayoutPanel8.ResumeLayout(false);
       this.tableLayoutPanel8.PerformLayout();
       this.ResumeLayout(false);
@@ -691,16 +986,11 @@
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     private System.Windows.Forms.Panel panelStatus;
     private System.Windows.Forms.Label label7;
-    private System.Windows.Forms.Panel panelTrend;
     private System.Windows.Forms.Label label8;
-    private System.Windows.Forms.Panel panelVibrationData;
-    private System.Windows.Forms.Label label9;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
     private System.Windows.Forms.Panel panelScatter;
     private System.Windows.Forms.Label label12;
-    private System.Windows.Forms.Panel panelMFD;
     private System.Windows.Forms.Label labelMFD;
-    private System.Windows.Forms.Panel panelAcousticData;
     private System.Windows.Forms.Label label10;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     private System.Windows.Forms.Label label4;
@@ -724,5 +1014,18 @@
     
     private CircularProgressBar_NET5.CircularProgressBar cpbTemp;
     private CircularProgressBar_NET5.CircularProgressBar cpbSpeed;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+    private System.Windows.Forms.Panel panel11;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+    private System.Windows.Forms.Panel panel9;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+    private System.Windows.Forms.Panel panel7;
+    private System.Windows.Forms.Label label14;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+    private System.Windows.Forms.Panel panel5;
+    private System.Windows.Forms.Panel panel4;
+    private System.Windows.Forms.DataVisualization.Charting.Chart chartVibration;
+    private System.Windows.Forms.DataVisualization.Charting.Chart chartMagFd;
+    private System.Windows.Forms.DataVisualization.Charting.Chart chartAccoustic;
   }
 }

@@ -1,4 +1,6 @@
-﻿using DataloggerDesktops.Repository;
+﻿using DataloggerDesktops.Models;
+using DataloggerDesktops.Repository;
+using MQTTnet.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DataloggerDesktops
 {
@@ -22,26 +25,61 @@ namespace DataloggerDesktops
 
     private void DashBoard_Load(object sender, EventArgs e)
     {
-      LoadValueTemp();
+      LoadData();
     }
 
     private void tmrDashBoard_Tick(object sender, EventArgs e)
     {
-      LoadValueTemp();
+      LoadData();
     }
 
 
-    public void LoadValueTemp()
+    public void LoadData()
     {
       try
       {
-        cpbTemp.Text = _managerParalog.GetValuesByIdParametter(9)[0].Value.ToString();
-        cpbSpeed.Text = _managerParalog.GetValuesByIdParametter(3)[0].Value.ToString();
+        // Hiển thị temp và speed
+        cpbTemp.Text = _managerParalog.GetValuesByIdParametter(10)[0].Value.ToString();
+        cpbSpeed.Text = _managerParalog.GetValuesByIdParametter(4)[0].Value.ToString();
+
+        // Clear các điểm trên chart trước khi load
+        chartVibration.Series["Dữ liệu độ rung"].Points.Clear();
+        chartAccoustic.Series["Dữ liệu âm thanh"].Points.Clear();
+        chartMagFd.Series["Dữ liệu từ trường"].Points.Clear();
+
+        for (int i = 1; i <= 24; i++)
+        {
+          // Vibration Data | Dữ liệu độ rung
+          var dataVibration = _managerParalog.Viet(7, i);
+          if (dataVibration != null)
+          {
+            chartVibration.Series["Dữ liệu độ rung"].Points.AddXY(dataVibration.DateCreate.Hour.ToString() + ":00", dataVibration.Value);
+          }
+
+          //Acoustic Data | Dữ liệu âm thanh
+          var dataAcoustic = _managerParalog.iChart(11, i);
+          if (dataAcoustic != null)
+          {
+            chartAccoustic.Series["Dữ liệu âm thanh"].Points.AddXY(dataAcoustic.DateCreate.Hour.ToString() + ":00", dataAcoustic.Value);
+          }
+
+          // Magnetic Field Data | Dữ liệu từ trường
+          var dataMagFd = _managerParalog.iChart(1, i);
+          if (dataMagFd != null)
+          {
+            chartMagFd.Series["Dữ liệu từ trường"].Points.AddXY(dataMagFd.DateCreate.Hour.ToString() + ":00", dataMagFd.Value);
+          }
+        }
+        
       }
       catch (Exception ex)
       {
         MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
       }
     }
+
+    
+
+
   }
 }

@@ -2,9 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
@@ -63,6 +65,22 @@ namespace DataloggerDesktops.Repository
       if (values != null)
       {
         return values;
+      }
+      return null;
+    }
+
+
+    public iChart? Viet(int idPara, int hour)
+    {
+      _dbContext.Database.EnsureCreated();
+      var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).Where(x => x.DateCreate.Hour == hour).OrderByDescending(s => s.Id).FirstOrDefault();
+      if (values != null)
+      {
+        return new iChart
+        {
+          DateCreate = values.DateCreate,
+          Value = (float)values.Value
+        };
       }
       return null;
     }

@@ -138,7 +138,7 @@
       this.panel9 = new System.Windows.Forms.Panel();
       this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
       this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-      this.tmrStatistics = new System.Windows.Forms.Timer(this.components);
+      this.tmrHistorical = new System.Windows.Forms.Timer(this.components);
       this.tableLayoutPanel1.SuspendLayout();
       this.tableLayoutPanel2.SuspendLayout();
       this.panel1.SuspendLayout();
@@ -217,7 +217,6 @@
       this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
       this.tableLayoutPanel1.Size = new System.Drawing.Size(1020, 567);
       this.tableLayoutPanel1.TabIndex = 0;
-      this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
       // 
       // tableLayoutPanel2
       // 
@@ -909,7 +908,7 @@
       series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       series1.BorderWidth = 4;
       series1.ChartArea = "ChartArea1";
-      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
       series1.Color = System.Drawing.Color.Red;
       series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
       series1.LabelBackColor = System.Drawing.Color.White;
@@ -1049,7 +1048,7 @@
       series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       series2.BorderWidth = 4;
       series2.ChartArea = "ChartArea1";
-      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
       series2.Color = System.Drawing.Color.LightSeaGreen;
       series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
       series2.LabelBackColor = System.Drawing.Color.White;
@@ -1435,6 +1434,12 @@
       this.dateTimePicker8.Size = new System.Drawing.Size(185, 27);
       this.dateTimePicker8.TabIndex = 7;
       // 
+      // tmrHistorical
+      // 
+      this.tmrHistorical.Enabled = true;
+      this.tmrHistorical.Interval = 1000;
+      this.tmrHistorical.Tick += new System.EventHandler(this.tmrHistorical_Tick);
+      // 
       // Historical
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1590,7 +1595,6 @@
     private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     private System.Windows.Forms.DataGridViewTextBoxColumn Thoigian;
     private System.Windows.Forms.DataGridViewTextBoxColumn Nhietdo;
-    private System.Windows.Forms.Timer tmrStatistics;
     private System.Windows.Forms.DataGridView dgvSpeed;
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1605,5 +1609,6 @@
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
     private System.Windows.Forms.Panel panel28;
     private System.Windows.Forms.Label label12;
+    private System.Windows.Forms.Timer tmrHistorical;
   }
 }

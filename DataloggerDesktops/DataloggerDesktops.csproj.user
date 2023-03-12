@@ -19,9 +19,6 @@
     <Compile Update="UI\Decentralization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\SettingParametter.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="UI\DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -32,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\SettingDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\SettingParametter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\SettingUser.cs">
