@@ -49,7 +49,7 @@ namespace DataloggerDesktops.UI
       Random rd = new Random();
       device.Value = rd.Next(1, 100);
 
-      device.LineId = _managerLine.GetIdLine(cbAddDevice.SelectedItem.ToString())[0];
+      device.LineId = _managerLine.GetIdLineByName(cbAddDevice.SelectedItem.ToString())[0];
 
       //device.LineId= cbAddDevice.SelectedIndex+1;
       //device.LineId = int.Parse(cbAddDevice.SelectedItem.ToString());

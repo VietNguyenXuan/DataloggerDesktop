@@ -41,11 +41,11 @@ namespace DataloggerDesktops.UI
     {
       Line line = new Line();
 
-      line.Id = _managerLine.GetIdLine(txbNameLine.Text)[0];
+      line.Id = _managerLine.GetIdLineByName(txbNameLine.Text)[0];
       line.Name = cbUpdateIdFactoryLine.SelectedItem.ToString() + " - " + txbUpdateLine.Text;
       line.DateCreate = DateTime.Now;
 
-      line.FactoryId = _managerFactory.GetIdFactory(cbUpdateIdFactoryLine.SelectedItem.ToString())[0];
+      line.FactoryId = _managerFactory.GetIdFactoryByName(cbUpdateIdFactoryLine.SelectedItem.ToString())[0];
 
       _managerLine.UpdateLine(line);
     }

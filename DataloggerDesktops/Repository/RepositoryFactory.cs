@@ -103,14 +103,15 @@ namespace DataloggerDesktops.Repository
       return null;
     }
 
-    public List<int>? GetIdFactory(string name)
+    // Lấy id riêng tương ứng với tên
+    public List<int>? GetIdFactoryByName(string name)
     {
       _dbContext.Database.EnsureCreated();
-      var line = _dbContext.Factories.Where(s => s.Name == name).Take(1).ToList();
+      var idFactory = _dbContext.Factories.Where(s => s.Name == name).Select(s => s.Id).ToList();
 
-      if (line != null)
+      if (idFactory != null)
       {
-        return line.Select(s => s.Id).ToList();
+        return idFactory;
       }
 
       return null;

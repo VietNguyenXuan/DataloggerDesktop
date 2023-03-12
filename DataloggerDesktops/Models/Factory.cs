@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataloggerDesktops.Models
 {
-  public class Factory:IEntity
+  public class Factory: IEntity
   {
     [Browsable(false)]
     public int Id { get; set; }

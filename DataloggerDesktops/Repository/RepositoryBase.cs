@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataloggerDesktops.Repository
 {
-  public class RepositoryBase<T> where T : class
+  public class RepositoryBase<T> //where T : //Entity
   {
     ApplicationDbContext _dbContext = new ApplicationDbContext();
 

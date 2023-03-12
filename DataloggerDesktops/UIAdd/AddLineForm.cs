@@ -29,8 +29,7 @@ namespace DataloggerDesktops.UI
 
       line.Name = cbAddLine.SelectedItem+" - "+txbAddLine.Text;
       line.DateCreate = DateTime.Now;
-
-      line.FactoryId = _managerFactory.GetIdFactory(cbAddLine.SelectedItem.ToString())[0];
+      line.FactoryId = _managerFactory.GetIdFactoryByName(cbAddLine.SelectedItem.ToString())[0];
 
       await _managerLine.Add(line);
 

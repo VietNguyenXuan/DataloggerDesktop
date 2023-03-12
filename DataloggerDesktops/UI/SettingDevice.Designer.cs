@@ -30,11 +30,11 @@
     {
       this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingDevice));
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -52,6 +52,8 @@
       this.pictureBox6 = new System.Windows.Forms.PictureBox();
       this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+      this.panel5 = new System.Windows.Forms.Panel();
+      this.lbAddLine = new System.Windows.Forms.Label();
       this.panel4 = new System.Windows.Forms.Panel();
       this.label3 = new System.Windows.Forms.Label();
       this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,6 +65,8 @@
       this.pictureBox5 = new System.Windows.Forms.PictureBox();
       this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
       this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+      this.panel8 = new System.Windows.Forms.Panel();
+      this.lbAddDevice = new System.Windows.Forms.Label();
       this.panel7 = new System.Windows.Forms.Panel();
       this.label9 = new System.Windows.Forms.Label();
       this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
@@ -82,10 +86,6 @@
       this.cbDisplay = new System.Windows.Forms.ComboBox();
       this.dgvSettingDevice = new System.Windows.Forms.DataGridView();
       this.tmrUpdateData = new System.Windows.Forms.Timer(this.components);
-      this.panel5 = new System.Windows.Forms.Panel();
-      this.lbAddLine = new System.Windows.Forms.Label();
-      this.panel8 = new System.Windows.Forms.Panel();
-      this.lbAddDevice = new System.Windows.Forms.Label();
       this.tableLayoutPanel1.SuspendLayout();
       this.tableLayoutPanel2.SuspendLayout();
       this.tableLayoutPanel3.SuspendLayout();
@@ -99,6 +99,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
       this.tableLayoutPanel7.SuspendLayout();
       this.tableLayoutPanel8.SuspendLayout();
+      this.panel5.SuspendLayout();
       this.panel4.SuspendLayout();
       this.tableLayoutPanel9.SuspendLayout();
       this.tableLayoutPanel10.SuspendLayout();
@@ -107,6 +108,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
       this.tableLayoutPanel11.SuspendLayout();
       this.tableLayoutPanel12.SuspendLayout();
+      this.panel8.SuspendLayout();
       this.panel7.SuspendLayout();
       this.tableLayoutPanel13.SuspendLayout();
       this.tableLayoutPanel14.SuspendLayout();
@@ -120,8 +122,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).BeginInit();
       this.panel11.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgvSettingDevice)).BeginInit();
-      this.panel5.SuspendLayout();
-      this.panel8.SuspendLayout();
       this.SuspendLayout();
       // 
       // tableLayoutPanel1
@@ -382,6 +382,29 @@
       this.tableLayoutPanel8.Size = new System.Drawing.Size(287, 45);
       this.tableLayoutPanel8.TabIndex = 0;
       // 
+      // panel5
+      // 
+      this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.panel5.Controls.Add(this.lbAddLine);
+      this.panel5.Location = new System.Drawing.Point(234, 3);
+      this.panel5.Name = "panel5";
+      this.panel5.Size = new System.Drawing.Size(50, 39);
+      this.panel5.TabIndex = 2;
+      // 
+      // lbAddLine
+      // 
+      this.lbAddLine.AutoSize = true;
+      this.lbAddLine.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.lbAddLine.ForeColor = System.Drawing.Color.White;
+      this.lbAddLine.Location = new System.Drawing.Point(4, -5);
+      this.lbAddLine.Name = "lbAddLine";
+      this.lbAddLine.Size = new System.Drawing.Size(43, 45);
+      this.lbAddLine.TabIndex = 0;
+      this.lbAddLine.Text = "+";
+      this.lbAddLine.Click += new System.EventHandler(this.lbAddLine_Click);
+      // 
       // panel4
       // 
       this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -537,6 +560,29 @@
       this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
       this.tableLayoutPanel12.Size = new System.Drawing.Size(287, 45);
       this.tableLayoutPanel12.TabIndex = 0;
+      // 
+      // panel8
+      // 
+      this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.panel8.Controls.Add(this.lbAddDevice);
+      this.panel8.Location = new System.Drawing.Point(234, 3);
+      this.panel8.Name = "panel8";
+      this.panel8.Size = new System.Drawing.Size(50, 39);
+      this.panel8.TabIndex = 2;
+      // 
+      // lbAddDevice
+      // 
+      this.lbAddDevice.AutoSize = true;
+      this.lbAddDevice.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.lbAddDevice.ForeColor = System.Drawing.Color.White;
+      this.lbAddDevice.Location = new System.Drawing.Point(4, -5);
+      this.lbAddDevice.Name = "lbAddDevice";
+      this.lbAddDevice.Size = new System.Drawing.Size(43, 45);
+      this.lbAddDevice.TabIndex = 0;
+      this.lbAddDevice.Text = "+";
+      this.lbAddDevice.Click += new System.EventHandler(this.lbAddDevice_Click);
       // 
       // panel7
       // 
@@ -778,46 +824,47 @@
       // 
       // dgvSettingDevice
       // 
-      dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
-      dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-      this.dgvSettingDevice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+      dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+      dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+      this.dgvSettingDevice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
       this.dgvSettingDevice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.dgvSettingDevice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.dgvSettingDevice.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(44)))));
-      dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-      dataGridViewCellStyle7.BackColor = System.Drawing.Color.Red;
-      dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-      dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-      dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-      dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-      this.dgvSettingDevice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+      dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+      dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
+      dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+      dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+      this.dgvSettingDevice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
       this.dgvSettingDevice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-      dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-      dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-      dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-      dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-      dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-      this.dgvSettingDevice.DefaultCellStyle = dataGridViewCellStyle8;
+      dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+      dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+      dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+      dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+      this.dgvSettingDevice.DefaultCellStyle = dataGridViewCellStyle3;
       this.dgvSettingDevice.Location = new System.Drawing.Point(3, 173);
       this.dgvSettingDevice.Name = "dgvSettingDevice";
-      dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-      dataGridViewCellStyle9.BackColor = System.Drawing.Color.DimGray;
-      dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-      dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-      dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-      dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-      this.dgvSettingDevice.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+      dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+      dataGridViewCellStyle4.BackColor = System.Drawing.Color.DimGray;
+      dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+      dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+      this.dgvSettingDevice.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+      this.dgvSettingDevice.RowHeadersVisible = false;
       this.dgvSettingDevice.RowHeadersWidth = 51;
-      dataGridViewCellStyle10.BackColor = System.Drawing.Color.Gray;
-      dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-      this.dgvSettingDevice.RowsDefaultCellStyle = dataGridViewCellStyle10;
+      dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
+      dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+      this.dgvSettingDevice.RowsDefaultCellStyle = dataGridViewCellStyle5;
       this.dgvSettingDevice.RowTemplate.Height = 29;
       this.dgvSettingDevice.Size = new System.Drawing.Size(1259, 481);
       this.dgvSettingDevice.TabIndex = 1;
@@ -826,52 +873,6 @@
       // 
       this.tmrUpdateData.Interval = 2000;
       this.tmrUpdateData.Tick += new System.EventHandler(this.tmrUpdateData_Tick);
-      // 
-      // panel5
-      // 
-      this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel5.Controls.Add(this.lbAddLine);
-      this.panel5.Location = new System.Drawing.Point(234, 3);
-      this.panel5.Name = "panel5";
-      this.panel5.Size = new System.Drawing.Size(50, 39);
-      this.panel5.TabIndex = 2;
-      // 
-      // lbAddLine
-      // 
-      this.lbAddLine.AutoSize = true;
-      this.lbAddLine.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.lbAddLine.ForeColor = System.Drawing.Color.White;
-      this.lbAddLine.Location = new System.Drawing.Point(4, -5);
-      this.lbAddLine.Name = "lbAddLine";
-      this.lbAddLine.Size = new System.Drawing.Size(43, 45);
-      this.lbAddLine.TabIndex = 0;
-      this.lbAddLine.Text = "+";
-      this.lbAddLine.Click += new System.EventHandler(this.lbAddLine_Click);
-      // 
-      // panel8
-      // 
-      this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel8.Controls.Add(this.lbAddDevice);
-      this.panel8.Location = new System.Drawing.Point(234, 3);
-      this.panel8.Name = "panel8";
-      this.panel8.Size = new System.Drawing.Size(50, 39);
-      this.panel8.TabIndex = 2;
-      // 
-      // lbAddDevice
-      // 
-      this.lbAddDevice.AutoSize = true;
-      this.lbAddDevice.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.lbAddDevice.ForeColor = System.Drawing.Color.White;
-      this.lbAddDevice.Location = new System.Drawing.Point(4, -5);
-      this.lbAddDevice.Name = "lbAddDevice";
-      this.lbAddDevice.Size = new System.Drawing.Size(43, 45);
-      this.lbAddDevice.TabIndex = 0;
-      this.lbAddDevice.Text = "+";
-      this.lbAddDevice.Click += new System.EventHandler(this.lbAddDevice_Click);
       // 
       // SettingDevice
       // 
@@ -900,6 +901,8 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
       this.tableLayoutPanel7.ResumeLayout(false);
       this.tableLayoutPanel8.ResumeLayout(false);
+      this.panel5.ResumeLayout(false);
+      this.panel5.PerformLayout();
       this.panel4.ResumeLayout(false);
       this.panel4.PerformLayout();
       this.tableLayoutPanel9.ResumeLayout(false);
@@ -911,6 +914,8 @@
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
       this.tableLayoutPanel11.ResumeLayout(false);
       this.tableLayoutPanel12.ResumeLayout(false);
+      this.panel8.ResumeLayout(false);
+      this.panel8.PerformLayout();
       this.panel7.ResumeLayout(false);
       this.panel7.PerformLayout();
       this.tableLayoutPanel13.ResumeLayout(false);
@@ -928,10 +933,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).EndInit();
       this.panel11.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.dgvSettingDevice)).EndInit();
-      this.panel5.ResumeLayout(false);
-      this.panel5.PerformLayout();
-      this.panel8.ResumeLayout(false);
-      this.panel8.PerformLayout();
       this.ResumeLayout(false);
 
     }

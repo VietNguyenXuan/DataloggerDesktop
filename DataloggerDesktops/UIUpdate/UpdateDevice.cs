@@ -39,11 +39,11 @@ namespace DataloggerDesktops.UI
     {
       Device device = new Device();
 
-      device.Id = _managerDevice.GetIdDevice(txbNameDevice.Text)[0];
+      device.Id = _managerDevice.GetIdDeviceByName(txbNameDevice.Text)[0];
       device.Name = cbUpdateIdLineDevice.SelectedItem.ToString() + " - " + txbUpdateDevice.Text;
       device.DateCreate = DateTime.Now;
       device.DeviceCode = txbUpdateCodeDevice.Text;
-      device.LineId = _managerLine.GetIdLine(cbUpdateIdLineDevice.SelectedItem.ToString())[0];
+      device.LineId = _managerLine.GetIdLineByName(cbUpdateIdLineDevice.SelectedItem.ToString())[0];
 
       _managerDevice.UpdateDevice(device);
     }

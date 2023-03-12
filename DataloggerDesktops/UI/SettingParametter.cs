@@ -19,6 +19,11 @@ namespace DataloggerDesktops
       InitializeComponent();
     }
 
+    private void pictureBox4_Click(object sender, EventArgs e)
+    {
+      //dgvAcoustic.Rows[0].Cells[0].Value = "Hello";
+    }
+
     private void SettingParametter_Load(object sender, EventArgs e)
     {
       // tắt hiển thị dòng cuối datagridview
@@ -27,26 +32,57 @@ namespace DataloggerDesktops
       dgvMagneticField.AllowUserToAddRows = false;
       dgvSpeed.AllowUserToAddRows = false;
       dgvVibration.AllowUserToAddRows = false;
+      string[] status = { "switch_on_48px", "switch_off_48px" };
 
-      string[] status = { "switch_off_48px", "switch_off_48px" };
 
-      //Dgv temp
-      AddColId_StatusName(dgvTemp, "ID", "StatusName", "High temperature");    // Thêm cột ID và status name
-      AddColActive(dgvTemp, "Kích hoạt", "ActiveTemp", status[0]);             // Thêm cột kích hoạt
-      AddColCondition(dgvTemp, "Điều kiện", "conditionCol");                   // Thêm cột điều kiện
-      AddColThreshold(dgvTemp, "Ngưỡng", "thresholdCol");                     // Thêm cột ngưỡng
-      AddColItem(dgvTemp, "Item", "itemCol");                                 // Thêm cột Item
-      dgvTemp.Columns["ID"].Width = 30;
-      dgvTemp.Columns["StatusName"].Width = 120;
+      //dgvVibration.Rows.Add(1,2);
 
-      //Acoustic Data | Dữ liệu âm thanh
-      AddColId_StatusName(dgvAcoustic, "ID", "StatusName", "High Acoustic");    // Thêm cột ID và status name
-      AddColActive(dgvAcoustic, "Kích hoạt", "Active", status[0]);             // Thêm cột kích hoạt
-      AddColCondition(dgvAcoustic, "Điều kiện", "conditionCol");                   // Thêm cột điều kiện
-      AddColThreshold(dgvAcoustic, "Ngưỡng", "thresholdCol");                     // Thêm cột ngưỡng
-      AddColItem(dgvAcoustic, "Item", "itemCol");                                 // Thêm cột Item
-      dgvAcoustic.Columns["ID"].Width = 30;
-      dgvAcoustic.Columns["StatusName"].Width = 120;
+      //dgvVibration.Rows[0].Cells[0].Value = status[0];  
+      //string s= dgvVibration.Rows[0].Cells[0].Value.ToString();
+      //MessageBox.Show(s);
+
+      //comboBox3.Items.Add(">");
+      //comboBox3.Items.Add("<");
+      //comboBox3.Items.Add(">=");
+      //dgvVibration.Rows.Add(2);
+
+      //dataGridView1.Rows[rowIndex].Cells[columnIndex].Value.ToString();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ////Dgv temp
+      //AddColId_StatusName(dgvTemp, "ID", "StatusName", "High temperature");    // Thêm cột ID và status name
+      //AddColActive(dgvTemp, "Kích hoạt", "ActiveTemp", status[0]);             // Thêm cột kích hoạt
+      //AddColCondition(dgvTemp, "Điều kiện", "conditionCol");                   // Thêm cột điều kiện
+      //AddColThreshold(dgvTemp, "Ngưỡng", "thresholdCol");                     // Thêm cột ngưỡng
+      //AddColItem(dgvTemp, "Item", "itemCol");                                 // Thêm cột Item
+      //dgvTemp.Columns["ID"].Width = 30;
+      //dgvTemp.Columns["StatusName"].Width = 120;
+
+
+      ////Acoustic Data | Dữ liệu âm thanh
+      //AddColId_StatusName(dgvAcoustic, "ID", "StatusName", "High Acoustic");    // Thêm cột ID và status name
+      //AddColActive(dgvAcoustic, "Kích hoạt", "Active", status[0]);             // Thêm cột kích hoạt
+      //AddColCondition(dgvAcoustic, "Điều kiện", "conditionCol");                   // Thêm cột điều kiện
+      //AddColThreshold(dgvAcoustic, "Ngưỡng", "thresholdCol");                     // Thêm cột ngưỡng
+      //AddColItem(dgvAcoustic, "Item", "itemCol");                                 // Thêm cột Item
+      //dgvAcoustic.Columns["ID"].Width = 30;
+      //dgvAcoustic.Columns["StatusName"].Width = 120;
 
 
       // Vibration Data | Dữ liệu độ rung
@@ -75,11 +111,7 @@ namespace DataloggerDesktops
       AddColItem(dgvSpeed, "Item", "itemCol");                                 // Thêm cột Item
       dgvSpeed.Columns["ID"].Width = 30;
       dgvSpeed.Columns["StatusName"].Width = 120;
-
     }
-
-
-
 
 
     void AddColId_StatusName(DataGridView dgv,string col1Name, string col2Name, string status)
@@ -114,7 +146,10 @@ namespace DataloggerDesktops
       CbCol.Items.Add("<");
       CbCol.Items.Add(">=");
       CbCol.Items.Add("<=");
+      
+      
       dgv.Columns.Add(CbCol);
+
       CbCol.Width = 150;
     }
     void AddColThreshold(DataGridView dgv, string headerCol, string NameCol)
@@ -122,6 +157,7 @@ namespace DataloggerDesktops
       DataGridViewTextBoxColumn thresholdCol = new DataGridViewTextBoxColumn();
       thresholdCol.HeaderText = headerCol;
       thresholdCol.Name = NameCol;
+
       dgv.Columns.Add(thresholdCol);
     }
     void AddColItem(DataGridView dgv, string headerCol, string NameCol)
@@ -131,7 +167,5 @@ namespace DataloggerDesktops
       itemCol.Name = NameCol;
       dgv.Columns.Add(itemCol);
     }
-
-
   }
 }

@@ -34,7 +34,9 @@ namespace DataloggerDesktops.UI
     {
       Factory factory=new Factory();
 
-      factory.Id = _managerFactory.GetIdFactory(txbNameFactory.Text)[0];
+
+      factory.Id = _managerFactory.GetIdFactoryByName(txbNameFactory.Text)[0];
+
       factory.Name = txbUpdateFactory.Text;
 
       _managerFactory.UpdateFactory(factory);

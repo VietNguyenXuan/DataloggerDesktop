@@ -93,7 +93,7 @@ namespace DataloggerDesktops.Repository
       return null;
     }
 
-    public List<int>? GetIdLine(string name)
+    public List<int>? GetIdLineByName(string name)
     {
       _dbContext.Database.EnsureCreated();
       var line = _dbContext.Lines.Where(s=>s.Name == name).ToList();
@@ -137,6 +137,18 @@ namespace DataloggerDesktops.Repository
 
         _dbContext.SaveChanges();
       }
+    }
+
+    public List<string>? GetNameLineByIdFactory(string name, int idFactory)
+    {
+      _dbContext.Database.EnsureCreated();
+      var nameFactory = _dbContext.Lines.Where(s=>s.FactoryId==idFactory).Select(s => s.Name).ToList();
+
+      if (nameFactory != null)
+      {
+        return nameFactory;
+      }
+      return null;
     }
 
 

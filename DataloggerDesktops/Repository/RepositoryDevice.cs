@@ -147,7 +147,7 @@ namespace DataloggerDesktops.Repository
       }
     }
 
-    public List<int>? GetIdDevice(string name)
+    public List<int>? GetIdDeviceByName(string name)
     {
       _dbContext.Database.EnsureCreated();
       var device = _dbContext.Devices.Where(s => s.Name == name).ToList();
@@ -166,27 +166,17 @@ namespace DataloggerDesktops.Repository
 
 
 
-    //public Device? GetById(int id)
-    //{
-    //  var device = _dbContext.Devices.Where(s => s.Id == 1).FirstOrDefault<Device>();
+    public List<string>? GetNameDeviceByIdLine(string name, int idLine)
+    {
+      _dbContext.Database.EnsureCreated();
+      var nameDevice= _dbContext.Devices.Where(s => s.LineId == idLine).Select(s => s.Name).ToList();
 
-    //  //var devide1 = _dbContext.Devices.Where(d => d.Id == id);
+      if (nameDevice != null)
+      {
+        return nameDevice;
+      }
+      return null;
+    }
 
-    //  if (device != null)
-    //  {
-    //    return device;
-    //  }
-    //  else
-    //  {
-    //    return null;
-    //  }
-    //}
-
-
-
-    //public void Update(Line machines)
-    //{
-    //  //var devide = _dbContext.Devices.SingleOrDefault
-    //}
   }
 }

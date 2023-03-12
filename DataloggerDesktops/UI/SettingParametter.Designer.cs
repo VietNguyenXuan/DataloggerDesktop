@@ -118,6 +118,9 @@
       this.pictureBox3 = new System.Windows.Forms.PictureBox();
       this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
       this.dgvVibration = new System.Windows.Forms.DataGridView();
+      this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
       this.panel5 = new System.Windows.Forms.Panel();
       this.label4 = new System.Windows.Forms.Label();
       this.panel6 = new System.Windows.Forms.Panel();
@@ -132,6 +135,12 @@
       this.pictureBox2 = new System.Windows.Forms.PictureBox();
       this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
       this.dgvTemp = new System.Windows.Forms.DataGridView();
+      this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.statusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.active = new System.Windows.Forms.DataGridViewImageColumn();
+      this.condition = new System.Windows.Forms.DataGridViewComboBoxColumn();
+      this.threshold = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.item = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.panel16 = new System.Windows.Forms.Panel();
       this.label13 = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
@@ -876,6 +885,7 @@
       this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
       this.pictureBox4.TabIndex = 4;
       this.pictureBox4.TabStop = false;
+      this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
       // 
       // tableLayoutPanel8
       // 
@@ -1133,6 +1143,10 @@
       dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
       this.dgvVibration.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
       this.dgvVibration.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dgvVibration.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
       dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
       dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(44)))));
       dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1158,6 +1172,24 @@
       this.dgvVibration.RowTemplate.Height = 29;
       this.dgvVibration.Size = new System.Drawing.Size(559, 79);
       this.dgvVibration.TabIndex = 3;
+      // 
+      // Column1
+      // 
+      this.Column1.HeaderText = "Column1";
+      this.Column1.MinimumWidth = 6;
+      this.Column1.Name = "Column1";
+      // 
+      // Column2
+      // 
+      this.Column2.HeaderText = "Column2";
+      this.Column2.MinimumWidth = 6;
+      this.Column2.Name = "Column2";
+      // 
+      // Column3
+      // 
+      this.Column3.HeaderText = "Column3";
+      this.Column3.MinimumWidth = 6;
+      this.Column3.Name = "Column3";
       // 
       // panel5
       // 
@@ -1330,6 +1362,7 @@
       // 
       // dgvTemp
       // 
+      this.dgvTemp.AllowUserToOrderColumns = true;
       dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(44)))));
       this.dgvTemp.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
       this.dgvTemp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1346,6 +1379,13 @@
       dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
       this.dgvTemp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
       this.dgvTemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dgvTemp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.statusName,
+            this.active,
+            this.condition,
+            this.threshold,
+            this.item});
       dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
       dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(44)))));
       dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1371,6 +1411,53 @@
       this.dgvTemp.RowTemplate.Height = 29;
       this.dgvTemp.Size = new System.Drawing.Size(559, 79);
       this.dgvTemp.TabIndex = 3;
+      // 
+      // id
+      // 
+      this.id.FillWeight = 96.25668F;
+      this.id.HeaderText = "ID";
+      this.id.MinimumWidth = 6;
+      this.id.Name = "id";
+      // 
+      // statusName
+      // 
+      this.statusName.FillWeight = 100.7487F;
+      this.statusName.HeaderText = "Status Name ";
+      this.statusName.MinimumWidth = 6;
+      this.statusName.Name = "statusName";
+      // 
+      // active
+      // 
+      this.active.FillWeight = 100.7487F;
+      this.active.HeaderText = "Kích hoạt";
+      this.active.MinimumWidth = 6;
+      this.active.Name = "active";
+      // 
+      // condition
+      // 
+      this.condition.FillWeight = 100.7487F;
+      this.condition.HeaderText = "Điều kiện";
+      this.condition.Items.AddRange(new object[] {
+            ">",
+            "<",
+            ">=",
+            "<="});
+      this.condition.MinimumWidth = 6;
+      this.condition.Name = "condition";
+      // 
+      // threshold
+      // 
+      this.threshold.FillWeight = 100.7487F;
+      this.threshold.HeaderText = "Ngưỡng";
+      this.threshold.MinimumWidth = 6;
+      this.threshold.Name = "threshold";
+      // 
+      // item
+      // 
+      this.item.FillWeight = 100.7487F;
+      this.item.HeaderText = "Item";
+      this.item.MinimumWidth = 6;
+      this.item.Name = "item";
       // 
       // panel16
       // 
@@ -1701,5 +1788,14 @@
     private System.Windows.Forms.ComboBox cbVibration;
     private System.Windows.Forms.PictureBox pictureBox2;
     private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn id;
+    private System.Windows.Forms.DataGridViewTextBoxColumn statusName;
+    private System.Windows.Forms.DataGridViewImageColumn active;
+    private System.Windows.Forms.DataGridViewComboBoxColumn condition;
+    private System.Windows.Forms.DataGridViewTextBoxColumn threshold;
+    private System.Windows.Forms.DataGridViewTextBoxColumn item;
+    private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+    private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
   }
 }
