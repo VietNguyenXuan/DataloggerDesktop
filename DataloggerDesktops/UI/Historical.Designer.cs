@@ -847,7 +847,7 @@
       dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.dgvUp.RowsDefaultCellStyle = dataGridViewCellStyle5;
       this.dgvUp.RowTemplate.Height = 29;
-      this.dgvUp.Size = new System.Drawing.Size(384, 198);
+      this.dgvUp.Size = new System.Drawing.Size(383, 198);
       this.dgvUp.TabIndex = 0;
       // 
       // ID
@@ -880,13 +880,13 @@
       this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
       this.tableLayoutPanel10.Controls.Add(this.chartUp, 0, 1);
       this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 0, 0);
-      this.tableLayoutPanel10.Location = new System.Drawing.Point(393, 3);
+      this.tableLayoutPanel10.Location = new System.Drawing.Point(392, 3);
       this.tableLayoutPanel10.Name = "tableLayoutPanel10";
       this.tableLayoutPanel10.RowCount = 2;
       this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.80105F));
       this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.19895F));
       this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-      this.tableLayoutPanel10.Size = new System.Drawing.Size(642, 198);
+      this.tableLayoutPanel10.Size = new System.Drawing.Size(643, 198);
       this.tableLayoutPanel10.TabIndex = 1;
       // 
       // chartUp
@@ -943,7 +943,7 @@
       series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
       series1.Name = "Up";
       this.chartUp.Series.Add(series1);
-      this.chartUp.Size = new System.Drawing.Size(636, 157);
+      this.chartUp.Size = new System.Drawing.Size(637, 157);
       this.chartUp.SuppressExceptions = true;
       this.chartUp.TabIndex = 13;
       this.chartUp.Text = "chartTemp";
@@ -966,7 +966,7 @@
       this.tableLayoutPanel11.Name = "tableLayoutPanel11";
       this.tableLayoutPanel11.RowCount = 1;
       this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-      this.tableLayoutPanel11.Size = new System.Drawing.Size(636, 29);
+      this.tableLayoutPanel11.Size = new System.Drawing.Size(637, 29);
       this.tableLayoutPanel11.TabIndex = 14;
       // 
       // panel27
@@ -1021,12 +1021,12 @@
       this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
       this.tableLayoutPanel12.Controls.Add(this.chartDown, 0, 1);
       this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel13, 0, 0);
-      this.tableLayoutPanel12.Location = new System.Drawing.Point(394, 3);
+      this.tableLayoutPanel12.Location = new System.Drawing.Point(393, 3);
       this.tableLayoutPanel12.Name = "tableLayoutPanel12";
       this.tableLayoutPanel12.RowCount = 2;
       this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.80105F));
       this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.19895F));
-      this.tableLayoutPanel12.Size = new System.Drawing.Size(641, 198);
+      this.tableLayoutPanel12.Size = new System.Drawing.Size(642, 198);
       this.tableLayoutPanel12.TabIndex = 15;
       // 
       // chartDown
@@ -1083,7 +1083,7 @@
       series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
       series2.Name = "Down";
       this.chartDown.Series.Add(series2);
-      this.chartDown.Size = new System.Drawing.Size(635, 157);
+      this.chartDown.Size = new System.Drawing.Size(636, 157);
       this.chartDown.SuppressExceptions = true;
       this.chartDown.TabIndex = 13;
       this.chartDown.Text = "chart1";
@@ -1106,7 +1106,7 @@
       this.tableLayoutPanel13.Name = "tableLayoutPanel13";
       this.tableLayoutPanel13.RowCount = 1;
       this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-      this.tableLayoutPanel13.Size = new System.Drawing.Size(635, 29);
+      this.tableLayoutPanel13.Size = new System.Drawing.Size(636, 29);
       this.tableLayoutPanel13.TabIndex = 14;
       // 
       // panel28
@@ -1182,7 +1182,7 @@
       dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
       this.dgvDown.RowsDefaultCellStyle = dataGridViewCellStyle10;
       this.dgvDown.RowTemplate.Height = 29;
-      this.dgvDown.Size = new System.Drawing.Size(385, 198);
+      this.dgvDown.Size = new System.Drawing.Size(384, 198);
       this.dgvDown.TabIndex = 1;
       // 
       // dataGridViewTextBoxColumn1

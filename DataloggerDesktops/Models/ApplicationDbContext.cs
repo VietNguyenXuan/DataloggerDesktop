@@ -26,5 +26,8 @@ namespace DataloggerDesktops.Models
     public DbSet<ParametterSensor>? ParametterSensors { get; set;}
     public DbSet<ParametterLog>? ParametterLogs { get; set; }
 
+    public DbSet<ParametterSetting>? ParametterSettings { get; set;}
+    public DbSet<Sensor> Sensors { get; set; }
+
   }
 }

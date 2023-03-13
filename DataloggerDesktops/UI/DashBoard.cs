@@ -22,10 +22,40 @@ namespace DataloggerDesktops
     }
 
     RepositoryParametterLog _managerParalog=new RepositoryParametterLog();
+    RepositoryFactory _managerFactory = new RepositoryFactory();
+    RepositoryLine _managerLine = new RepositoryLine();
+    RepositoryDevice _managerDevice = new RepositoryDevice();
 
     private void DashBoard_Load(object sender, EventArgs e)
     {
+      var nameFactory = _managerFactory.GetNameFactory();
+      if (nameFactory != null) cbFactory.DataSource = nameFactory;
+
       LoadData();
+    }
+    private void cbFactory_SelectedValueChanged(object sender, EventArgs e)
+    {
+      // Lấy ra id Factory và hiển thị cb Line
+      if (cbFactory.SelectedItem != null)
+      {
+        int idFactory = _managerFactory.GetIdFactoryByName(cbFactory.SelectedItem.ToString())[0];
+        var nameLine = _managerLine.GetNameLineByIdFactory(cbFactory.SelectedItem.ToString(), idFactory);
+
+        cbLine.DataSource = null;
+        if (nameLine != null) cbLine.DataSource = nameLine;
+      }
+    }
+
+    private void cbLine_SelectedValueChanged(object sender, EventArgs e)
+    {
+      // Lấy ra id Line và hiển thị cb Device
+      if (cbLine.SelectedItem != null)
+      {
+        int idLine = _managerLine.GetIdLineByName(cbLine.SelectedItem.ToString())[0];
+        var nameDevice = _managerDevice.GetNameDeviceByIdLine(cbLine.SelectedItem.ToString(), idLine);
+        cbDevice.DataSource = null;
+        if (nameDevice != null) cbDevice.DataSource = nameDevice;
+      }
     }
 
     private void tmrDashBoard_Tick(object sender, EventArgs e)
@@ -50,7 +80,7 @@ namespace DataloggerDesktops
         for (int i = 1; i <= 24; i++)
         {
           // Vibration Data | Dữ liệu độ rung
-          var dataVibration = _managerParalog.Viet(7, i);
+          var dataVibration = _managerParalog.GetDataChart(7, i);
           if (dataVibration != null)
           {
             chartVibration.Series["Dữ liệu độ rung"].Points.AddXY(dataVibration.DateCreate.Hour.ToString() + ":00", dataVibration.Value);
@@ -79,7 +109,5 @@ namespace DataloggerDesktops
     }
 
     
-
-
   }
 }

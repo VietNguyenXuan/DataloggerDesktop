@@ -28,7 +28,6 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingDevice));
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -85,7 +84,6 @@
       this.panel11 = new System.Windows.Forms.Panel();
       this.cbDisplay = new System.Windows.Forms.ComboBox();
       this.dgvSettingDevice = new System.Windows.Forms.DataGridView();
-      this.tmrUpdateData = new System.Windows.Forms.Timer(this.components);
       this.tableLayoutPanel1.SuspendLayout();
       this.tableLayoutPanel2.SuspendLayout();
       this.tableLayoutPanel3.SuspendLayout();
@@ -869,11 +867,6 @@
       this.dgvSettingDevice.Size = new System.Drawing.Size(1259, 481);
       this.dgvSettingDevice.TabIndex = 1;
       // 
-      // tmrUpdateData
-      // 
-      this.tmrUpdateData.Interval = 2000;
-      this.tmrUpdateData.Tick += new System.EventHandler(this.tmrUpdateData_Tick);
-      // 
       // SettingDevice
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -983,7 +976,6 @@
     private System.Windows.Forms.Panel panel11;
     private System.Windows.Forms.ComboBox cbDisplay;
     private System.Windows.Forms.DataGridView dgvSettingDevice;
-    private System.Windows.Forms.Timer tmrUpdateData;
     private System.Windows.Forms.Panel panel2;
     private System.Windows.Forms.Label lbAddFactory;
     private System.Windows.Forms.Panel panel5;

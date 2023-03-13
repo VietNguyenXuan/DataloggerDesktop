@@ -124,6 +124,60 @@ namespace DataloggerDesktops.Migrations
                     b.ToTable("ParametterSensors");
                 });
 
+            modelBuilder.Entity("DataloggerDesktops.Models.ParametterSetting", b =>
+                {
+                    b.Property<int?>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool?>("Action")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Condition")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DateCreate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Item")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("SensorId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("StatusName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Threshold")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("UnitId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SensorId");
+
+                    b.ToTable("ParametterSettings");
+                });
+
+            modelBuilder.Entity("DataloggerDesktops.Models.Sensor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateCreate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sensors");
+                });
+
             modelBuilder.Entity("DataloggerDesktops.Models.UserHistorical", b =>
                 {
                     b.Property<int>("Id")
@@ -207,6 +261,15 @@ namespace DataloggerDesktops.Migrations
                         .HasForeignKey("DeviceId");
                 });
 
+            modelBuilder.Entity("DataloggerDesktops.Models.ParametterSetting", b =>
+                {
+                    b.HasOne("DataloggerDesktops.Models.Sensor", "Sensor")
+                        .WithMany("ParametterSettings")
+                        .HasForeignKey("SensorId");
+
+                    b.Navigation("Sensor");
+                });
+
             modelBuilder.Entity("DataloggerDesktops.Models.Device", b =>
                 {
                     b.Navigation("ParametterSensors");
@@ -225,6 +288,11 @@ namespace DataloggerDesktops.Migrations
             modelBuilder.Entity("DataloggerDesktops.Models.ParametterSensor", b =>
                 {
                     b.Navigation("ParametterLogs");
+                });
+
+            modelBuilder.Entity("DataloggerDesktops.Models.Sensor", b =>
+                {
+                    b.Navigation("ParametterSettings");
                 });
 #pragma warning restore 612, 618
         }

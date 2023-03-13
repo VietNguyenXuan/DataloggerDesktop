@@ -70,7 +70,7 @@ namespace DataloggerDesktops.Repository
     }
 
 
-    public iChart? Viet(int idPara, int hour)
+    public iChart? GetDataChart(int idPara, int hour)
     {
       _dbContext.Database.EnsureCreated();
       var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).Where(x => x.DateCreate.Hour == hour).OrderByDescending(s => s.Id).FirstOrDefault();

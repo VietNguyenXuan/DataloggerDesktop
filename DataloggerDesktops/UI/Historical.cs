@@ -62,6 +62,8 @@ namespace DataloggerDesktops
           FormatLoadData(dgvDown, "Tốc độ", 4, chartDown, "Down");
           lbDown.Text = "Tốc độ";
           lbChartDown.Text = "Biểu đồ tốc độ";
+
+          picBack.Visible = false;  picNext.Visible = true;
           break; 
         case 2:
           tlpDown.Visible = true; tlbHearderDown.Visible = true;
@@ -71,6 +73,8 @@ namespace DataloggerDesktops
           FormatLoadData(dgvDown, "Âm thanh", 11, chartDown, "Down");
           lbDown.Text = "Âm thanh";
           lbChartDown.Text = "Biểu đồ âm thanh";
+
+          picBack.Visible = true; picNext.Visible = true;
           break;
         case 3:
           FormatLoadData(dgvUp, "Từ trường", 1, chartUp, "Up");
@@ -78,6 +82,7 @@ namespace DataloggerDesktops
           lbChartUp.Text = "Biểu đồ từ trường";
 
           tlpDown.Visible= false; tlbHearderDown.Visible = false;
+          picBack.Visible = true; picNext.Visible = false;
 
           break;
       }

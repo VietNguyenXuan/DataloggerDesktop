@@ -23,65 +23,53 @@ namespace DataloggerDesktops
     private void SettingDevice_Load(object sender, EventArgs e)
     {
       cbDisplay.SelectedIndex= 0;
-
-      tmrUpdateData.Start();
     }
 
     private void lbAddFactory_Click(object sender, EventArgs e)
     {
       AddFactoryForm frm = new AddFactoryForm();
       frm.ShowDialog();
+      UpdateData();
     }
     private void lbAddLine_Click(object sender, EventArgs e)
     {
       AddLineForm frm = new AddLineForm();
       frm.ShowDialog();
+      UpdateData();
     }
     private void lbAddDevice_Click(object sender, EventArgs e)
     {
       AddDeviceForm frm = new AddDeviceForm();
       frm.ShowDialog();
+      UpdateData();
     }
-
-
-    //public int viewSettingDevice;
    
     public void lbSeeMoreFatory_Click(object sender, EventArgs e)
     {
       ViewSettingDeviceForm frm = new ViewSettingDeviceForm("1");
       frm.ShowDialog();
-
+      UpdateData();
     }
 
     public void lbSeeMoreLine_Click(object sender, EventArgs e)
     {
       ViewSettingDeviceForm frm = new ViewSettingDeviceForm("2");
       frm.ShowDialog();
+      UpdateData();
     }
 
     public void lbSeeMoreDevice_Click(object sender, EventArgs e)
     {
       ViewSettingDeviceForm frm = new ViewSettingDeviceForm("3");
       frm.ShowDialog();
+      UpdateData();
     }
 
     private void cbDisplay_SelectedIndexChanged(object sender, EventArgs e)
     {
       UpdateData();
     }
-
-    private void tmrUpdateData_Tick(object sender, EventArgs e)
-    {
-      UpdateData();
-
-      //MessageBox.Show("A");
-    }
-    public void LoadImage(string filename)
-    {
-      //load image
-      picDisplay.Image = new Bitmap(Application.StartupPath + $"\\Resources\\{filename}.png");
-      picDisplay.SizeMode = PictureBoxSizeMode.StretchImage;
-    }
+    
     public void UpdateData()
     {
       RepositoryFactory _managerFactory = new RepositoryFactory();
@@ -101,7 +89,6 @@ namespace DataloggerDesktops
         case 0:
           dgvSettingDevice.DataSource = factory;
           LoadImage("factory");
-
           break;
         case 1:
           dgvSettingDevice.DataSource = line;
@@ -112,9 +99,12 @@ namespace DataloggerDesktops
           LoadImage("device");
           break;
       }
-
     }
-
-    
+    public void LoadImage(string filename)
+    {
+      //load image
+      picDisplay.Image = new Bitmap(Application.StartupPath + $"\\Resources\\{filename}.png");
+      picDisplay.SizeMode = PictureBoxSizeMode.StretchImage;
+    }
   }
 }
