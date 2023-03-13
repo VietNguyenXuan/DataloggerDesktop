@@ -4,6 +4,9 @@
     <Compile Update="MQTTClass.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Report\ReviewData.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UIAdd\AddDeviceForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -57,8 +57,10 @@ namespace DataloggerDesktops.Repository
       return null;
     }
 
+    
 
-    public ParametterLog? iChart(int idPara, int hour)
+
+    public ParametterLog? GetDataChart(int idPara, int hour)
     {
       _dbContext.Database.EnsureCreated();
       var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).Where(x => x.DateCreate.Hour == hour).OrderByDescending(s => s.Id).FirstOrDefault();
@@ -70,7 +72,7 @@ namespace DataloggerDesktops.Repository
     }
 
 
-    public iChart? GetDataChart(int idPara, int hour)
+    public iChart? GetDataChart2(int idPara, int hour)
     {
       _dbContext.Database.EnsureCreated();
       var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).Where(x => x.DateCreate.Hour == hour).OrderByDescending(s => s.Id).FirstOrDefault();
@@ -81,6 +83,17 @@ namespace DataloggerDesktops.Repository
           DateCreate = values.DateCreate,
           Value = (float)values.Value
         };
+      }
+      return null;
+    }
+
+    public List<ParametterLog>? GetDataByDate(int idPara, DateTime dateStart, DateTime dateEnd)
+    {
+      _dbContext.Database.EnsureCreated();
+      var values = _dbContext.ParametterLogs.Where(s => s.ParametterSensorId == idPara).Where(x => x.DateCreate.Date >= dateStart && x.DateCreate.Date <= dateEnd).OrderBy(s => s.Id).ToList(); //OrderByDescending
+      if (values != null)
+      {
+        return values;
       }
       return null;
     }

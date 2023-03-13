@@ -87,14 +87,14 @@ namespace DataloggerDesktops
           }
 
           //Acoustic Data | Dữ liệu âm thanh
-          var dataAcoustic = _managerParalog.iChart(11, i);
+          var dataAcoustic = _managerParalog.GetDataChart(11, i);
           if (dataAcoustic != null)
           {
             chartAccoustic.Series["Dữ liệu âm thanh"].Points.AddXY(dataAcoustic.DateCreate.Hour.ToString() + ":00", dataAcoustic.Value);
           }
 
           // Magnetic Field Data | Dữ liệu từ trường
-          var dataMagFd = _managerParalog.iChart(1, i);
+          var dataMagFd = _managerParalog.GetDataChart(1, i);
           if (dataMagFd != null)
           {
             chartMagFd.Series["Dữ liệu từ trường"].Points.AddXY(dataMagFd.DateCreate.Hour.ToString() + ":00", dataMagFd.Value);
@@ -107,7 +107,5 @@ namespace DataloggerDesktops
         MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
       }
     }
-
-    
   }
 }

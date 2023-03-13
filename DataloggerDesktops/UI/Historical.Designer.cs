@@ -65,38 +65,38 @@
       this.comboBox2 = new System.Windows.Forms.ComboBox();
       this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
       this.panel8 = new System.Windows.Forms.Panel();
-      this.button2 = new System.Windows.Forms.Button();
+      this.btnUpExport = new System.Windows.Forms.Button();
       this.panel12 = new System.Windows.Forms.Panel();
-      this.button1 = new System.Windows.Forms.Button();
+      this.btnUpSeeData = new System.Windows.Forms.Button();
       this.panel13 = new System.Windows.Forms.Panel();
-      this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+      this.dtmUpEnd = new System.Windows.Forms.DateTimePicker();
       this.panel14 = new System.Windows.Forms.Panel();
       this.label6 = new System.Windows.Forms.Label();
       this.panel15 = new System.Windows.Forms.Panel();
-      this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+      this.dtmUpStart = new System.Windows.Forms.DateTimePicker();
       this.panel16 = new System.Windows.Forms.Panel();
       this.label5 = new System.Windows.Forms.Label();
       this.panel17 = new System.Windows.Forms.Panel();
       this.lbUp = new System.Windows.Forms.Label();
       this.panel18 = new System.Windows.Forms.Panel();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
+      this.picLoadDataUp = new System.Windows.Forms.PictureBox();
       this.tlbHearderDown = new System.Windows.Forms.TableLayoutPanel();
       this.panel19 = new System.Windows.Forms.Panel();
-      this.button3 = new System.Windows.Forms.Button();
+      this.btnDownExport = new System.Windows.Forms.Button();
       this.panel20 = new System.Windows.Forms.Panel();
-      this.button4 = new System.Windows.Forms.Button();
-      this.panel21 = new System.Windows.Forms.Panel();
-      this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
+      this.btnDownSeeData = new System.Windows.Forms.Button();
+      this.panle = new System.Windows.Forms.Panel();
+      this.dtmDownEnd = new System.Windows.Forms.DateTimePicker();
       this.panel22 = new System.Windows.Forms.Panel();
       this.label8 = new System.Windows.Forms.Label();
       this.panel23 = new System.Windows.Forms.Panel();
-      this.dateTimePicker10 = new System.Windows.Forms.DateTimePicker();
+      this.dtmDownStart = new System.Windows.Forms.DateTimePicker();
       this.panel24 = new System.Windows.Forms.Panel();
       this.label9 = new System.Windows.Forms.Label();
       this.panel25 = new System.Windows.Forms.Panel();
       this.lbDown = new System.Windows.Forms.Label();
       this.panel26 = new System.Windows.Forms.Panel();
-      this.pictureBox2 = new System.Windows.Forms.PictureBox();
+      this.picLoadDataDown = new System.Windows.Forms.PictureBox();
       this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
       this.dgvUp = new System.Windows.Forms.DataGridView();
       this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,6 +121,7 @@
       this.picBack = new System.Windows.Forms.PictureBox();
       this.picNext = new System.Windows.Forms.PictureBox();
       this.pictureBox3 = new System.Windows.Forms.PictureBox();
+      this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
       this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
       this.panel10 = new System.Windows.Forms.Panel();
       this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
@@ -143,6 +144,7 @@
       this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
       this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
       this.tmrHistorical = new System.Windows.Forms.Timer(this.components);
+      this.sdlUp = new System.Windows.Forms.SaveFileDialog();
       this.tableLayoutPanel1.SuspendLayout();
       this.tableLayoutPanel2.SuspendLayout();
       this.panel1.SuspendLayout();
@@ -161,17 +163,17 @@
       this.panel16.SuspendLayout();
       this.panel17.SuspendLayout();
       this.panel18.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picLoadDataUp)).BeginInit();
       this.tlbHearderDown.SuspendLayout();
       this.panel19.SuspendLayout();
       this.panel20.SuspendLayout();
-      this.panel21.SuspendLayout();
+      this.panle.SuspendLayout();
       this.panel22.SuspendLayout();
       this.panel23.SuspendLayout();
       this.panel24.SuspendLayout();
       this.panel25.SuspendLayout();
       this.panel26.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picLoadDataDown)).BeginInit();
       this.tableLayoutPanel7.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgvUp)).BeginInit();
       this.tableLayoutPanel10.SuspendLayout();
@@ -459,56 +461,61 @@
       // 
       // panel8
       // 
-      this.panel8.Controls.Add(this.button2);
+      this.panel8.Controls.Add(this.btnUpExport);
       this.panel8.Location = new System.Drawing.Point(877, 3);
       this.panel8.Name = "panel8";
       this.panel8.Size = new System.Drawing.Size(99, 38);
       this.panel8.TabIndex = 0;
       // 
-      // button2
+      // btnUpExport
       // 
-      this.button2.Location = new System.Drawing.Point(8, 4);
-      this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(83, 29);
-      this.button2.TabIndex = 1;
-      this.button2.Text = "Xuất";
-      this.button2.UseVisualStyleBackColor = true;
+      this.btnUpExport.Location = new System.Drawing.Point(8, 4);
+      this.btnUpExport.Name = "btnUpExport";
+      this.btnUpExport.Size = new System.Drawing.Size(83, 29);
+      this.btnUpExport.TabIndex = 1;
+      this.btnUpExport.Text = "Xuất";
+      this.btnUpExport.UseVisualStyleBackColor = true;
+      this.btnUpExport.Click += new System.EventHandler(this.btnUpExport_Click);
       // 
       // panel12
       // 
-      this.panel12.Controls.Add(this.button1);
+      this.panel12.Controls.Add(this.btnUpSeeData);
       this.panel12.Location = new System.Drawing.Point(777, 3);
       this.panel12.Name = "panel12";
       this.panel12.Size = new System.Drawing.Size(94, 38);
       this.panel12.TabIndex = 1;
       // 
-      // button1
+      // btnUpSeeData
       // 
-      this.button1.Location = new System.Drawing.Point(6, 4);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(83, 29);
-      this.button1.TabIndex = 0;
-      this.button1.Text = "Xem";
-      this.button1.UseVisualStyleBackColor = true;
+      this.btnUpSeeData.Location = new System.Drawing.Point(6, 4);
+      this.btnUpSeeData.Name = "btnUpSeeData";
+      this.btnUpSeeData.Size = new System.Drawing.Size(83, 29);
+      this.btnUpSeeData.TabIndex = 0;
+      this.btnUpSeeData.Text = "Xem";
+      this.btnUpSeeData.UseVisualStyleBackColor = true;
+      this.btnUpSeeData.Click += new System.EventHandler(this.btnUpSeeData_Click);
       // 
       // panel13
       // 
       this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel13.Controls.Add(this.dateTimePicker5);
+      this.panel13.Controls.Add(this.dtmUpEnd);
       this.panel13.Location = new System.Drawing.Point(567, 3);
       this.panel13.Name = "panel13";
       this.panel13.Size = new System.Drawing.Size(144, 38);
       this.panel13.TabIndex = 2;
       // 
-      // dateTimePicker5
+      // dtmUpEnd
       // 
-      this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-      this.dateTimePicker5.Location = new System.Drawing.Point(11, 6);
-      this.dateTimePicker5.Name = "dateTimePicker5";
-      this.dateTimePicker5.Size = new System.Drawing.Size(125, 27);
-      this.dateTimePicker5.TabIndex = 0;
+      this.dtmUpEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.dtmUpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+      this.dtmUpEnd.Location = new System.Drawing.Point(11, 6);
+      this.dtmUpEnd.Name = "dtmUpEnd";
+      this.dtmUpEnd.Size = new System.Drawing.Size(125, 27);
+      this.dtmUpEnd.TabIndex = 0;
       // 
       // panel14
       // 
@@ -531,19 +538,22 @@
       // 
       // panel15
       // 
-      this.panel15.Controls.Add(this.dateTimePicker6);
+      this.panel15.Controls.Add(this.dtmUpStart);
       this.panel15.Location = new System.Drawing.Point(317, 3);
       this.panel15.Name = "panel15";
       this.panel15.Size = new System.Drawing.Size(144, 38);
       this.panel15.TabIndex = 4;
       // 
-      // dateTimePicker6
+      // dtmUpStart
       // 
-      this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-      this.dateTimePicker6.Location = new System.Drawing.Point(10, 5);
-      this.dateTimePicker6.Name = "dateTimePicker6";
-      this.dateTimePicker6.Size = new System.Drawing.Size(121, 27);
-      this.dateTimePicker6.TabIndex = 0;
+      this.dtmUpStart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.dtmUpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+      this.dtmUpStart.Location = new System.Drawing.Point(10, 5);
+      this.dtmUpStart.Name = "dtmUpStart";
+      this.dtmUpStart.Size = new System.Drawing.Size(121, 27);
+      this.dtmUpStart.TabIndex = 0;
       // 
       // panel16
       // 
@@ -587,21 +597,22 @@
       // 
       // panel18
       // 
-      this.panel18.Controls.Add(this.pictureBox1);
+      this.panel18.Controls.Add(this.picLoadDataUp);
       this.panel18.Location = new System.Drawing.Point(717, 3);
       this.panel18.Name = "panel18";
       this.panel18.Size = new System.Drawing.Size(54, 38);
       this.panel18.TabIndex = 7;
       // 
-      // pictureBox1
+      // picLoadDataUp
       // 
-      this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(9, 4);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(27, 29);
-      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox1.TabIndex = 7;
-      this.pictureBox1.TabStop = false;
+      this.picLoadDataUp.Image = ((System.Drawing.Image)(resources.GetObject("picLoadDataUp.Image")));
+      this.picLoadDataUp.Location = new System.Drawing.Point(9, 4);
+      this.picLoadDataUp.Name = "picLoadDataUp";
+      this.picLoadDataUp.Size = new System.Drawing.Size(27, 29);
+      this.picLoadDataUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.picLoadDataUp.TabIndex = 7;
+      this.picLoadDataUp.TabStop = false;
+      this.picLoadDataUp.Click += new System.EventHandler(this.picLoadDataUp_Click);
       // 
       // tlbHearderDown
       // 
@@ -623,7 +634,7 @@
       this.tlbHearderDown.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
       this.tlbHearderDown.Controls.Add(this.panel19, 9, 0);
       this.tlbHearderDown.Controls.Add(this.panel20, 8, 0);
-      this.tlbHearderDown.Controls.Add(this.panel21, 6, 0);
+      this.tlbHearderDown.Controls.Add(this.panle, 6, 0);
       this.tlbHearderDown.Controls.Add(this.panel22, 5, 0);
       this.tlbHearderDown.Controls.Add(this.panel23, 4, 0);
       this.tlbHearderDown.Controls.Add(this.panel24, 3, 0);
@@ -638,56 +649,58 @@
       // 
       // panel19
       // 
-      this.panel19.Controls.Add(this.button3);
+      this.panel19.Controls.Add(this.btnDownExport);
       this.panel19.Location = new System.Drawing.Point(877, 3);
       this.panel19.Name = "panel19";
       this.panel19.Size = new System.Drawing.Size(99, 38);
       this.panel19.TabIndex = 0;
       // 
-      // button3
+      // btnDownExport
       // 
-      this.button3.Location = new System.Drawing.Point(8, 5);
-      this.button3.Name = "button3";
-      this.button3.Size = new System.Drawing.Size(83, 29);
-      this.button3.TabIndex = 1;
-      this.button3.Text = "Xuất";
-      this.button3.UseVisualStyleBackColor = true;
+      this.btnDownExport.Location = new System.Drawing.Point(8, 5);
+      this.btnDownExport.Name = "btnDownExport";
+      this.btnDownExport.Size = new System.Drawing.Size(83, 29);
+      this.btnDownExport.TabIndex = 1;
+      this.btnDownExport.Text = "Xuất";
+      this.btnDownExport.UseVisualStyleBackColor = true;
+      this.btnDownExport.Click += new System.EventHandler(this.btnDownExport_Click);
       // 
       // panel20
       // 
-      this.panel20.Controls.Add(this.button4);
+      this.panel20.Controls.Add(this.btnDownSeeData);
       this.panel20.Location = new System.Drawing.Point(777, 3);
       this.panel20.Name = "panel20";
       this.panel20.Size = new System.Drawing.Size(94, 38);
       this.panel20.TabIndex = 1;
       // 
-      // button4
+      // btnDownSeeData
       // 
-      this.button4.Location = new System.Drawing.Point(6, 5);
-      this.button4.Name = "button4";
-      this.button4.Size = new System.Drawing.Size(83, 29);
-      this.button4.TabIndex = 0;
-      this.button4.Text = "Xem";
-      this.button4.UseVisualStyleBackColor = true;
+      this.btnDownSeeData.Location = new System.Drawing.Point(6, 5);
+      this.btnDownSeeData.Name = "btnDownSeeData";
+      this.btnDownSeeData.Size = new System.Drawing.Size(83, 29);
+      this.btnDownSeeData.TabIndex = 0;
+      this.btnDownSeeData.Text = "Xem";
+      this.btnDownSeeData.UseVisualStyleBackColor = true;
+      this.btnDownSeeData.Click += new System.EventHandler(this.btnDownSeeData_Click);
       // 
-      // panel21
+      // panle
       // 
-      this.panel21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+      this.panle.Controls.Add(this.dtmDownEnd);
+      this.panle.Location = new System.Drawing.Point(567, 3);
+      this.panle.Name = "panle";
+      this.panle.Size = new System.Drawing.Size(144, 38);
+      this.panle.TabIndex = 2;
+      // 
+      // dtmDownEnd
+      // 
+      this.dtmDownEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel21.Controls.Add(this.dateTimePicker9);
-      this.panel21.Location = new System.Drawing.Point(567, 3);
-      this.panel21.Name = "panel21";
-      this.panel21.Size = new System.Drawing.Size(144, 38);
-      this.panel21.TabIndex = 2;
-      // 
-      // dateTimePicker9
-      // 
-      this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-      this.dateTimePicker9.Location = new System.Drawing.Point(11, 6);
-      this.dateTimePicker9.Name = "dateTimePicker9";
-      this.dateTimePicker9.Size = new System.Drawing.Size(125, 27);
-      this.dateTimePicker9.TabIndex = 0;
+      this.dtmDownEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+      this.dtmDownEnd.Location = new System.Drawing.Point(11, 6);
+      this.dtmDownEnd.Name = "dtmDownEnd";
+      this.dtmDownEnd.Size = new System.Drawing.Size(121, 27);
+      this.dtmDownEnd.TabIndex = 1;
       // 
       // panel22
       // 
@@ -710,19 +723,22 @@
       // 
       // panel23
       // 
-      this.panel23.Controls.Add(this.dateTimePicker10);
+      this.panel23.Controls.Add(this.dtmDownStart);
       this.panel23.Location = new System.Drawing.Point(317, 3);
       this.panel23.Name = "panel23";
       this.panel23.Size = new System.Drawing.Size(144, 38);
       this.panel23.TabIndex = 4;
       // 
-      // dateTimePicker10
+      // dtmDownStart
       // 
-      this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-      this.dateTimePicker10.Location = new System.Drawing.Point(10, 5);
-      this.dateTimePicker10.Name = "dateTimePicker10";
-      this.dateTimePicker10.Size = new System.Drawing.Size(121, 27);
-      this.dateTimePicker10.TabIndex = 0;
+      this.dtmDownStart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.dtmDownStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+      this.dtmDownStart.Location = new System.Drawing.Point(10, 5);
+      this.dtmDownStart.Name = "dtmDownStart";
+      this.dtmDownStart.Size = new System.Drawing.Size(121, 27);
+      this.dtmDownStart.TabIndex = 0;
       // 
       // panel24
       // 
@@ -765,21 +781,22 @@
       // 
       // panel26
       // 
-      this.panel26.Controls.Add(this.pictureBox2);
+      this.panel26.Controls.Add(this.picLoadDataDown);
       this.panel26.Location = new System.Drawing.Point(717, 3);
       this.panel26.Name = "panel26";
       this.panel26.Size = new System.Drawing.Size(54, 38);
       this.panel26.TabIndex = 7;
       // 
-      // pictureBox2
+      // picLoadDataDown
       // 
-      this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-      this.pictureBox2.Location = new System.Drawing.Point(9, 4);
-      this.pictureBox2.Name = "pictureBox2";
-      this.pictureBox2.Size = new System.Drawing.Size(27, 30);
-      this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox2.TabIndex = 7;
-      this.pictureBox2.TabStop = false;
+      this.picLoadDataDown.Image = ((System.Drawing.Image)(resources.GetObject("picLoadDataDown.Image")));
+      this.picLoadDataDown.Location = new System.Drawing.Point(9, 4);
+      this.picLoadDataDown.Name = "picLoadDataDown";
+      this.picLoadDataDown.Size = new System.Drawing.Size(27, 30);
+      this.picLoadDataDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.picLoadDataDown.TabIndex = 7;
+      this.picLoadDataDown.TabStop = false;
+      this.picLoadDataDown.Click += new System.EventHandler(this.picLoadDataDown_Click);
       // 
       // tableLayoutPanel7
       // 
@@ -1228,7 +1245,6 @@
       this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
       this.tableLayoutPanel14.Size = new System.Drawing.Size(1038, 24);
       this.tableLayoutPanel14.TabIndex = 11;
-      this.tableLayoutPanel14.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel14_Paint);
       // 
       // picBack
       // 
@@ -1270,6 +1286,14 @@
       this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
       this.pictureBox3.TabIndex = 2;
       this.pictureBox3.TabStop = false;
+      // 
+      // dateTimePicker9
+      // 
+      this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+      this.dateTimePicker9.Location = new System.Drawing.Point(11, 6);
+      this.dateTimePicker9.Name = "dateTimePicker9";
+      this.dateTimePicker9.Size = new System.Drawing.Size(125, 27);
+      this.dateTimePicker9.TabIndex = 0;
       // 
       // tableLayoutPanel3
       // 
@@ -1562,11 +1586,11 @@
       this.panel17.ResumeLayout(false);
       this.panel17.PerformLayout();
       this.panel18.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picLoadDataUp)).EndInit();
       this.tlbHearderDown.ResumeLayout(false);
       this.panel19.ResumeLayout(false);
       this.panel20.ResumeLayout(false);
-      this.panel21.ResumeLayout(false);
+      this.panle.ResumeLayout(false);
       this.panel22.ResumeLayout(false);
       this.panel22.PerformLayout();
       this.panel23.ResumeLayout(false);
@@ -1575,7 +1599,7 @@
       this.panel25.ResumeLayout(false);
       this.panel25.PerformLayout();
       this.panel26.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picLoadDataDown)).EndInit();
       this.tableLayoutPanel7.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.dgvUp)).EndInit();
       this.tableLayoutPanel10.ResumeLayout(false);
@@ -1648,38 +1672,38 @@
     private System.Windows.Forms.DateTimePicker dateTimePicker7;
     private System.Windows.Forms.DateTimePicker dateTimePicker8;
     private System.Windows.Forms.Panel panel8;
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button btnUpExport;
     private System.Windows.Forms.Panel panel12;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button btnUpSeeData;
     private System.Windows.Forms.Panel panel13;
-    private System.Windows.Forms.DateTimePicker dateTimePicker5;
+    private System.Windows.Forms.DateTimePicker dtmUpEnd;
     private System.Windows.Forms.Panel panel14;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Panel panel15;
-    private System.Windows.Forms.DateTimePicker dateTimePicker6;
+    private System.Windows.Forms.DateTimePicker dtmUpStart;
     private System.Windows.Forms.Panel panel16;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.Panel panel17;
     private System.Windows.Forms.Label lbUp;
-    private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.PictureBox picLoadDataUp;
     private System.Windows.Forms.Panel panel18;
     private System.Windows.Forms.TableLayoutPanel tlbHearderDown;
     private System.Windows.Forms.Panel panel19;
-    private System.Windows.Forms.Button button3;
+    private System.Windows.Forms.Button btnDownExport;
     private System.Windows.Forms.Panel panel20;
-    private System.Windows.Forms.Button button4;
-    private System.Windows.Forms.Panel panel21;
+    private System.Windows.Forms.Button btnDownSeeData;
+    private System.Windows.Forms.Panel panle;
     private System.Windows.Forms.DateTimePicker dateTimePicker9;
     private System.Windows.Forms.Panel panel22;
     private System.Windows.Forms.Label label8;
     private System.Windows.Forms.Panel panel23;
-    private System.Windows.Forms.DateTimePicker dateTimePicker10;
+    private System.Windows.Forms.DateTimePicker dtmDownStart;
     private System.Windows.Forms.Panel panel24;
     private System.Windows.Forms.Label label9;
     private System.Windows.Forms.Panel panel25;
     private System.Windows.Forms.Label lbDown;
     private System.Windows.Forms.Panel panel26;
-    private System.Windows.Forms.PictureBox pictureBox2;
+    private System.Windows.Forms.PictureBox picLoadDataDown;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
     private System.Windows.Forms.TableLayoutPanel tlpDown;
     private System.Windows.Forms.DataGridView dgvUp;
@@ -1705,5 +1729,7 @@
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+    private System.Windows.Forms.DateTimePicker dtmDownEnd;
+    private System.Windows.Forms.SaveFileDialog sdlUp;
   }
 }

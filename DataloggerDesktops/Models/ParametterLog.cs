@@ -9,6 +9,7 @@ namespace DataloggerDesktops.Models
 {
   public class ParametterLog
   {
+    [Browsable(false)]
     public int Id { get; set; }
     public float? Value { get; set; }
     public DateTime DateCreate { get; set; }

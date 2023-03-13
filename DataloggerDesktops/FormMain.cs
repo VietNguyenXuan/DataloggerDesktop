@@ -91,8 +91,10 @@ namespace DataloggerDesktops
       // Khi chạy mặc định vào form dashboard
       //btnDashBoard.PerformClick();
 
-      btnSetting.PerformClick();
-      btnParameter.PerformClick();
+      //btnSetting.PerformClick();
+      //btnParameter.PerformClick();
+
+      btnHistorical.PerformClick();
 
       //btnSetting.PerformClick();
       //btnUser.PerformClick();

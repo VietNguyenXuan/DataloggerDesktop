@@ -1546,7 +1546,7 @@
       this.picTemp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
       this.picTemp.TabIndex = 4;
       this.picTemp.TabStop = false;
-      this.picTemp.Click += new System.EventHandler(this.picActiveTemp_Click);
+      this.picTemp.Click += new System.EventHandler(this.picTemp_Click);
       // 
       // tableLayoutPanel14
       // 

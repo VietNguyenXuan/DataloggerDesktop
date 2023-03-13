@@ -1,5 +1,6 @@
 ﻿
 using DataloggerDesktops.Models;
+using DataloggerDesktops.Report;
 using DataloggerDesktops.Repository;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Newtonsoft.Json.Linq;
@@ -39,7 +40,7 @@ namespace DataloggerDesktops
     }
     private void tmrHistorical_Tick(object sender, EventArgs e)
     {
-      LoadData();
+      //LoadData();
     }
 
     public void LoadData()
@@ -56,56 +57,56 @@ namespace DataloggerDesktops
       {
         case 1:
           tlpDown.Visible = true; tlbHearderDown.Visible = true;
-          FormatLoadData(dgvUp, "Nhiệt độ", 10, chartUp, "Up");
+          FormatLoadData(dgvUp, "Nhiệt độ", 10, chartUp, "Up", dtmUpStart.Value, dtmUpEnd.Value);
           lbUp.Text = "Nhiệt độ";
           lbChartUp.Text = "Biểu đồ nhiệt độ";
-          FormatLoadData(dgvDown, "Tốc độ", 4, chartDown, "Down");
+          FormatLoadData(dgvDown, "Tốc độ", 4, chartDown, "Down", dtmDownStart.Value, dtmDownEnd.Value);
           lbDown.Text = "Tốc độ";
           lbChartDown.Text = "Biểu đồ tốc độ";
 
-          picBack.Visible = false;  picNext.Visible = true;
-          break; 
+          picBack.Visible = false; picNext.Visible = true;
+          break;
         case 2:
           tlpDown.Visible = true; tlbHearderDown.Visible = true;
-          FormatLoadData(dgvUp, "Độ rung", 7, chartUp, "Up");
+          FormatLoadData(dgvUp, "Độ rung", 7, chartUp, "Up", dtmUpStart.Value, dtmUpEnd.Value);
           lbUp.Text = "Độ rung";
           lbChartUp.Text = "Biểu đồ độ rung";
-          FormatLoadData(dgvDown, "Âm thanh", 11, chartDown, "Down");
+          FormatLoadData(dgvDown, "Âm thanh", 11, chartDown, "Down", dtmDownStart.Value, dtmDownEnd.Value);
           lbDown.Text = "Âm thanh";
           lbChartDown.Text = "Biểu đồ âm thanh";
 
           picBack.Visible = true; picNext.Visible = true;
           break;
         case 3:
-          FormatLoadData(dgvUp, "Từ trường", 1, chartUp, "Up");
+          FormatLoadData(dgvUp, "Từ trường", 1, chartUp, "Up", dtmUpStart.Value, dtmUpEnd.Value);
           lbUp.Text = "Từ trường";
           lbChartUp.Text = "Biểu đồ từ trường";
 
-          tlpDown.Visible= false; tlbHearderDown.Visible = false;
+          tlpDown.Visible = false; tlbHearderDown.Visible = false;
           picBack.Visible = true; picNext.Visible = false;
 
           break;
       }
     }
 
-    public void FormatLoadData(DataGridView dgv, string name, int address, Chart chart, string nameSeries)
+    public void FormatLoadData(DataGridView dgv, string name, int address, Chart chart, string nameSeries, DateTime dateStart, DateTime dateEnd)
     {
       try
       {
-        // Load lên datagridview
-        var dgvValues = _managerParalog.GetValuesByIdParametter(address);
+        var dgvValues = _managerParalog.GetDataByDate(address, dateStart.Date, dateEnd.Date);
         if (dgvValues != null)
         {
           dgv.Columns[2].HeaderText = name;
           dgv.Rows.Clear();
-          for (int i = 0; i < 10; i++) dgv.Rows.Add(i + 1, dgvValues[i].DateCreate, dgvValues[i].Value);
+          for (int i = 0; i < dgvValues.Count; i++) dgv.Rows.Add(i + 1, dgvValues[i].DateCreate, dgvValues[i].Value);
         }
+
 
         // Load lên chart
         chart.Series[nameSeries].Points.Clear();
         for (int i = 1; i <= 24; i++)
         {
-          var chartValues = _managerParalog.iChart(address, i);
+          var chartValues = _managerParalog.GetDataChart(address, i);
           if (chartValues != null)
           {
             chart.Series[nameSeries].Points.AddXY(chartValues.DateCreate.Hour.ToString() + ":00", chartValues.Value);
@@ -144,19 +145,86 @@ namespace DataloggerDesktops
       }
     }
 
-    private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)
-    {
-
-    }
 
     private void picBack_Click(object sender, EventArgs e)
     {
       if (statusPage > 1) statusPage --;
+      LoadData();
     }
 
     private void picNext_Click(object sender, EventArgs e)
     {
       if (statusPage < 3) statusPage ++;
+      LoadData();
+    }
+
+    private void btnUpSeeData_Click(object sender, EventArgs e)
+    {
+      ReviewData frmReviewData = new ReviewData("btnUp", statusPage, dtmUpStart.Value, dtmUpEnd.Value);
+      frmReviewData.ShowDialog();
+    }
+
+    private void btnDownSeeData_Click(object sender, EventArgs e)
+    {
+      ReviewData frmReviewData = new ReviewData("btnDown", statusPage, dtmDownStart.Value, dtmDownEnd.Value);
+      frmReviewData.ShowDialog();
+    }
+
+    ToExcel ToExcel= new ToExcel();
+    RepositoryParametterLog _managerParametterLog = new RepositoryParametterLog();
+    private void btnUpExport_Click(object sender, EventArgs e)
+    {
+      switch (statusPage)
+      {
+        case 1:
+          var dataTemp = _managerParametterLog.GetDataByDate(10, dtmUpStart.Value.Date, dtmUpEnd.Value.Date);
+          if (dataTemp != null) SaveExcel(dgvUp, dataTemp, "Nhiệt độ");
+          break;
+        case 2:
+          var dataVibration = _managerParametterLog.GetDataByDate(7, dtmUpStart.Value.Date, dtmUpEnd.Value.Date);
+          if (dataVibration!=null) SaveExcel(dgvUp, dataVibration, "Độ rung");
+          break;
+        case 3:
+          var dataTempMag = _managerParametterLog.GetDataByDate(1, dtmUpStart.Value.Date, dtmUpEnd.Value.Date);
+          if (dataTempMag != null) SaveExcel(dgvUp, dataTempMag, "Từ trường");
+          break;
+      }
+    }
+    private void btnDownExport_Click(object sender, EventArgs e)
+    {
+      switch (statusPage)
+      {
+        case 1:
+          var dataSpeed = _managerParametterLog.GetDataByDate(4, dtmDownStart.Value.Date, dtmDownEnd.Value.Date);
+          if (dataSpeed != null) SaveExcel(dgvDown, dataSpeed, "Tốc độ");
+          break;
+        case 2:
+          var dataAccoustic = _managerParametterLog.GetDataByDate(11, dtmDownStart.Value.Date, dtmDownEnd.Value.Date);
+          if (dataAccoustic != null) SaveExcel(dgvDown, dataAccoustic, "Âm thanh");
+          break;
+        case 3:
+          //No code
+          break;
+      }
+    }
+
+    private void picLoadDataDown_Click(object sender, EventArgs e)
+    {
+      LoadData();
+    }
+
+    private void picLoadDataUp_Click(object sender, EventArgs e)
+    {
+      LoadData();
+    }
+
+
+    void SaveExcel(DataGridView dgv, List<ParametterLog> data, string NameSheet)
+    {
+      if (sdlUp.ShowDialog() == DialogResult.OK)
+      {
+        ToExcel.FromDatagridviewToExcel(dgv, sdlUp.FileName, NameSheet);
+      }
     }
   }
 }

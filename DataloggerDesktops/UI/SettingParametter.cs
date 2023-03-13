@@ -20,14 +20,19 @@ namespace DataloggerDesktops
     public SettingParametter()
     {
       InitializeComponent();
-      AddAllDgv();
+      LoadDataGridView();
     }
 
     RepositoryParametterSetting _managerParametterSetting = new RepositoryParametterSetting();
     RepositorySensor _managerSensor = new RepositorySensor();
 
     public string[] statusActive = { "switch_off_48px", "switch_on_48px" };
-    bool activeTemp, activeAcoustic, activeVibration, activeSpeed, activeMagneticField;
+    public bool activeTemp=false;
+    public bool activeAcoustic = false;
+    public bool activeVibration = false;
+    public bool activeSpeed = false;
+    public bool activeMagneticField = false;
+
 
     private void SettingParametter_Load(object sender, EventArgs e)
     {
@@ -45,7 +50,7 @@ namespace DataloggerDesktops
       LoadAllData();
     }
 
-    public void SaveData(DataGridView dgv, bool nameAction, string nameFind, System.Windows.Forms.ComboBox comboBox)
+    public async Task SaveData(DataGridView dgv, bool nameAction, string nameFind, System.Windows.Forms.ComboBox comboBox)
     {
       try
       {
@@ -55,7 +60,7 @@ namespace DataloggerDesktops
         if (cell != null) parametterSetting.Condition = cell.Value.ToString();
         if (dgv.Rows[0].Cells["thresholdCol"].Value.ToString()!="") parametterSetting.Threshold = dgv.Rows[0].Cells["thresholdCol"].Value.ToString();
        
-        parametterSetting.Action = !nameAction;
+        parametterSetting.Action = nameAction;
 
         if (dgv.Rows[0].Cells["itemCol"].Value.ToString()!="") parametterSetting.Item = dgv.Rows[0].Cells["itemCol"].Value.ToString();
 
@@ -63,7 +68,7 @@ namespace DataloggerDesktops
 
         parametterSetting.DateCreate = DateTime.Now;
         parametterSetting.UnitId = comboBox.SelectedIndex;
-        _managerParametterSetting.Add(parametterSetting);
+        await _managerParametterSetting.Add(parametterSetting);
       }
       catch (Exception ex)
       {
@@ -71,13 +76,13 @@ namespace DataloggerDesktops
       }
       
     }
-    public void SaveAll()
+    public async Task SaveAll()
     {
-      SaveData(dgvMagneticField, activeMagneticField, "Magnetometer", cbMagneticField);
-      SaveData(dgvVibration, activeVibration, "Accelerometer (Primary)", cbVibration);
-      SaveData(dgvSpeed, activeSpeed, "Accelerometer (Secondary)", cbSpeed);
-      SaveData(dgvTemp, activeTemp, "Temperature", cbTemp);
-      SaveData(dgvAcoustic, activeAcoustic, "Microphone", cbAcoustic);
+      await SaveData(dgvMagneticField, activeMagneticField, "Magnetometer", cbMagneticField);
+      await SaveData(dgvVibration, activeVibration, "Accelerometer (Primary)", cbVibration);
+      await SaveData(dgvSpeed, activeSpeed, "Accelerometer (Secondary)", cbSpeed);
+      await SaveData(dgvTemp, activeTemp, "Temperature", cbTemp);
+      await SaveData(dgvAcoustic, activeAcoustic, "Microphone", cbAcoustic);
     }
     public void LoadData(int idSensor, DataGridView dgv, PictureBox picture, System.Windows.Forms.ComboBox comboBox)
     {
@@ -90,13 +95,13 @@ namespace DataloggerDesktops
           dgv.Rows[0].Cells["Active"].Value = imageOn;
           picture.Image = imageOn;
         }
-        else
+        else if (data.Action == false)
         {
           Image imageOff = Image.FromFile(Application.StartupPath + $"\\Resources\\{statusActive[0]}.png");
           dgv.Rows[0].Cells["Active"].Value = imageOff;
           picture.Image = imageOff;
         }
-        DataGridViewComboBoxCell comboBoxCell = dgv.Rows[0].Cells["conditionCol"] as DataGridViewComboBoxCell;
+        DataGridViewComboBoxCell? comboBoxCell = dgv.Rows[0].Cells["conditionCol"] as DataGridViewComboBoxCell;
         if (comboBoxCell != null)
         {
           comboBoxCell.Value = data.Condition;
@@ -166,40 +171,41 @@ namespace DataloggerDesktops
     }
 
     
-    public void picActiveTemp_Click(object sender, EventArgs e)
+   
+    private void picTemp_Click(object sender, EventArgs e)
     {
       activeTemp = !activeTemp;
       Action(activeTemp, picTemp);
     }
 
-    private void picVibration_Click(object sender, EventArgs e)
+    public void picVibration_Click(object sender, EventArgs e)
     {
-      activeVibration = !activeVibration;
+      activeVibration=!activeVibration;
       Action(activeVibration, picVibration);
     }
 
-    private void picAcoustic_Click(object sender, EventArgs e)
+    public void picAcoustic_Click(object sender, EventArgs e)
     {
-      activeAcoustic = !activeAcoustic;
+      activeAcoustic=!activeAcoustic;
       Action(activeAcoustic, picAcoustic);
     }
 
-    private void picMagneticField_Click(object sender, EventArgs e)
+    public void picMagneticField_Click(object sender, EventArgs e)
     {
-      activeMagneticField = !activeMagneticField;
+      activeMagneticField=!activeMagneticField;
       Action(activeMagneticField, picMagneticField);
     }
 
-    private void picSpeed_Click(object sender, EventArgs e)
+    public void picSpeed_Click(object sender, EventArgs e)
     {
-      activeSpeed = !activeSpeed;
+      activeSpeed=!activeSpeed;
+
       Action(activeSpeed, picSpeed);
     }
 
 
     public void Action(bool nameAction,PictureBox picture)
     {
-      nameAction = !nameAction;
       if (nameAction == true)
       {
         Image image = Image.FromFile(Application.StartupPath + $"\\Resources\\{statusActive[1]}.png");
@@ -212,7 +218,7 @@ namespace DataloggerDesktops
       }
     }
 
-    void AddAllDgv()
+    public void LoadDataGridView()
     {
       // tắt hiển thị dòng cuối datagridview
       dgvTemp.AllowUserToAddRows = false;
@@ -268,5 +274,7 @@ namespace DataloggerDesktops
       dgvSpeed.Columns["ID"].Width = 30;
       dgvSpeed.Columns["StatusName"].Width = 120;
     }
+
+    
   }
 }
